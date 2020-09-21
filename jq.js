@@ -28,7 +28,7 @@ var loadDoc = function() {
 	$.ajax({
 		type: "GET",
 		dataType: "xml",
-		url: "http://localhost/ATI/data.xml",
+		url: "https://ATI1-UCV.github.io/data.xml",
 	})
 	.done(function( result ) {
 		myFunction(result);

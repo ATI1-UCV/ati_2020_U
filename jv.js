@@ -11,7 +11,7 @@ function loadDoc() {
 			myFunction(xhttp);
 		}
 	};
-	xhttp.open("GET", "http://localhost/ATI/data.xml", true);
+	xhttp.open("GET", "https://ATI1-UCV.github.io/data.xml", true);
 	xhttp.send();
 }
 
