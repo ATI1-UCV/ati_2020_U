@@ -22,7 +22,7 @@ Al principio es una aplicación web del tipo MPA, con una manera de navegar senc
 <h2>Versión 1</h2>
 <h3>Experiencia de usuario (UX)</h3>
 
-<img src="/README_files/UX-MPA-PaginasDinamicas.png" width="200" />
+<img src="/README_files/UX-MPA-PaginasDinamicas.png" width="100" />
 
 <h3>Página de Listado:</h3>
 
