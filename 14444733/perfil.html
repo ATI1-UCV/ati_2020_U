@@ -2,29 +2,93 @@
 <html lang="es-ES" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	 <meta charset="UTF-8">
-	 <link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
+	<meta charset="UTF-8">
+	<style>
+		td {
+		    vertical-align: top;
+		}
+		
+		a:link {
+			text-decoration:none;   
+			color: orange;
+		}
+		
+		a:hover { 
+			text-decoration: underline;
+			color: orange;
+		}
+		
+		a:visited {
+			text-decoration:none;   
+			color: red;
+		}
+		
+		#foto {
+			border: 0px solid black;
+			width: 200px;
+		}
+		
+		#foto img {
+			border-radius: 60px 0px 0px 0px;
+		}
+	
+		#contenido {
+			border: 1px solid black;
+			width: 600px;
+			box-shadow: 5px 5px gray;
+		}
+		
+		#contenido  {
+			border: 1px solid black;
+			padding: 6px;
+		}
+	
+		#nombre {
+			color: orange; 
+			font-family: verdana;
+			font-size: 24pt;
+			margin: 0;
+		}
+		
+		#descripcion {
+			font-family: arial;
+			font-style: italic;
+			margin-top: 3px;
+		}
+		
+		#agenda {
+			border: 0px solid black;
+			padding: 0;
+			width: 450px;
+		}
+		
+		.negrita {
+			font-weight: bold;
+		}
+		
+	</style>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>María Paula Herrero</title>
   </head>
   <body>
 	<table>
-		<tr><td valign="top"><img src="14444733.jpg"></td>
-		    <td valign="top" width="600">
-			  <table border="0" cellpadding="3">
-				<tr><td><font face="verdana" size="13px" color="orange">María Paula Herrero</font></td></tr>
-				<tr><td><font face="arial"><i>Soy licenciada en Computación de la UCV. Me desempeño en el área de ingeniería web 
+		<tr><td id="foto"><img src="14444733.jpg"></td>
+		    <td id="contenido" >
+			  <table>
+				<tr><td><p id="nombre">María Paula Herrero</p></td></tr>
+				<tr><td><p id="descripcion">Soy licenciada en Computación de la UCV. Me desempeño en el área de ingeniería web 
 					y actualmente doy clases en la Escuela de Computación de la UCV.
 					Además, desde el 2007 he venido desarrollando una segunda carrera como escritora e ilustradora. 
-					He participado en diversos talleres de escritura y actualmente estudio diseño gráfico en Prodiseño.</i></font>
+					He participado en diversos talleres de escritura y actualmente estudio diseño gráfico en Prodiseño.</p>
 					</td>
 				</tr>
 				<tr><td>
-					  <table>
+					  <table id="agenda">
 						<tr><td>Mi color favorito es: </td><td>Azul</td></tr>
 						<tr><td>Mi libro favorito es: </td><td>El Señor de los Anillos</td></tr>
 						<tr><td>Mi estilo de música preferida: </td><td>Cualquiera menos regueton</td></tr>
 						<tr><td>Video juegos favoritos: </td><td>Pokemón Go</td></tr>
-						<tr><td><b>Lenguajes aprendidos: </b></td><td><b>c++, java, php, perl, python</b></td></tr>
+						<tr><td><span class="negrita">Lenguajes aprendidos: </span></td><td><span class="negrita">c++, java, php, perl, python</span></td></tr>
 					  </table>
 					</td>
 				</tr>
