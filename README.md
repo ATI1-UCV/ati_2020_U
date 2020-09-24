@@ -8,38 +8,38 @@ Es una aplicación web muy sencilla que muestra el listado de estudiantes y el p
 El código de este proyecto va evolucionando y existe una versión (una rama) por estudiante y reto
 Es un proyecto muy sencillo con solo dos casos de uso:
 
-<img src="/README_files/DiagramaUC.png" width="400" />
+<img src="/README_files/DiagramaUC.png" width="200" />
 
 Y Un modelo de datos de tres objetos:
 
-<img src="/README_files/DiagramaClases.png" width="400" />
+<img src="/README_files/DiagramaClases.png" width="500" />
 
 Sobre el prototipo tenemos varias versiones.
 
 ## Preview
 Al principio es un sitio web del tipo MPA muy sencillo, con una manera de navegar sencilla, así como las paginas:
 
-###Versión 1
+<h2>Versión 1</h2>
 Experiencia de usuario (UX)
 
-<img src="/README_files/UX-MPA-PaginasDinamicas.png" width="400" />
+<img src="/README_files/UX-MPA-PaginasDinamicas.png" width="200" />
 
-####Página de Listado:
+<h3>Página de Listado:</h3>
 
 <img src="/README_files/verListado1.png" width="400" />
 
-####Página de Perfil:
+<h3>Página de Perfil:</h3>
 
 <img src="/README_files/verPerfil1.png" width="400" />
 
-###Versión 2
+<h2>Versión 2</h2>
 
 Luego se mantiene la manera de navegar, pero el diseño es mejorado:
 
-####Página de Listado:
+<h3>Página de Listado:</h3>
 
 <img src="/README_files/verListado2.png" width="400" />
 
-####Página de Perfil:
+<h3>Página de Perfil:</h3>
 
 <img src="/README_files/verPerfil2.png" width="400" />
