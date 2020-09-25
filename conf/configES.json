@@ -1,14 +1,16 @@
 config = {
 	"sitio": ["ATI","[UCV]","2020-U"],
 	"home": "Inicio",
-	"saludo": "Hola",
+	"login": "Entrar",
 	"copyRight":"Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados",
-	"nombre":"",
+	"nombre":"Nombre",
 	"descripcion":"",
 	"color":"Mi color favorito es",
 	"libro":"Mi libro favorito es",
 	"musica":"Mi estilo de música preferida",
 	"video_juego":"Vídeo juegos favoritos",
 	"lenguajes":"Lenguajes aprendidos",
-	"email":"Si necesitan comunicarse conmigo me pueden escribir a [email]"
+	"email":"Si necesitan comunicarse conmigo me pueden escribir a [email]",
+	"buscar": "Buscar",
+	"saludo": "Hola"
 }
