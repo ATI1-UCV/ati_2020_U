@@ -338,7 +338,7 @@ public:
 	char periChar='*';
 	char backChar=' ';
 	char fillChar='*';
-	char lineChar='.';
+	char lineChar='*';
 	
    for (int y = cuadrante.getCajaY(); y >= 0; --y) {
 	  if(y % cuadrante.getIntervalo() == 0) {
@@ -401,6 +401,7 @@ public:
 int main() {
 
   int x0,y0,x1,y1,x2,y2,x3,y3;
+  printf("Hola 13852255");
   printf("Ingrese coordenada 1 (x y): "); scanf("%d %d",&x0, &y0);
   printf("Ingrese coordenada 2 (x y): "); scanf("%d %d",&x1, &y1); 
   printf("Ingrese coordenada 3 (x y): "); scanf("%d %d",&x2, &y2);
