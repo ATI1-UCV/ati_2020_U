@@ -1,0 +1,22 @@
+{
+"languages": {
+		 "en_labels":{
+			"key_color": "My favorite colors are:",
+			"key_book": "My favorite book is:",
+			"key_color": "Preferred Music Style are:",
+			"key_music": "My favorite book is:",
+			"key_game": "My favorite Video games are:",
+			"key_languages": "Learned languages:",
+			"key_how_communicate": "If you need to communicate with me, you can write to: [email]"
+		  },
+		 "es_labels":{
+			"key_color":		"Mis colores favoritos son:",
+			"key_book":		"Mi libro favorito es:",
+			"key_color":		"Los Estilo de música preferida son:",
+			"key_music":		"Mi libro favorito es:",
+			"key_game":		"Mis Video juegos favoritos son:",
+			"key_languages":	"Lenguajes aprendidos:",
+			"key_how_communicate":	"Si necesitan comunicarse conmigo me pueden escribir a: [email]"
+		 }
+	 }
+}
