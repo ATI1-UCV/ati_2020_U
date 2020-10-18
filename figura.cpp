@@ -401,7 +401,7 @@ public:
 int main() {
 
   int x0,y0,x1,y1,x2,y2,x3,y3;
-  printf("Hola 26272390");
+  printf("Hola 26272390"); 
   printf("Ingrese coordenada 1 (x y): "); scanf("%d %d",&x0, &y0);
   printf("Ingrese coordenada 2 (x y): "); scanf("%d %d",&x1, &y1); 
   printf("Ingrese coordenada 3 (x y): "); scanf("%d %d",&x2, &y2);
