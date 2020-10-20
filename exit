@@ -1,0 +1,24 @@
+[33mcommit 6de541dd7e9b7a8a027075787f9799a844094086[m[33m ([m[1;36mHEAD -> [m[1;32mreto3-25504486[m[33m, [m[1;31morigin/reto3-25504486[m[33m)[m
+Merge: 04cdb98 0e3e2c6
+Author: VictorTafuri <victortafuri2@gmail.com>
+Date:   Mon Oct 19 21:33:13 2020 -0400
+
+    cambios reto 3 merge
+
+[33mcommit 04cdb98113d653d44d9ed3b1c0468e41baf98783[m
+Author: VictorTafuri <victortafuri2@gmail.com>
+Date:   Mon Oct 19 21:13:43 2020 -0400
+
+    cambios reto 3
+
+[33mcommit 0e3e2c6ab181e90984c48637313c72b84caacfdc[m[33m ([m[1;31morigin/reto3-profesores[m[33m)[m
+Author: Maria Paula Herrero <mpaulaherrero@gmail.com>
+Date:   Mon Sep 21 16:41:40 2020 -0400
+
+    quitar comentarios y arreglar salida a consola
+
+[33mcommit 650cbe24cc752f430733c3dd274c9d1284b15200[m[33m ([m[1;31morigin/reto3[m[33m, [m[1;32mreto3[m[33m)[m
+Author: Maria Paula Herrero <mpaulaherrero@gmail.com>
+Date:   Mon Sep 21 16:31:07 2020 -0400
+
+    archivos iniciales
