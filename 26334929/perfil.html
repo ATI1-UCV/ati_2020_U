@@ -7,64 +7,74 @@
     <meta name="description" content="Reto clase 04" />
     <meta charset="UTF-8">
     <link rel="icon" href="favicon.ico">
+    <style>
+      #nombre{
+        color: orange;
+      }
+
+      #foto-perfil{
+        float: left;
+        margin: 0px 10px 0px 0px;
+      }
+
+      #foto-perfil img{
+        border: 1px solid black;
+        border-top-left-radius: 50px 50px;
+      }
+
+      #contenido{
+        float: left;
+        box-shadow: 3px 3px grey;
+        border: 1px solid black;
+        padding: 10px;
+        max-width: 900px;
+      }
+
+      a[href="mailto:diegosandmg@gmail.com"]{
+        color: orange;
+      }
+      
+      a[href="mailto:diegosandmg@gmail.com"]:visited{
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <main>
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <img id="foto-perfil" src="26334929.jpeg" alt="foto de perfil"> 
-            </td>
-            <td>
-              <article>
-                <table>
-                  <tbody>
-                    <tr>
-                      <td colspan="2">
-                        <h1 style="color: orange">Diego Sánchez</h1>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2">
-                        <p>
-                        <em>Estudiante de ciencias de la computación en La UCV. Interesado en el desarrollo web y las aplicaciones que puede tener la tecnología internet</em>
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Mi color favorito es:</td>
-                      <td>Amarillo</td>
-                    </tr>
-                    <tr>
-                      <td>Mi libro favorito es:</td>
-                      <td>Ian Horrocks - Constructing the User Interface with Statecharts-Addison-Wesley (1999)</td>
-                    </tr>
-                    <tr>
-                      <td>Estilo de música preferida es:</td>
-                      <td>Keygen/Chiptune Music</td>
-                    </tr>
-                    <tr>
-                      <td>Mis Video juegos favoritos son:</td>
-                      <td>IL-2 Sturmovik 1946</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Lenguajes aprendidos:</strong></td>
-                      <td><strong>C/C++, javascript, python3</strong></td>
-                    </tr>
-                    <tr>
-                      <td colspan="2">
-                        <p>Si necesitan comunicarse conmigo me pueden escribir a:<a href="mailto:diegosandmg@gmail.com">diegosandmg@gmail.com</a></p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </article>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <section id="foto-perfil"> 
+        <img src="26334929.jpeg" alt="foto de perfil"> 
+      </section>
+      <article id="contenido">
+          <h1 id="nombre">Diego Sánchez</h1>
+          <p>
+          <em>Estudiante de ciencias de la computación en La UCV. Interesado en el desarrollo web y las aplicaciones que puede tener la tecnología internet.</em>
+          </p>
+          <table>
+            <tbody>
+              <tr>
+                <td>Mi color favorito es:</td>
+                <td>Amarillo</td>
+              </tr>
+              <tr>
+                <td>Mi libro favorito es:</td>
+                <td>Ian Horrocks - Constructing the User Interface with Statecharts-Addison-Wesley (1999)</td>
+              </tr>
+              <tr>
+                <td>Estilo de música preferida es:</td>
+                <td>Keygen/Chiptune Music</td>
+              </tr>
+              <tr>
+                <td>Mis Video juegos favoritos son:</td>
+                <td>IL-2 Sturmovik 1946</td>
+              </tr>
+              <tr>
+                <td><strong>Lenguajes aprendidos:</strong></td>
+                <td><strong>C/C++, javascript, python3</strong></td>
+              </tr>
+            </tbody>
+          </table>
+              <p>Si necesitan comunicarse conmigo me pueden escribir a: <a href="mailto:diegosandmg@gmail.com">diegosandmg@gmail.com</a></p>
+      </article>
     </main>
-
   </body>
 </html>
