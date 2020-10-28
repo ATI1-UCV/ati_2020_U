@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 	<meta charset="utf-8">
@@ -8,44 +8,96 @@
 
 	<title>Vittorio Adesso</title>
 
+	<!-- Favico.ico -->
 	<link rel="short icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" />
-
 	<!-- Fonts Google -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" />
 
+	<!-- Custom stylesheet -->
+	<style>
+		html {
+			margin: 0;
+			width: 100vw;
+			height: 100vh;
+		}
+
+		#grid {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			padding: 5%;
+		}
+
+		img {
+			max-width: 315px;
+			height: auto;
+			border-top-left-radius: 20%;
+			margin: 5px;
+		}
+
+		#content {
+			flex: 1 0 315px;
+			max-width: 1260px;
+			margin: 0;
+			font-size: 1em;
+			padding: 1%;
+			border: 4px solid black;
+			box-shadow: 5px 5px gray;
+		}
+
+		.bold {
+			font-weight: bold;
+		}
+
+		#name {
+			color: Gold;
+			font-size: clamp(2.4em, 4.1vw, 4.1em);
+		}
+
+		#desc {
+			font-family:Montserrat;
+			font-style: italic;
+		}
+
+		a {
+			color: orange;
+		}
+
+		a:visited {
+			color: red;
+		}
+	</style>
 </head>
+
 <body>
-	<table style="width: 100%; margin-left: auto; margin-right: auto; font-size: 1.5vw;">
-		<tr>
-			<td style="width: 35%;">
-				<img src="26838989.jpg" alt="Profile Image" style="max-width: 100%; height: auto;">
-			</td>
-			<td style="padding-left: 1rem;">
-				<h1 style="color:Gold; font-size: 6vw;">Vittorio Adesso</h1>
-				<p style="font-family:Montserrat;"><i>
-					Soy estudiante de computación en la UCV, preparador del curso de Algoritmo y Estructura de Datos, actualmente contribuyendo al proyecto de GDQTech.com, desarrollandome en las areas de la seguridad informática e Inteligencia Artificial.
-				</i></p>
-				<table>
-					<tr>
-						<td>Mis color favorito es:</td><td>Amarillo azulado</td>
-					</tr>
-					<tr>
-						<td>Mi libro favorito es:</td><td>I̶̜̬̳͗ ̷̡̹̦̖̑̎d̵̡̯̝̰́̿̕ȍ̴͕̼̮̀̕ ̶̫̊͘͠n̷̠̝̩͌͂̕͠ȯ̵̞͚̊t̵̩͂̽͂͒ ̸̖̄̆̄͝r̵̛̩ĕ̷̮̀͑ä̸̡̯́͛͝d̴̪̫͗̑</td>
-					</tr>
-					<tr>
-						<td>Estilo de música preferida es:</td><td>Chillstep o Lo-Fi</td>
-					</tr>
-					<tr>
-						<td>Mis Video juegos favoritos son:</td><td>Call of Duty y Minecraft</td>
-					</tr>
-					<tr>
-						<td><b>Lenguajes aprendidos:</b></td><td><b>C, C++, Python, Go, JavaScript y Haskell</b></td>
-					</tr>
-				</table>
-				<p>Si necesitan comunicarse conmigo me pueden escribir a: <a href = "mailto: vittorio.adesso@gmail.com">vittorio.adesso@gmail.com</a></p>
-			</td>
-		</tr>
-	</table>
+	<div id="grid">
+		<img src="26838989.jpg" alt="Profile Image">
+		<div id="content">
+			<h1 id="name">Vittorio Adesso</h1>
+			<p id="desc">
+				Soy estudiante de computación en la UCV, preparador del curso de Algoritmo y Estructura de Datos, actualmente contribuyendo al proyecto de GDQTech.com, desarrollandome en las areas de la seguridad informática e Inteligencia Artificial.
+			</p>
+			<table>
+				<tr>
+					<td>Mi color favorito es:</td><td>Amarillo azulado</td>
+				</tr>
+				<tr>
+					<td>Mi libro favorito es:</td><td>I̶̜̬̳͗ ̷̡̹̦̖̑̎d̵̡̯̝̰́̿̕ȍ̴͕̼̮̀̕ ̶̫̊͘͠n̷̠̝̩͌͂̕͠ȯ̵̞͚̊t̵̩͂̽͂͒ ̸̖̄̆̄͝r̵̛̩ĕ̷̮̀͑ä̸̡̯́͛͝d̴̪̫͗̑</td>
+				</tr>
+				<tr>
+					<td>Estilo de música preferida es:</td><td>Chillstep o Lo-Fi</td>
+				</tr>
+				<tr>
+					<td>Mis video juegos favoritos son:</td><td>Call of Duty y Minecraft</td>
+				</tr>
+				<tr>
+					<td class="bold">Lenguajes aprendidos:</td><td class="bold">C, C++, Python, Go, JavaScript y Haskell</td>
+				</tr>
+			</table>
+			<p>Si necesitan comunicarse conmigo me pueden escribir a: <a href = "mailto: owner@vittorioadesso.com">owner@vittorioadesso.com</a></p>
+		</div>
+	</div>
 </body>
 
 </html>
