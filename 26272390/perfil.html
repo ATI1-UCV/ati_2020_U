@@ -4,29 +4,96 @@
         <meta charset="utf-8">
         <title>Daniel Vieira</title>
         <link rel="shortcut icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
+        <style>
+            .line {
+                display:inline-block;
+                position: relative;
+                width: 600px;
+                left: 20px;
+                padding-left: 5px;
+                border: 2px solid black;
+                box-shadow: 10px 10px 5px blue;
+            }
+
+            .left {
+                float: left;
+            }
+
+            .bold {
+                font-weight: bold;
+                position: absolute;
+                top: 206px;
+            }
+
+            .titulo {
+                width: 300px;
+                position: relative;
+            }
+
+            .contenido {
+                width: 300px;
+                position: absolute;
+                top: 135px;
+                left: 250px;
+            }
+
+            #c {
+                left: 250px;
+            }
+
+            #dif {
+                font-family: Arial; 
+                word-break: break-word;
+            }
+
+            h1 {
+                color:#0000FF
+            }
+
+            a {
+                color: orange;
+            }
+
+            img {
+                border-radius: 60px 0px 0px 0px;
+                height: 280px;
+                width: 300px;
+            }
+
+            a:visited {
+                color: red;
+            }
+        </style>
     </head>
     <body>
-        <div  style="float:left">
+        <div class="left">
             <img src="26272390.jpg">
         </div>
-        <div style="display:inline-block; width: 600px;">
-            <h1 style="color:#0000FF">
+        <div class="line">
+            <h1>
                 Daniel Vieira
             </h1>
-            <p style="font-family: Arial; word-break: break-word;">
+            <p id="dif">
                 <em>
                     Soy estudiante de computación de la Universidad Central de Venezuela. Estoy interesado en la rama de Inteligencia Artificial 
                     debido a eso he realizado diversos cursos respecto a eso. En mi tiempo libre me gusta ir a jugar fútbol.
                 </em>
             </p>
-            <p>
-                Mi color favorito es: azul <br/>
-                Mi libro favorito es: Las Crónicas de Narnia <br/>
-                Estilo de música preferida es: Reggaeton <br/>
-                Mis videos juegos favoritos son: World of Warcraft <br/>
-                Lenguajes aprendidos: <strong>C, C++, C#, Python</strong> <br/>
-                Si necesitan comunicarse conmigo me pueden escribir a <a href="mailto:danielvieiucv@gmail.com">danielvieiucv@gmail.com</a>
+            <p class="titulo"> 
+                Mi color favorito es: <br/>
+                Mi libro favorito es:  <br/>
+                Mi estilo de música preferida: <br/>
+                Video juego favoritos: <br/>
             </p>
+            <p class="contenido">
+                    azul <br>
+                    Las Crónicas de Narnia <br>
+                    Reggaeton <br>
+                    World of Warcraft <br>
+            </p>
+            <p class="bold" >Lenguajes aprendidos: </p>
+            <p class="bold" id="c">C, C++, C#, Python</p>
+            <p>Si necesitan comunicarse conmigo me pueden escribir a <a href="mailto:danielvieiucv@gmail.com">danielvieiucv@gmail.com</a>
         </div>
     </body>
 </html>
