@@ -1,0 +1,53 @@
+html {
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+#grid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 5%;
+}
+
+img {
+	max-width: 315px;
+	height: auto;
+	border-top-left-radius: 20%;
+	margin: 5px;
+}
+
+#content {
+	flex: 1 0 315px;
+	max-width: 1260px;
+	margin: 0;
+	font-size: 1em;
+	padding: 1%;
+	border: 4px solid black;
+	box-shadow: 5px 5px gray;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+#name {
+	color: Gold;
+	font-size: clamp(2.4em, 4.1vw, 4.1em);
+}
+
+#desc {
+	font-family:Montserrat;
+	font-style: italic;
+}
+
+a {
+	color: orange;
+}
+
+a:visited {
+	color: red;
+}
+
