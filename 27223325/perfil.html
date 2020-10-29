@@ -7,18 +7,60 @@
 
 	<!-- add icon link -->
      <link rel = "icon" href = "http://www.ciens.ucv.ve/portalasig2/favicon.ico" type = "image/x-icon">
+
+     <style type="text/css">
+
+     	.image_text_next {
+     		display:inline-block;
+     		vertical-align: top;
+     	}
+
+     	.info_card {
+     		display:inline-block;
+     		border: solid 2px;
+     		box-shadow: 10px 10px 10px;
+     	}
+
+     	#name_person {
+     		color:blue;
+     	}
+
+     	#description_person {
+     		font-family:verdana;
+     	}
+
+     	.top_left_border {
+     		border-top-left-radius: 80px;
+     	}
+
+     	/* unvisited link */
+		a:link {
+		  color: orange;
+		}
+
+		/* visited link */
+		a:visited {
+		  color: red;
+		}
+
+     </style>
+
 </head>
 <body>
 
-	<img src="27223325.jpeg" alt="Cesar Salazar Foto" width="300" height="400" align="left">
+	<div class="image_text_next">
+		<img src="27223325.jpeg" class="top_left_border" alt="Cesar Salazar Foto" width="200" height="300">
+	</div>
 
-	<div style="padding-left: : 11px; margin: 15px;">
+	<div class="info_card">
 
-		<h1 style="color:blue;">Cesar Salazar</h1>
+		<h1 id="name_person">Cesar Salazar</h1>
 
-		<p style="font-family:verdana;">
+		<p id="description_person">
 			<i>
-				Soy Estudiante de computacion en la Universidad Central de Venezuela, aprendiendo sobre el Web design y las Bases de datos; aunque el area de Redes tambien me atrae mucho.
+				Soy Estudiante de computacion en la Universidad Central de Venezuela,aprendiendo <br>
+				sobre el Web design y las Bases de datos; aunque el area de Redes tambien me atrae <br>
+				mucho.
 			</i>
 		</p>
 
