@@ -1,0 +1,32 @@
+.image_text_next {
+     		display:inline-block;
+     		vertical-align: top;
+     	}
+
+.info_card {
+     		display:inline-block;
+     		border: solid 2px;
+     		box-shadow: 10px 10px 10px;
+     	}
+
+#name_person {
+     		color:blue;
+     	}
+
+#description_person {
+     		font-family:verdana;
+     	}
+
+.top_left_border {
+     		border-top-left-radius: 80px;
+     	}
+
+/* unvisited link */
+a:link {
+		  color: orange;
+		}
+
+/* visited link */
+a:visited {
+		  color: red;
+		}
