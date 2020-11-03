@@ -1,0 +1,12 @@
+{
+	"sitio": ["ATI","[UCV]","2020-U"],
+	"inicio": "Inicio",
+	"saludo": "Hola",
+	"copyright": "Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados",
+	"color": "Mi color favorito es:",
+	"libro": "Mi libro favorito es:",
+	"musica": "Mi estilo de música preferida:",
+	"videojuego": "Mis vídeo juegos favoritos:",
+	"lenguaje": "Lenguajes aprendidos:",
+	"contacto": "Si necesitan comunicarse conmigo me pueden escribir a:"
+}
