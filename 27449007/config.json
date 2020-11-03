@@ -1,13 +1,13 @@
 {
     "nombre": "Mi nombre es: ",
-    "sobre_mi_descripcion":"[descripcion]",
+    "sobre_mi":"[descripcion]",
 	"color":"Mi color favorito es: " ,
 	"libro":"Mi libro favorito es: ",
 	"musica":"Mi estilo de musica favorito es: ",
 	"video_juego":"Mi video juego favorito es: ",
-	"sobre_lenguajes":"Lenguajes aprendidos: ",
-	"sobre_mi_email":"Si necesitan comunicarse conmigo pueden escribirme a: [email]",
+	"lenguajes":"Lenguajes de programacion aprendidos: ",
+	"mi_contacto":"Si necesitan comunicarse conmigo pueden escribirme a: [email]",
 	"CI": "Mi cedula de identidad es: ",
-	"mi_genero": "Soy de genero [genero]", 
+	"genero": "Soy de genero: ", 
 	"fecha_nacimiento": "Mi fecha de nacimiento es: "
 }
