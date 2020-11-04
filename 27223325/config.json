@@ -1,0 +1,9 @@
+{
+	"saludo" : "Hola",
+	"color_fav" : "Mi color favorito es:",
+	"libro_fav" : "Mi libro favorito es:",
+	"music_fav" : "Estilo de música preferida es:",
+	"vidgame_fav":"Mis Video juegos favoritos son:",
+	"leg_aprendi":"Lenguajes aprendidos:",
+	"como_comunicarse" : "Si necesitan comunicarse conmigo me pueden escribir a:"
+}
