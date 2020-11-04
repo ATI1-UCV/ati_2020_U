@@ -1,0 +1,14 @@
+{
+	"Configuración":
+	{
+		"saludo": "Hola, [nombre]",
+		"inicio": "Inicio",
+		"color" : "Mi color favorito es: [color]",
+		"libro" : "Mi libro favorito es: [libro]",
+		"musica": "Estilo de musica preferida es: [musica]",
+		"video_juego": "Mis Video juegos favoritos son: [video_juego]",
+		"lenguajes": "Lenguajes aprendidos: [lenguajes]",
+		"saber_mas": "Si necesitan comunicarse conmigo, me pueden escribir a: [email]",
+		"footer": "Copyright 2020 Escuela de computación - ATI. Todos los derechos reservados"
+	}
+}

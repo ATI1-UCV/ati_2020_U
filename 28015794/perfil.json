@@ -1,0 +1,16 @@
+{
+	"Estudiante":
+	{
+		"nombre":"Daniel Berbesi",
+		"descripcion": "Estudiante de la carrera Ciencias de la computacion, preferencia por el back-end, buscando graduarse de la mencion Inteligencia Artificial. Esperando lograr todo esto en el menor tiempo posible.",
+		"color":"Negro",
+		"libro":"Zig Zag",
+		"musica":"Dubstep",
+		"video_juego":["LOL", "Valorant", "CSGO", "..."],
+		"lenguajes":["Assembler", "C", "C++", "Python", "Java", "Prolog", "Haskell", "..."],
+		"email":"berbesidaniel@gmail.com",
+		"CI":28015794,
+		"genero":"masculino",
+		"fecha_nacimiento":"07/06/99"
+	}
+}
