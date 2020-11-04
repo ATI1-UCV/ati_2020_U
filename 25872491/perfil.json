@@ -1,0 +1,13 @@
+{
+	"nombre":"Katherin Mozo",
+	"descripcion":"Soy una estudiante de la carrera licenciatura en computación en la UCV. Me interesan temas como la tecnología, los deportes y las artes.",
+	"color":"azul",
+	"libro":"1984",
+	"musica":"pop-rock",
+	"video_juego":["crash team racing", "TLOU"],
+	"lenguajes":["c++","javascript"],
+	"email":"kathemozo27@gmail.com",
+	"CI":25872491,
+	"genero":"femenino",
+	"fecha_nacimiento":"27-02-1998"
+}

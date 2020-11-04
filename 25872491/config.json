@@ -1,0 +1,11 @@
+{
+	"indicador_inicio":"inicio",
+	"saludo":"Hola [nombre]",
+	"color_fav":"Mi color favorito es:",
+	"libro_fav":"Mi libro favorito es:",
+	"estilo_musica_fav":"Mi estilo de música favorita:",
+	"video_juego_fav":"Video juegos favoritos:",
+	"lenguajes_aprendidos":"Lenguajes aprendidos:",
+	"como_comunicarse":"Si necesitan comunicarse conmigo me pueden escribir a: [email]",
+	"mensaje_footer":"Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados",
+}
