@@ -77,3 +77,59 @@ footer {
   font-size: 9pt;
 }
 
+.busqueda input[type=button] {
+
+  padding: 6px;
+  
+  background: #f5f7f9;
+  
+  border: none;
+  
+  cursor: pointer;
+  
+  color: #86b1ef;
+  
+}
+
+.busqueda input[type=text] {
+
+  padding: 6px;
+  
+  border: none;
+  
+  margin-right: 10px;
+  
+}
+
+.image{
+  padding: 25px 0px 20px 0px;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  margin: 30px;
+  list-style-type:none;
+  background-color: #F0F3F9;
+  text-align: center;
+  box-shadow: 5px 5px gray;
+  color: #86b1ef;
+  font-size: 15px;
+}
+
+#listado{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+img{
+  height: 200px;
+  width: 200px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+#contenedor_lista{
+  align-items: center;
+  display: grid;
+}
+.image:hover{
+  transform: rotate(15deg);
+  background-color: #99c5dd;
+}
+
