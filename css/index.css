@@ -1,0 +1,11 @@
+.square_display_profile{
+	display:inline-block;
+	background-color: grey;
+	text-align: center;
+
+	box-shadow: 11px 11px 11px
+}
+
+.image_in_square{
+
+}
