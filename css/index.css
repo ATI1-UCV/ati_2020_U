@@ -1,0 +1,30 @@
+.perfil{
+	display: inline-block;
+	width:200px;
+	height:250px; 
+	padding-left:50px;
+	padding-top: 25px;
+	background-color: rgb(234,247,245);
+	margin: 20px;
+	box-shadow: 3px 3px #888888;
+}
+
+.perfil:hover{
+	animation-name: rotacion;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.imagen_perfil{
+	width: 150px;
+	height: 175px;
+}
+ul li p{
+	font-size: 115%;
+	color: rgb(102,165,215);
+}
+
+@keyframes rotacion{
+	0%	 {transform: rotate(); background-color: rgb(234,247,245);	width:200px; height:250px; }
+	100% {transform: rotate(5deg); background-color:#99c5dd; width:210px; height:260px; padding-left:60px; padding-top: 35px;}
+}

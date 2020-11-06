@@ -8,9 +8,9 @@
 html,body { width: 100%; height: 100%; }
 
 header {
-   height: 62px;
-	 top: 0;
-   position: relative;
+  height: 62px;
+	top: 0;
+  position: relative;
 	background-color:#86b1ef;			
 }
 
@@ -41,7 +41,7 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
 .logo {
 	margin-left: 2px;
 	font-size: 27pt;
-   font-family: helvetica;
+  font-family: helvetica;
 	width: 30%;
 }
 
@@ -77,3 +77,22 @@ footer {
   font-size: 9pt;
 }
 
+.busqueda input[type=button] {
+
+padding: 6px;
+
+background: #f5f7f9;
+
+border: none;
+
+cursor: pointer;
+
+color: #86b1ef;
+
+}
+
+.busqueda input[type=text] {
+padding: 6px;
+border: none;
+margin-right: 10px;
+}
