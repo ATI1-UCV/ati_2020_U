@@ -4,24 +4,65 @@
 			johan velasquez
 		</title>
 		<meta charset="UTF-8">
-		<link rel="icon" href="favicon.ico" type="image/ico" />
+		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/ico" />
+		<style>
+			#name{
+				font-size: xx-large; color: rgb(255,0,0);
+			}
+			#italic{
+				font-style:italic;
+			}
+			#bold{
+				font-weight:bold;
+			}
+			.imagen{
+				width:15%;
+				margin: inherit;
+				float: left;
+				text-align: right;
+				display: inline-flex;
+			}
+			.imagen img{
+				width: 100%;
+				height: auto;
+				border-top-left-radius: 40% 40%;
+			}
+			.texto{
+				width:75%;
+				margin: inherit;
+				border-width: 1px;
+				border-style: solid;
+				border-color: red;
+				box-shadow: 5px 5px 5px #999;
+				float: left;
+				text-align: left;
+				display: inline-block;
+			}
+			a:link{
+				color:orange;
+			}
+			a:visited{
+				color:red;
+			}
+		</style>
 	</head>
 	<body>
-		<img src="21759251.jpg" alt="foto de Johan Velasquez" align="left"width ="20%"> 
-		<p><font size="5" color= "red" >mi nombre es Johan velasquez </font></p>
-		<p>
-			<i> estatura media, piel oscura y pelo negro</i>
-		</p>
-		<ol>
-			<li> mi color favorito es: negro</li>
-			<li> mi libro favorito es: El Señor de los anillos</li>
-			<li> mi estilo de música preferida es: Rock</li>
-		</ol>
-		<p>
-			<b> lenguages aprendidos:C, Jaba, Swift </b>
-		</P>
-		<p>
-			si necesitan comunicarse conmigo, me pueden escribir a:
-			<a href="mailto:johanvelasquezpiedrahita@gmail.com"> mi correo electrónico </a>	
-		</p>
-			</body>
+		<div class="imagen">
+			<img src="21759251.jpg" alt="foto de Johan">
+		</div>
+		<div class="texto">
+			<p id="name">Mi Nombre es Johan velasquez </p>
+			<p id="italic">Estatura media, piel oscura y pelo negro</p>
+			<ol>
+				<li> Mi color favorito es: negro</li>
+				<li> Mi libro favorito es: El Señor de los anillos</li>
+				<li> Mi estilo de música preferida es: Rock</li>
+			</ol>
+			<p id="bold"> Lenguages aprendidos: C, Java, Swift </p>
+			<p>
+				Si necesitan comunicarse conmigo, me pueden escribir a:
+				<a href="mailto:johanvelasquezpiedrahita@gmail.com"> mi correo electrónico </a>
+			</p>
+		</div>
+	</body>
+</html>
