@@ -1,0 +1,24 @@
+section ul { 
+   display: grid; 
+   grid-template-columns: repeat(4, minmax(150px,1fr));
+   gap: 10px 10px;
+}
+
+section ul li{
+  background-color:#f5f7f9; 
+  padding: 10px; 
+  text-align: center; 
+  border-right: grey solid 1px; 
+  border-bottom: grey solid 1px; 
+  list-style-type: none;
+}
+
+section ul li img {
+	min-width:130px; 
+  height:130px;	
+}
+
+section ul li:hover {
+    background-color: #99c5dd;
+    transform: scale(1.1) rotate(3deg);
+}
