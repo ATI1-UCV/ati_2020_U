@@ -1,0 +1,41 @@
+.dum{
+  background-color:hsl(180, 50%, 96%);     
+  margin: 8px;
+  width: 150px;
+  height: 150px;
+  box-shadow: 1px 1px #CFCDC8;
+
+}
+
+.texto{
+  margin-top: -10px;
+  text-align: center;
+  display: block;
+  color: blue;
+
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80%;
+  width: auto;
+
+}
+
+.dum:hover{
+  animation: myMove 0.5s forwards;
+
+}
+
+@keyframes myMove{
+  0% {
+    background-color:hsl(180, 50%, 96%);   
+  }
+  100% {
+    background-color: #99c5dd;
+    transform: rotate(5deg) scale(1.05);
+  }
+
+}
