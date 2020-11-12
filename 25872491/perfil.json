@@ -1,4 +1,4 @@
-{
+let perfil =  {
 	"nombre":"Katherin Mozo",
 	"descripcion":"Soy una estudiante de la carrera licenciatura en computación en la UCV. Me interesan temas como la tecnología, los deportes y las artes.",
 	"color":"azul",
@@ -7,7 +7,8 @@
 	"video_juego":["crash team racing", "TLOU"],
 	"lenguajes":["c++","javascript"],
 	"email":"kathemozo27@gmail.com",
-	"CI":25872491,
+	"ci":"25872491",
 	"genero":"femenino",
-	"fecha_nacimiento":"27-02-1998"
+	"fecha_nacimiento":"27/02/1998",
+	"imagen": "25872491.PNG"
 }
