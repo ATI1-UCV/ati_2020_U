@@ -32,3 +32,12 @@
 td{
     font-family: 'Times New Roman', Times, serif;
 }
+.aligned{
+    text-align: left;
+    align-content: left;
+}
+.aligned-r{
+    text-align: right;
+    align-self: right;
+    align-content: right;
+}
