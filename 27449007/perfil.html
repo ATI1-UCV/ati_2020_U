@@ -22,12 +22,12 @@
 			</nav> 
 	    </header>
 	    <section id="general_content">
-	       
+			<section id="photo_content">
 				<img  align="left" id="photo" class="content">
-			
-			<section align="right" >   
+			</section>
+			<section id="table_content" align="right" >   
 
-				<table id="content_1" class="content">
+				<table id="table" class="content">
 
 				</table>
 			</section>
@@ -41,26 +41,26 @@
 		var perfil_j = JSON.parse(JSON.stringify(perfil));
 		console.log(perfil_j.nombre);
 		//JSON en la tabla
-			$("#content_1").append('<tr>' + 
+			$("#table").append('<tr>' + 
 			'<td colspan="2" class="aligned" id="name">' + perfil_j.nombre + '</td>'+'</tr>');
-			$("#content_1").append('<tr>' + 
+			$("#table").append('<tr>' + 
 			'<td colspan="2" class="aligned" id="description">' + perfil_j.descripcion + '</td>'+'</tr>');
-			$("#content_1").append('<tr>' + 
+			$("#table").append('<tr>' + 
 			'<td class="aligned">' + config_j.color + '</td>'+
 			'<td class="aligned">' + perfil_j.color + '</td>'+'</tr>');
-			$("#content_1").append('<tr>' + 
+			$("#table").append('<tr>' + 
 			'<td class="aligned">' + config_j.libro + '</td>'+
 			'<td class="aligned">' + perfil_j.libro + '</td>'+'</tr>');
-			$("#content_1").append('<tr>' + 
+			$("#table").append('<tr>' + 
 			'<td class="aligned">' + config_j.musica + '</td>'+
 			'<td class="aligned">' + perfil_j.musica+ '</td>'+'</tr>');
-			$("#content_1").append('<tr>' + 
+			$("#table").append('<tr>' + 
 			'<td class="aligned">' + config_j.video_juego + '</td>'+
 			'<td class="aligned">' + perfil_j.video_juego + '</td>'+'</tr>');
-			$("#content_1").append('<tr>' + 
+			$("#table").append('<tr>' + 
 			'<td class="aligned lp">' + config_j.lenguajes + '</td>'+
 			'<td class="aligned lp">' + perfil_j.lenguajes + '</td>'+'</tr>');
-			$("#content_1").append('<tr>' + 
+			$("#table").append('<tr>' + 
 			'<td class="aligned">' + (config_j.email).replace('[email]','') + '<a href="https://www.aaronmorillo7@gmail.com" id="email">' + perfil_j.email +'</a>' + '</td>'+ '</tr>');
 			//JSON en el footer
 			$("#footer").append(config_j.copyRight);
