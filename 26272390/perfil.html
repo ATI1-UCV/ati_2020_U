@@ -6,15 +6,17 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
+		<script src="config.json"></script>
+		<script src="perfil.json"></script>
 		<title>Daniel Vieira</title>
 	</head>
 	<body>
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2020-U</li>
-					<li class="saludo">Hola, Daniel Vieira</li>
-					<li class="busqueda"><a href="../index.html">Inicio</a></li>
+					<li id="sitio" class="logo"></li>
+					<li id="saludo" class="saludo"></li>
+					<li id="inicio" class="busqueda"><a href="../index.html"></a></li>
 				</ul>	
 			</nav> 
 	    </header>
@@ -22,51 +24,35 @@
 			<table>
 				<tr>
 					<td>
-						<img src="26272390.jpg">
+						<img id="imagen">
 					</td>
 					<td class="shadow">
-						<h1>
-							Daniel Vieira
-						</h1>
-						<p class="cursiva">
-							Soy estudiante de computación de la Universidad Central de Venezuela. Estoy interesado en la rama de Inteligencia Artificial 
-							debido a eso he realizado diversos cursos respecto a eso. En mi tiempo libre me gusta ir a jugar fútbol.
-						</p>
+						<h1 id="nombre"></h1>
+						<p id="descripcion" class="cursiva"></p>
 						<table>
 							<tr>
 								<td>
-									<p>
-										Mi color favorito es: <br/>
-										Mi libro favorito es:  <br/>
-										Mi estilo de música preferida: <br/>
-										Video juego favoritos: <br/>
-									</p>
+									<p id="column1"> </p>
 								</td>
 								<td>
-									<p>
-										azul <br>
-										Las Crónicas de Narnia <br>
-										Reggaeton <br>
-										World of Warcraft <br>
-									</p>
+									<p id="column2"> </p>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<p class="bold" >Lenguajes aprendidos: </p>
+									<p id="lenguajes" class="bold" ></p>
 								</td>
 								<td>
-									<p class="bold">C, C++, C#, Python</p>
+									<p id="mis_lenguajes" class="bold"></p>
 								</td>
 							</tr>
 						</table>
-						<p>Si necesitan comunicarse conmigo me pueden escribir a <a href="mailto:danielvieiucv@gmail.com">danielvieiucv@gmail.com</a>
+						<p id="contacto"></p>
 					</td>
 				</tr>
 			</table>
 	    </section>
-	    <footer>
-	        Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados
-	    </footer>
+	    <footer id="footer"/>
 	</body>
+	<script src="script.js"></script>
 </html>
