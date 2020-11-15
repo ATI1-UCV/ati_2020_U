@@ -1,4 +1,4 @@
-.foto-perfil{
+.foto-perfil {
     float: left;
     width: 25%;
     margin-right: 2%;
@@ -7,30 +7,31 @@
     margin-bottom: 0;
 }
 
-img{
+img {
     border-top-left-radius: 3em;
     width: 100%;
 }
 
-h1{
-    color:purple; 
-    font-size:80px; 
+h1 {
+    color: purple;
+    font-size: 80px;
     margin-top: 0;
     margin-bottom: 2%;
 }
-.description{
-    font-family:'Century Gothic'; 
+
+.description {
+    font-family: 'Century Gothic';
     text-align: justify;
     font-style: italic;
     margin-bottom: 2%;
     line-height: 1.5;
 }
 
-span{
+span {
     font-weight: bold;
 }
 
-aside{
+aside {
     margin-left: 26%;
     border: 0.1em solid rgb(20, 0, 48);
     box-shadow: 0.5em 0.5em 0.5em rgb(20, 0, 48);
@@ -38,15 +39,15 @@ aside{
     height: 27em;
 }
 
-a{
+a {
     color: orange;
     text-decoration: none;
 }
 
-a:visited{
+a:visited {
     color: red;
 }
 
-table{
+table {
     margin-bottom: 3%;
 }

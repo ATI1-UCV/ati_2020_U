@@ -1,4 +1,4 @@
-{
+let perfil = {
     "nombre": "Gabriela Ustariz",
     "descripcion": "Soy estudiante de Licenciatura en Computación de la Universidad Central de Venezuela. Curso 5to semestre de la carrera y pretendo desenvolverme en la mención ATI que ofrece la misma, puesto que me parece muy interesante el desarrollo web y todo lo relacionado.",
     "color": "Violeta",
@@ -7,7 +7,8 @@
     "video_juego": ["Beyond Two Souls", "Limbo", "Among Us"],
     "lenguajes": ["C++", "Python", "C", "Haskell", "Prolog"],
     "email": "gabrielaustariz@gmail.com",
-    "CI": "26956071",
+    "ci": "26956071",
     "genero": "femenino",
-    "fecha_nacimiento": "27/12/1999"
+    "fecha_nacimiento": "27/12/1999",
+    "imagen": "26956071.jpg"
 }
