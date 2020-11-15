@@ -1,11 +1,14 @@
-{
-	"saludo":"Hola, [nombre]",
-	"boton_inicio":"Inicio",
-	"color_favorito":"Mi color favorito es:",
-	"libro_favorito":"Mi libro favorito es:",
-	"musica_favorita":"Estilo de música preferida es:",
-	"video_juegos_favoritos":"Mis Video juegos favoritos son:",
-	"lenguajes_aprendidos":"Lenguajes aprendidos:",
-	"como_comunicarse":"Lenguajes aprendidos:Si necesitan comunicarse conmigo me pueden escribir a [email]",
-	"footer_contenido":"Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados"
+let config = {
+	"sitio": ["ATI","[UCV]","2020-U"],
+	"home": "Inicio",
+	"saludo": "Hola",
+	"copyRight":"Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados",
+	"nombre":"",
+	"descripcion":"",
+	"color":"Mi color favorito es",
+	"libro":"Mi libro favorito es",
+	"musica":"Mi estilo de música preferida",
+	"video_juego":"Vídeo juegos favoritos",
+	"lenguajes":"Lenguajes aprendidos",
+	"email":"Si necesitan comunicarse conmigo me pueden escribir a [email]"
 }

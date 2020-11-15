@@ -28,3 +28,7 @@ a{
 a:visited  {
   color: green !important;
 }
+
+tbody tr:last-child td{
+	font-weight: 700
+}

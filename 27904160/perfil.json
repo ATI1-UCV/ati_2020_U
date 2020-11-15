@@ -1,13 +1,14 @@
-{
+let perfil = {	
 	"nombre":"Jose Gregorio Hernandez",
-	"descripcion":"Soy estudiante de computacion del 6to semestre de la UCV, bachiller desde el 2015 y actualmente me desempeño como desarrollador frontend con react para una empresa llamada JaliSoft",
+	"descripcion":"Soy estudiante de computacion del 6to semestre de la UCV, bachiller desde el 2015 y actualmente me desempeño como desarrollador frontend con react para una empresa llamada JaliSoft.",
 	"color":"verde",
 	"libro":"El Psicoanalista",
 	"musica":"Cualquiera menos vallenato",
-	"video_juego":"Odio League of Legends",
+	"video_juego": ["Odio League of Legends"],
 	"lenguajes":["Python","JavaScript","C++","Java"],
 	"email":"joseghi.26@gmail.com",
-	"CI":"27904160",
-	"genero":"masculino",
-	"fecha_nacimiento":"26/08/1998"
+	"ci":"27904160",
+	"genero": "masculino",
+	"fecha_nacimiento":"26/08/1998",
+	"imagen": "27904160.jpg"
 }
