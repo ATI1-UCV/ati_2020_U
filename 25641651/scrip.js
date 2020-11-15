@@ -1,0 +1,44 @@
+let logo = document.getElementsByClassName('logo')[0]//sitio
+let inicio = document.getElementsByClassName("busqueda")[0]//home
+let saludo = document.getElementsByClassName("saludo")[0]//nombre
+let tabla = document.getElementsByClassName('TABLA')[0]
+let tabla_color = tabla.getElementsByTagName("tr")[0].getElementsByTagName("td")[0]//color
+let tabla_libro = tabla.getElementsByTagName("tr")[1].getElementsByTagName("td")[0]//libro
+let tabla_musica = tabla.getElementsByTagName("tr")[2].getElementsByTagName("td")[0]//musica
+let tabla_videojuego = tabla.getElementsByTagName("tr")[3].getElementsByTagName("td")[0]//videojuego
+let tabla_lenguaje = tabla.getElementsByTagName("tr")[4].getElementsByTagName("td")[0]//lenguajes
+let email = tabla.nextSibling
+let copyright = document.getElementsByTagName("footer")[0]
+
+var s_logo=""
+s_logo = config.sitio[0] + "<strong>" + config.sitio[1] + "</strong>" + config.sitio[2]
+logo.innerHTML = s_logo
+inicio.innerText = config["home"]
+saludo.innerText = config["nombre"]
+tabla_color.innerText = config["color"]
+tabla_libro.innerText = config["libro"]
+tabla_musica.innerText = config["musica"]
+tabla_videojuego.innerText = config["videojuego"]
+tabla_lenguaje.innerText = config["lenguajes"]
+email.innerText = config["email"]
+copyright.innerText = config["copyRight"]
+
+let nombre = document.getElementById("texto1")
+let descripcion = document.getElementById("texto2")
+let tabla2 = tabla
+let tabla_color2 = tabla2.getElementsByTagName("tr")[0].getElementsByTagName("td")[1]//color
+let tabla_libro2 = tabla2.getElementsByTagName("tr")[1].getElementsByTagName("td")[1]//libro
+let tabla_musica2 = tabla2.getElementsByTagName("tr")[2].getElementsByTagName("td")[1]//musica
+let tabla_videojuego2 = tabla2.getElementsByTagName("tr")[3].getElementsByTagName("td")[1]//videojuego
+let tabla_lenguaje2 = tabla2.getElementsByTagName("tr")[4].getElementsByTagName("td")[1]//lenguajes
+let div = document.getElementsByClassName("grid-item-marco")[0]
+let email2 = div.getElementsByTagName("p")[0].getElementsByTagName("span")
+
+nombre.innerText = perfil["nombre"]
+descripcion.innerText = perfil["descripcion"]
+tabla_color2.innerText = perfil["color"]
+tabla_libro2.innerText = perfil["libro"]
+tabla_musica2.innerText = perfil["musica"]
+tabla_videojuego2.innerText = perfil["covideo_juegolor"]
+tabla_lenguaje2.innerText = perfil["lenguajes"]
+email2.innerText = perfil["email"]
