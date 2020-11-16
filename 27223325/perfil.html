@@ -4,8 +4,14 @@
 	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta charset="UTF-8">
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
+
+		<script src="config.json" type="text/javascript"></script>
+		<script src="perfil.json" type="text/javascript"></script>
+		<script src="perfil.js" type="text/javascript"></script>
+
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
+		
 		<title>Cesar Salazar</title>
 	</head>
 
@@ -13,9 +19,9 @@
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2020-U</li>
-					<li class="saludo">Hola, Cesar Salazar</li>
-					<li class="busqueda"><a href="../index.html">Inicio</a></li>
+					<li id="logo" class="logo"></li>
+					<li id="saludo" class="saludo"></li>
+					<li id="busqueda" class="busqueda"></li>
 				</ul>	
 			</nav> 
 	    </header>
@@ -23,33 +29,19 @@
 	    <section>
 	       
 			<div class="image_text_next">
-				<img src="27223325.jpeg" class="top_left_border" alt="Cesar Salazar Foto" width="200" height="300">
+				<img id="profile_photo" class="top_left_border">
 			</div>
 
 			<div class="info_card">
 
-				<h1 id="name_person">Cesar Salazar</h1>
+				<h1 id="name_person"></h1>
 
-				<p id="description_person">
-					<i>
-						Soy Estudiante de computacion en la Universidad Central de Venezuela,aprendiendo <br>
-						sobre el Web design y las Bases de datos; aunque el area de Redes tambien me atrae <br>
-						mucho.
-					</i>
-				</p>
+				<p id="description_person"></p>
 
 
-				<p>
-				Mi color favorito es: Rosado barbie <br>
-				Mi libro favorito es: La culpa es de la Vaca <br>
-				Estilo de música preferida es: Vallenato <br>
-				Mis Video juegos favoritos son: Among Us <br>
-				Lenguajes aprendidos: <b>Python, C++ , SQL</b>
-				</p>
+				<p id="like_person"></p>
 				
-				<p>
-					Si necesitan comunicarse conmigo me pueden escribir a: <a href = "mailto: bitemecesar@gmail.com">bitemecesar@gmail.com</a>
-				</p>
+				<p id="contact_person"></p>
 			</div>
 			 
 	    </section>

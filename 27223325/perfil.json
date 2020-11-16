@@ -1,13 +1,14 @@
-{
-	"nombre": "Cesar Salazar",
-	"descripción": "Soy Estudiante de computacion en la Universidad Central de Venezuela,aprendiendo sobre el Web design y las Bases de datos; aunque el area de Redes tambien me atrae mucho.",
-	"color": "Rosado barbie",
-	"libro": "La culpa es de la Vaca",
-	"música": "Vallenato",
-	"video_juego": "Among Us",
-	"lenguajes": ["Python", "C++" , "SQL"],
-	"email": "bitemecesar@gmail.com",
-	"CI": 27223325,
-	"género": "masculino",
-	"fecha_nacimiento": "16/03/1999"
+let perfil = {	
+	"nombre":"Cesar Salazar",
+	"descripcion": "Soy Estudiante de computacion en la Universidad Central de Venezuela,aprendiendo sobre el Web design y las Bases de datos; aunque el area de Redes tambien me atrae mucho.",
+	"color":"Rosado barbie",
+	"libro":"La culpa es de la Vaca",
+	"musica":"Vallenato",
+	"video_juego": ["Among Us"],
+	"lenguajes":["Python", "C++" , "SQL"],
+	"email":"bitemecesar@gmail.com",
+	"ci":"27223325",
+	"genero": "masculino",
+	"fecha_nacimiento":"16/03/1999",
+	"imagen": "27223325.jpeg"
 }
