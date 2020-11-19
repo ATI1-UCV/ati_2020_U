@@ -1,0 +1,40 @@
+section ul li {
+ display:inline;
+ float:left;
+ background-color: #d3e6f0;
+ padding: 20px;
+ width: 170px;
+ height:170px;
+ margin: 10px;
+text-align: center; 
+border-right: #6b6f75 solid 1px; 
+border-bottom: #6b6f75 solid 1px; 
+box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+	overflow: hidden; 
+}
+
+section ul li img {
+	width: 140px;
+	height: 140px;
+	object-fit: contain; 
+
+}
+
+section ul li:hover{
+	background-color: #99c5dd; 
+	transform:scale(1.05) rotate(5deg);
+	
+
+}
+
+section ul li a {
+	font-family:arial;
+	font-size:10pt;
+	color: #45b3ed;
+	text-decoration: none; 
+}
+
+
+
+
+
