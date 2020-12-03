@@ -46,3 +46,6 @@ td{
     grid-area: table_content;
     margin-left: 0px;
 }
+span{
+    font-size: small;
+}
