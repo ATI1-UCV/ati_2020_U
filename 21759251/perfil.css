@@ -20,7 +20,7 @@
 	border-top-left-radius: 40% 40%;
 }
 .texto{
-	width:75%;
+	width:80%;
 	margin: inherit;
 	border-width: 1px;
 	border-style: solid;
@@ -35,4 +35,7 @@ a:link{
 }
 a:visited{
 	color:red;
+}
+section{
+display:flex
 }
