@@ -1,14 +1,15 @@
 section{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(3, 170px);
+	grid-template-rows: repeat(3, 200px);
 	justify-items: center;
 }
 
 section ul{
 	border-bottom: 2px #565656 solid;
 	border-right: 2px #565656 solid;
-	width: 200px;
+	width: 230px;
+	height: 180px;
 	margin: 5px;
 	list-style:none;
 }
