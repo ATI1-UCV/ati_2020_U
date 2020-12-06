@@ -1,7 +1,7 @@
   document.addEventListener("DOMContentLoaded", function(event) {
     setConfig()
     setListado()
-    document.getElementsByClassName('busqueda')[0].addEventListener('change',filtrarLista)
+    document.getElementById('input_buscar').addEventListener('keydown',filtrarLista)
     document.getElementById('formulario').addEventListener('submit',(e)=>{e.preventDefault()})
   });
 
@@ -31,7 +31,9 @@ function setListado(){
 
 function filtrarLista(e){
 	let htmlListado=""
-	let text=e.target.value.toString().toLowerCase()
+	console.log(e)
+	let text=document.getElementById('input_buscar').value.toString().toLowerCase()
+	console.log(text)
 	listado.forEach(reg=>{
 		if(reg.nombre.toString().toLowerCase().includes(text) || reg.ci.toString().toLowerCase().includes(text)){		
 			htmlListado=htmlListado+`
