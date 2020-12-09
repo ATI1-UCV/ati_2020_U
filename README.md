@@ -42,4 +42,8 @@ Luego se mantiene la manera de navegar, pero el diseño es mejorado:
 
 <h3>Página de Perfil:</h3>
 
+<<<<<<< HEAD
 <img src="/README_files/verPerfil2.png" width="400" />
+=======
+<img src="/README_files/verPerfil2.png" width="400" />
+>>>>>>> origin/reto12
