@@ -44,3 +44,18 @@ Luego se mantiene la manera de navegar, pero el diseño es mejorado:
 <h3>Página de Perfil:</h3>
 
 <img src="/README_files/verPerfil2.png" width="400" />
+
+# Captures del lab
+
+### Vista de los comandos en la shell
+<img src="/README_files/terminal.png" width="400" />
+
+### Vista de la pagina resultante
+<img src="/README_files/all.png" width="400" />
+
+### Vista de la pagina con el filtro 'v'
+<img src="/README_files/filter.png" width="400" />
+
+### Vista de la pagina con el error de query 'xx'
+<img src="/README_files/error.png" width="400" />
+
