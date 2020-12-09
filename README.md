@@ -4,6 +4,7 @@ Proyecto del semestre 2020_U
 ## Content
 
 Este proyecto es para practicar paso a paso todo el contenido que se estudia en la primera parte de ATI. 
+=======
 Es una aplicación web muy sencilla que muestra el listado de estudiantes y el perfil de cada uno de ellos haciendo clic sobre el nombre.
 El código de este proyecto va evolucionando y existe una versión (una rama) por estudiante y reto. 
 Es un proyecto muy sencillo con solo dos casos de uso:
