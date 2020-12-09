@@ -3,7 +3,11 @@ Proyecto del semestre 2020_U
 
 ## Content
 
+<<<<<<< HEAD
 Este proyecto es para practicar paso a paso todo el contenido que se estudia en la primera parte de ATI. 
+=======
+Este proyecto es para practivar paso a paso todo el contenido que se estudia en la primera parte de ATI. 
+>>>>>>> origin/reto12
 Es una aplicación web muy sencilla que muestra el listado de estudiantes y el perfil de cada uno de ellos haciendo clic sobre el nombre.
 El código de este proyecto va evolucionando y existe una versión (una rama) por estudiante y reto. 
 Es un proyecto muy sencillo con solo dos casos de uso:
@@ -42,4 +46,8 @@ Luego se mantiene la manera de navegar, pero el diseño es mejorado:
 
 <h3>Página de Perfil:</h3>
 
+<<<<<<< HEAD
 <img src="/README_files/verPerfil2.png" width="400" />
+=======
+<img src="/README_files/verPerfil2.png" width="400" />
+>>>>>>> origin/reto12
