@@ -39,3 +39,6 @@ a:visited{
 section{
 display:flex
 }
+li{
+	list-style-position:inside;
+}
