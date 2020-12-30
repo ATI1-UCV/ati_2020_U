@@ -58,5 +58,7 @@ a:active {
 }
 
 img.css_img {
-  border-top-left-radius: 200px 100px;
+	border-radius: 60px 0px 0px 0px;
+  
+	width: 15%;
 }
