@@ -6,15 +6,19 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
-		<title>Victor Tafuri</title>
+		<script type="text/javascript" src ="config.json"></script>
+		<script type="text/javascript" src ="perfil.json"></script>
+		<script type="text/javascript" src ="codigo.js"></script>
+		
+
 	</head>
-	<body>
+	<body onload="llenar()">
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2020-U</li>
-					<li class="saludo">Hola, Victor Tafuri</li>
-					<li class="busqueda"><a href="../index.html">Inicio</a></li>
+					<li class="logo" id = "logo"></li>
+					<li class="saludo" id = "saludo"></li>
+					<li class="busqueda" id = "busqueda"></li>
 				</ul>	
 			</nav> 
 	    </header>
@@ -24,22 +28,27 @@
 	<table>
 	<tr>
 		<td>
-			<img id="imagen"  src ="25504486.jpeg" alt ="imagen">
+			<img id="imagen"  src ="" alt ="imagen">
 		</td>
 		<td id = "td_1">
-			<h1>Victor Daniel Tafuri Vidal</h1>
-			<p id ="p_1"> <i>Estudiante de 6to Semestre en la Escuela de Computacion de la UCV, Supervisor Departamento de NEXGO de DISGLOBAL, Auxiliar Docente del Laboratorio de Postgrado en la Facultad de Ciencias de la UCV Segunda Linea del Equipo de Rugby UCVRFC</i> </p>
-			<p> Mi Color Favorito es:	Azul </p> 
-			<p> Mi Libro Favorito es:	Tormenta de Espadas     </p>
-			<p> Estilo de musica preferida es:	Cualquiera     </p>
-			<p> Mis Video juegos Favoritos son:	the last of us </p>
-			<p> <b>Lenguajes Aprendidios: 	c++,java </b></p>
-			<p>Si necesitan comunicarse conmigo me pueden escribir a: <a href = "mailto: victortafuri2@gmail.com">victortafuri2@gmail.com</a></p>
+			<table>
+				<tr><td><h1 id = "h_1" > </h1><tr><td>
+				<tr><td><p id ="p_1"> <i id = "descripcion"></i> </p><tr><td>
+					<table>
+			<tr><td id = "color_fav"></td><td id = "color"></td></tr> 
+			<tr><td id = "libro_fav"></td><td id = "libro"></td></tr> 
+			<tr><td id = "musica_fav"></td><td id = "musica"></td></tr> 
+			<tr><td id = "videojuego_fav"></td><td id = "videojuego"></td></tr>
+			<tr><td ><b id = "lenguajes_fav" ></b></td><td><b id = "lenguajes">></b></td></tr>  
+			<tr><td id = "correo"></tr></td >
+		</table>
+
+			
 	</tr>	
 	</table> 
 	    </section>
-	    <footer>
-	        Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados
+	    <footer id ="Footer">
+	        
 	    </footer>
 	</body>
 </html>

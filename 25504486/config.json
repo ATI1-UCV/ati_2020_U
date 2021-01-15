@@ -1,7 +1,8 @@
-{
-
-	
-	"Bienvenida" : "Hola, [nombre]",
+let config = {
+	"sitio" : ["ATI", "[UCV]", "2020-U"],
+	"Bienvenida" : "Hola, Victor Tafuri",
+	"home" : "Hola",
+	"copyRight" : "Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados",
 	"Busqueda" : "Inicio",
 	"nombre" : "",
 	"descripcion" : "",
@@ -9,7 +10,7 @@
 	"libro" : "Mi Libro favorito es: ",
 	"musica" :  "Mi Estilo de Musica preferida es: ",
 	"video_juego" : "Mis Video juegos Favoritos son:",
-	"lenguajes" : "Lenguajes Aprendidios:",
+	"lenguajes" : "Lenguajes Aprendidos:",
 	"email" : "Si necesitan comunicarse conmigo me pueden escribir a: [email] "
 
 }
