@@ -1,0 +1,28 @@
+section ul li { 
+  width:20%;
+  height:200px;
+  padding:20px;
+  margin:10px;
+  border-right: #a5a7aa solid 1px;
+  border-bottom: #a5a7aa solid 1px;
+  display:inline;
+  float: left;
+  background-color:#f5f7f9;
+  text-align: center;
+}
+
+section ul li div div {
+  color: #86b1ef;
+  font-weight: bold;
+}
+
+section ul li div img {
+  object-fit: scale-down;
+  width:80%; 
+  height:180px;	
+}
+
+section ul li:hover {
+  transform:scale(1.02) rotate(4deg);
+  background-color:#99c5dd;
+}
