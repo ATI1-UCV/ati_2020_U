@@ -1,12 +1,14 @@
-{
-  "titulo": "ATI[UCV] 2020-U",
-  "saludo": "Hola, [nombre]",
+let config = {
+  "sitio": ["ATI","[UCV]","2020-U"],
+  "saludo": "Hola",
   "home": "Inicio",
+  "nombre":"",
+	"descripcion":"",
   "color":"Mi color favorito es:",
 	"libro":"Mi libro favorito es:",
   "musica":"Estilo de música preferida es:",
   "video_juego": "Mis Video juegos favoritos son:",
   "lenguajes": "Lenguajes aprendidos:",
-  "como_comunicarse": "Si necesitan comunicarse conmigo me pueden escribir a: [email]",
-  "copyright": "Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados"
+  "email": "Si necesitan comunicarse conmigo me pueden escribir a: [email]",
+  "copyRight": "Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados"
 }

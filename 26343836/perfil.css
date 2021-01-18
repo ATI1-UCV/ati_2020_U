@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 h1 {
   color:orange;
   font-size:300%;
@@ -16,31 +12,57 @@ a:visited {
   color: red;
 }
 
-.column1 {
-  float: left;
-  width: 32%;
-  height: 450px;
-  margin-top: 10px;
+table {
+	width: 100%;
 }
 
-.column2 {
-  float: left;
-  width: 40%;
-  height: 450px;
-  margin-top: 10px;
-  border-style: groove;
-  box-shadow: 1px 10px 10px gray;
+td {
+  vertical-align: top;
 }
 
-.row:after {
-  display: table;
-  clear: both;
+#foto {
+	border: 0px solid black;
+	width: 15%;
+}
+
+#foto img {
+	border-radius: 60px 0px 0px 0px;
+}
+
+#contenido {
+	border: 1px solid black;
+	width: 80px;
+	box-shadow: 5px 5px gray;
+}
+
+#contenido  {
+	border: 1px solid black;
+	padding: 6px;
+}
+
+#nombre {
+	color: orange; 
+	font-family: verdana;
+	font-size: 24pt;
+	margin: 0;
+}
+
+#descripcion {
+	font-family: arial;
+	font-style: italic;
+	margin-top: 3px;
+}
+
+#agenda {
+	border: 0px solid black;
+	padding: 0;
+	width: 80%;
 }
 
 .verdanaFont {
   font-family:verdana;
 }
 
-.rcorners {
-  border-radius: 75px 0px 0px 0px;
+.negrita {
+	font-weight: bold;
 }

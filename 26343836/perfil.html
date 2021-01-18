@@ -7,65 +7,115 @@
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
 		<title>Diego Chacón</title>
+		<script type="text/javascript" src="config.json"></script>
+		<script type="text/javascript" src="perfil.json"></script>
+		<script type="text/javascript">
+			function llenar(){
+				
+				document.title = perfil.nombre;
+				document.getElementById("footer").innerHTML = config.copyRight;
+				
+				document.getElementById("logo").innerHTML = config.sitio[0] + "<span>" + config.sitio[1] +  "</span> " + config.sitio[2];
+				
+				document.getElementById("saludo").innerHTML = config.saludo + ", Diego";
+				document.getElementById("busqueda").innerHTML = "<a href='../index.html'>" + config.home + "</a>";
+				
+				document.getElementById("nombre").innerHTML = perfil.nombre;
+				document.getElementById("descripcion").innerHTML = perfil.descripcion;
+				
+				document.getElementById("imagen").src = perfil.imagen;
+				
+				document.getElementById("color_fav").innerHTML = config.color;
+				document.getElementById("color").innerHTML = perfil.color;
+				document.getElementById("libro_fav").innerHTML = config.libro;
+				document.getElementById("libro").innerHTML = perfil.libro;
+				document.getElementById("musica_fav").innerHTML = config.musica;
+				document.getElementById("musica").innerHTML = perfil.musica;
+				document.getElementById("video_juego_fav").innerHTML = config.video_juego;
+				document.getElementById("video_juego").innerHTML = perfil.video_juego.toString();
+
+				document.getElementById("lenguajes_fav").innerHTML = config.lenguajes;
+				document.getElementById("lenguajes").innerHTML = perfil.lenguajes.toString();
+
+				var correoEnlace = "<a href=\"mailto: [email]\">[email]</a>".replace("[email]", perfil.email).replace("[email]", perfil.email);
+
+				document.getElementById("correo").innerHTML = config.email.replace("[email]", correoEnlace);	
+			}
+		</script>
 	</head>
-	<body>
+	<body onload="llenar()">
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2020-U</li>
-					<li class="saludo">Hola, Diego</li>
-					<li class="busqueda"><a href="../index.html">Inicio</a></li>
+					<li class="logo" id="logo"></li>
+					<li class="saludo" id="saludo"></li>
+					<li class="busqueda" id="busqueda"></li>
 				</ul>	
 			</nav> 
 	    </header>
 	    <section>
 	       
-				<div class="row">
+			<table id="perfil">
 
-					<div class="column1">
-						<img class="rcorners" src="fotoPerfil.jpg" width="400px" height="450px"></img>
-					</div>
-			
-					<div class="column2" >
-						<h1>Diego Chacón</h1>
-			
-						<p class="verdanaFont"> <i>Hola muy buenas, mi nombre es Diego, soy estudiante de Computación de la U.C.V.
-							y desarrollador web en Java con springboot y en Angular. También practico Kung Fu, soy aficionado
-							a las artes marciales, el fútbol y la música. Toco la batería desde los 9 años y me gusta hacer covers de canciones 
-							de metal progresivo.</i>
-						</p>
-			
+				<tr>
+					<td id="foto"><img id="imagen" src="" width="400px" height="450px"></td>
+
+					<td id="contenido">
+
 						<table>
 							<tr>
-								<td>Mi color favorito es:</td>
-								<td>Anaranjado</td>
+								<td>
+									<p id="nombre"></p>
+								</td>
 							</tr>
 							<tr>
-								<td>Mi libro favorito es:</td>
-								<td>Mi jardin</td>
+								<td>
+									<p id="descripcion"></p>
+								</td>
 							</tr>
+
 							<tr>
-								<td>Estilo de música preferida es: </td>
-								<td>Metal progresivo</td>
+								<td>
+									<table id="agenda">
+										<tr>
+											<td id="color_fav"></td>
+											<td id="color"></td>
+										</tr>
+										<tr>
+											<td id="libro_fav"></td>
+											<td id="libro"></td>
+										</tr>
+										<tr>
+											<td id="musica_fav"></td>
+											<td id="musica"></td>
+										</tr>
+										<tr>
+											<td id="video_juego_fav"></td></td>
+											<td id="video_juego"></td></td>
+										</tr>
+										<tr>
+											<td class="negrita" id="lenguajes_fav"></td>
+											<td class="negrita" id="lenguajes"></td>
+										</tr>
+									</table>
+								</td>
 							</tr>
-							<tr>
-								<td>Mis Video juegos favoritos son:</td>
-								<td>Pokemon, FIFA, Call of Duty, Super Smash Bros, Zelda</td>
-							</tr>
-							<tr>
-								<td><b>Lenguajes aprendidos:</b></td>
-								<td><b>Java, Javascript, C++, C</b></td>
-							</tr>
+
+							<tr><td id="correo"></td></tr>
+
 						</table>
-			
-						<p>Si necesitan comunicarse conmigo me pueden escribir a: <a href = "mailto: diegochz98@gmail.com">diegochz98@gmail.com</a></p>
-			
-					</div>
-				</div>
-			 
-	    </section>
-	    <footer>
-	        Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados
+
+
+					</td>
+
+				</tr>
+
+			</table>
+
+			</section>
+
+			<aside></aside>
+	    <footer id="footer">
 	    </footer>
 	</body>
 </html>
