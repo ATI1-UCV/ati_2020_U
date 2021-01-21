@@ -7,38 +7,39 @@
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
 		<title>Johan velasquez</title>
+		<script src="perfil.js" > </script>
+		<script src= "config.js"> </script>
+		<script src="main.js"> </script>
 	</head>
-	<body>
+	<body onload="load()">
 		<header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2020-U</li>
-					<li class="saludo">Hola, Johan Velasquez</li>
-					<li class="busqueda"><a href="../index.html">Inicio</a></li>
-				</ul>	
+					<li class="logo" id= "nombredelsitio"></li>
+					<li class="saludo" id="saludar"></li>
+					<li class="busqueda"><a id="inicio" href="../index.html"></a></li>
+				</ul>
 			</nav> 
 		</header>
 		<section>
-		<div class="imagen">
-			<img src="21759251.jpg" alt="foto de Johan">
+		<div class="imagen" id="foto">
+			
 		</div>
 		<div class="texto">
-			<p id="name">Mi Nombre es Johan velasquez </p>
-			<p id="italic">Estatura media, piel oscura y pelo negro</p>
+			<p id="name">Mi Nombre es  </p>
+			<p id="italic"></p>
 			<ol>
-				<li> Mi color favorito es: negro</li>
-				<li> Mi libro favorito es: El Señor de los anillos</li>
-				<li> Mi estilo de música preferida es: Rock</li>
-			</ol>
-			<p id="bold"> Lenguages aprendidos: C, Java, Swift </p>
-			<p>
-				Si necesitan comunicarse conmigo, me pueden escribir a:
-				<a href="mailto:johanvelasquezpiedrahita@gmail.com"> mi correo electrónico </a>
+				<li id="color"></li>
+				<li id="libro"></li>
+				<li id="musica"></li>
+				<li id="videojuego"></li>
+						</ol>
+			<p id="bold"> Lenguages aprendidos:  </p>
+			<p id="correo">
 			</p>
 		</div>
 	    </section>
-		<footer>
-			Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados
+		<footer id="pie">
 		</footer>
 	</body>
 </html>
