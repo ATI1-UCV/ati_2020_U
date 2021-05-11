@@ -1,21 +1,38 @@
 document.title = `${perfil.nombre}`;
-document.querySelector("img").src = `${perfil.ci}.jpg`;
+// $(document).attr("title", "New Title"); // does not work on IE
 
-document.querySelector(".logo").innerHTML = `${config.sitio[0]} <small>${config.sitio[1]}</small> ${config.sitio[2]}`;
-document.querySelector(".email").innerHTML = config.email.replace('[email]',`<a href = "mailto: ${perfil.email}">${perfil.email}</a>`);
+$("img").attr("src", `${perfil.ci}.jpg`);
 
-putText = (selec, text) => document.querySelector(selec).innerText = text;
+$(".logo").append([
+  `${config.sitio[0]}`,
+  $("<small></small>", { text: `${config.sitio[1]}` }),
+  `${config.sitio[2]}`,
+]);
 
-putText(".saludo",`${config.saludo}, ${perfil.nombre}`);
-putText(".busqueda a",`${config.home}`);
-putText("footer",`${config.copyRight}`);
+$(".email").html(
+  config.email.replace(
+    "[email]",
+    `<a href = "mailto: ${perfil.email}">${perfil.email}</a>`
+  )
+);
 
-putText(".name",`${perfil.nombre}`);
-putText(".desc",`${perfil.descripcion}`);
+putText = (selec, text) => $(selec).text(text);
 
-putTable = elem => {
-	putText(".q-"+elem, config[elem]);
-	putText(".a-"+elem, Array.isArray(perfil[elem])? perfil[elem].join(", ") : perfil[elem]);
+putText(".saludo", `${config.saludo}, ${perfil.nombre}`);
+putText(".busqueda a", `${config.home}`);
+putText("footer", `${config.copyRight}`);
+
+putText(".name", `${perfil.nombre}`);
+putText(".desc", `${perfil.descripcion}`);
+
+putTable = (elem) => {
+  putText(".q-" + elem, config[elem]);
+  putText(
+    ".a-" + elem,
+    Array.isArray(perfil[elem]) ? perfil[elem].join(", ") : perfil[elem]
+  );
 };
 
-["color","libro","musica","video_juego","lenguajes"].forEach(i => putTable(i));
+["color", "libro", "musica", "video_juego", "lenguajes"].forEach((i) =>
+  putTable(i)
+);
