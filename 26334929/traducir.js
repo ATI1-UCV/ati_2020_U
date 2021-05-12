@@ -7,29 +7,35 @@ function renderInner(el, translated){
     // Render normal string
     transStr = translated
   }
-  el.innerHTML = transStr;
+  $(el).html(transStr);
 }
+
 function traducir(traducirStr, type){
   // config and perfil are variables that come from config.json and perfil.json respectively
-  traducirElementos = document.getElementsByClassName(traducirStr);
-  for(const el of traducirElementos){
-    // Select JsonKey
-    const jsonKey = el.dataset.jsonKey;
+  $(traducirStr).each(function (){
+
+    const jsonKey = this.dataset.jsonKey;
+
     if(type === "config"){
-      renderInner(el, config[jsonKey]);
-    }else if(type === "perfil"){
-      renderInner(el, perfil[jsonKey]);
-      
+      renderInner(this, config[jsonKey]);
+    } 
+
+    if(type === "perfil"){
+      renderInner(this, perfil[jsonKey]);
     }
-  }
+
+  });
 }
 
-// Select elements to translate
-traducir("traducir-config", "config");
-traducir("traducir-perfil", "perfil");
+$(document).ready(()=>{
+  // Select elements to translate
+  traducir(".traducir-config", "config");
+  traducir(".traducir-perfil", "perfil");
 
-// Special elements
-// This could have been done in a more atomic way 
-// Having sitio-nombre = ATI, sitio-uni=UCV and so on
+  // Special elements
+  // This could have been done in a more atomic way 
+  // Having sitio-nombre = ATI, sitio-uni=UCV and so on
 
-document.getElementById("especial-logo").innerHTML = `${config.sitio[0]} <small>${config.sitio[1]}</small> ${config.sitio[2]}`;
+  $("#especial-logo").html(`${config.sitio[0]} <small>${config.sitio[1]}</small> ${config.sitio[2]}`);
+
+});
