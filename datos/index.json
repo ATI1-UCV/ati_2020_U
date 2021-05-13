@@ -1,4 +1,4 @@
-[
+listado = [
     {
         "ci": "24463392",
         "imagen": "24463392\/24463392.jpg",
@@ -498,5 +498,10 @@
         "ci": "26396050",
         "imagen": "26396050\/26396050.jpg",
         "nombre": "Daniel Giannotti"
+    },
+    {
+        "ci": "13852255",
+        "imagen": "13852255\/13852255.png",
+        "nombre": "Betty Torres"
     }
 ]
