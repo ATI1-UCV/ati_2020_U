@@ -1,13 +1,14 @@
-const title = document.querySelector('title')
-const logo = document.querySelector('.logo')
-const saludo = document.querySelector('.saludo')
-const busqueda = document.querySelector('.busqueda')
-const nombrePerfil = document.querySelector('#nombre-perfil')
-const descPerfil = document.querySelector('#desc-perfil')
-const tablaPerfil = document.querySelector('#tabla-perfil')
-const contactoPerfil = document.querySelector('#contacto-perfil')
-const footer = document.querySelector('footer')
-const imagenPerfil = document.querySelector('#img-perfil')
+//Variables y selectores
+const title = $('title')
+const logo = $('.logo')
+const saludo = $('.saludo')
+const busqueda = $('.busqueda')
+const nombrePerfil = $('#nombre-perfil')
+const imagenPerfil = $('#img-perfil')
+const descPerfil = $('#desc-perfil')
+const tablaPerfil = $('#tabla-perfil')
+const contactoPerfil = $('#contacto-perfil')
+const footer = $('footer')
 
 let infoTabla = [
 	[config.color,perfil.color],
@@ -17,40 +18,42 @@ let infoTabla = [
 	[config.lenguajes,perfil.lenguajes]
 ]
 
-
 // cambios en perfil.html
-title.innerText = perfil.nombre
+title.text(perfil.nombre)
+
 // header
 let sitio = config.sitio
-logo.innerHTML = `${sitio[0]}<small>${sitio[1]}</small> ${sitio[2]}`
+console.log(sitio)
+logo.html(`${sitio[0]}<small>${sitio[1]}</small> ${sitio[2]}`)
 
-busqueda.innerText = config.home
-saludo.innerText = `${config.saludo}, ${perfil.nombre}`
+busqueda.text(config.home)
+saludo.text(`${config.saludo}, ${perfil.nombre}`)
+
 
 // section-perfil
 // src="25872491.PNG" alt="Katherin Mozo"
-imagenPerfil.setAttribute("src",perfil.imagen)
-imagenPerfil.setAttribute("alt",perfil.nombre) 
-nombrePerfil.innerText = perfil.nombre
-descPerfil.innerHTML = `<em>${perfil.descripcion}</em>`
+imagenPerfil.attr("src",perfil.imagen)
+imagenPerfil.attr("alt",perfil.nombre)
+nombrePerfil.text(perfil.nombre)
+descPerfil.html(`<em>${perfil.descripcion}</em>`)
 
 let tamTabla = 5
 for (let i = 0; i < tamTabla; i++) {
-	const nuevoTR = document.createElement('tr')
-	if(i === tamTabla-1){
-		nuevoTR.innerHTML=`	<td><strong>${infoTabla[i][0]}</strong></td>
-							<td><strong>${infoTabla[i][1]}</strong></td>`
-		tablaPerfil.appendChild(nuevoTR)
-		break
-	}
-	nuevoTR.innerHTML=`	<td>${infoTabla[i][0]}</td>
-						<td>${infoTabla[i][1]}</td>`
-	tablaPerfil.appendChild(nuevoTR)	
+		if(i !== tamTabla-1){
+			tablaPerfil.append(`<tr>
+				<td>${infoTabla[i][0]}</td>
+				<td>${infoTabla[i][1]}</td>
+			</tr>`)	
+		}else{
+			tablaPerfil.append(`<tr>
+				<td><strong>${infoTabla[i][0]}</strong></td>
+				<td><strong>${infoTabla[i][1]}</strong></td>
+			</tr>`)
+		}		
 }
-
+	
 let textContacto = `<a href="mailto:${perfil.email}">${perfil.email}</a>`
 textContacto = config.email.replace('[email]', textContacto)
-contactoPerfil.innerHTML = textContacto
+contactoPerfil.html(textContacto)
 
-
-footer.innerText = config.copyRight
+footer.text(config.copyRight)
