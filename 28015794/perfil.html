@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
 		<script type="text/javascript" src="config.json"></script>
 		<script type="text/javascript" src="perfil.json"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<title>Daniel Berbesi</title>
 		
 
@@ -25,7 +26,6 @@
 		
 		<script>
 
-
 			const header = document.getElementById("myHeader");
 
 			const myNav = document.createElement('nav');
@@ -34,36 +34,38 @@
 
 
 			const myLi1 = document.createElement('li');
-			myLi1.classList.add('logo');
-			myLi1.textContent = config.sitio[0];
+			$(myLi1).text(config.sitio[0]);
+			$(myLi1).addClass('logo');
+
 
 			const mySmall = document.createElement('small');
-			mySmall.textContent = config.sitio[1];
+			$(mySmall).text(config.sitio[1]);
 
-			myLi1.appendChild(mySmall);
+			$(myLi1).append(mySmall);
 
-			myLi1.textContent = myLi1.textContent + ' '+  config.sitio[2];
-			myUl.appendChild(myLi1);
+			$(myLi1).text($(myLi1).text() + ' '+ config.sitio[2]);
+
+			$(myUl).append(myLi1);
 
 
 			const myLi2 = document.createElement('li');
-			myLi2.classList.add('saludo');
-			myLi2.textContent = config.saludo + perfil.nombre;
-			myUl.appendChild(myLi2);
+			$(myLi2).addClass('saludo');
+			$(myLi2).text(config.saludo + perfil.nombre);
+			$(myUl).append(myLi2);
 
 			const myLi3 = document.createElement('li');
-			myLi3.classList.add('busqueda');
+			$(myLi3).addClass('busqueda');
 
 			const myA = document.createElement('a');
-			myA.href = "perfil.html";
-			myA.textContent = config.inicio;
-			myLi3.appendChild(myA);
+			$(myA).attr("href", "perfil.html");
+			$(myA).text(config.inicio);
+			$(myLi3).append(myA);
 			
-			myUl.appendChild(myLi3);
+			$(myUl).append(myLi3);
 
-			header.appendChild(myNav);
+			$(header).append(myNav);
 
-			myNav.appendChild(myUl);			
+			$(myNav).append(myUl);		
 
 
 
@@ -72,9 +74,9 @@
 
 			const myImg = document.createElement('img');
 			myImg.id = "im";
-			myImg.src = "28015794.jpg";
+			$(myImg).attr("src", "28015794.jpg");
 
-			section.appendChild(myImg);
+			$(section).append(myImg);
 			
 
 			const myDiv = document.createElement('div');
@@ -83,70 +85,71 @@
 
 			const myP = document.createElement('p');
 			myP.id = "primero";
-			myP.textContent = perfil.nombre;
 
-			myDiv.appendChild(myP);
+			$(myP).text(perfil.nombre);
+			$(myDiv).append(myP);
 
-			myDiv.appendChild(document.createElement('br'));
+			$(myDiv).append(document.createElement('br'));
 
 			
 			const myI = document.createElement('i');
 			myI.id = "segundo";
-			myI.textContent = perfil.descripcion;
+			$(myI).text(perfil.descripcion);
 
-			myDiv.appendChild(myI);
+			$(myDiv).append(myI);
 
 
 			const myP2 = document.createElement('p');
-			myP2.classList.add('tercero');
 
-			myP2.textContent = config.color + perfil.color;
-			myDiv.appendChild(myP2);
-			myDiv.appendChild(document.createElement('br'));
+			$(myP2).addClass('tercero');
+
+			$(myP2).text(config.color + perfil.color);
+			$(myDiv).append(myP2);
+			$(myDiv).append(document.createElement('br'));
 
 
 			const myP3 = document.createElement('p');
-			myP3.classList.add('tercero');
+			$(myP3).addClass('tercero');
 
-			myP3.textContent = config.libro + perfil.libro;
-			myDiv.appendChild(myP3);
-			myDiv.appendChild(document.createElement('br'));
+			$(myP3).text(config.libro + perfil.libro);
+			$(myDiv).append(myP3);
+			$(myDiv).append(document.createElement('br'));
 
 
 			const myP4 = document.createElement('p');
-			myP4.classList.add('tercero');
+			$(myP4).addClass('tercero');
 
-			myP4.textContent = config.video_juego + perfil.video_juego;
-			myDiv.appendChild(myP4);
-			myDiv.appendChild(document.createElement('br'));
+			$(myP4).text(config.video_juego + perfil.video_juego);
+			$(myDiv).append(myP4);
+			$(myDiv).append(document.createElement('br'));
 
 
 			const myP5 = document.createElement('p');
-			myP5.classList.add('tercero', 'extra');
+			$(myP5).addClass('tercero', 'extra');
 
-			myP5.textContent = config.lenguajes + perfil.lenguajes;
-			myDiv.appendChild(myP5);
-			myDiv.appendChild(document.createElement('br'));
+			$(myP5).text(config.lenguajes + perfil.lenguajes);
+			$(myDiv).append(myP5);
+			$(myDiv).append(document.createElement('br'));
 
-			myDiv.appendChild(document.createElement('br'));
-			myDiv.appendChild(document.createElement('br'));
+			$(myDiv).append(document.createElement('br'));
+			$(myDiv).append(document.createElement('br'));
 
 			const myP6 = document.createElement('p');
-			myP6.classList.add('tercero');
-			myP6.textContent = config.email;
+			$(myP6).addClass('tercero');
+			$(myP6).text(config.email);
 
 			const myA2 = document.createElement('a');
-			myA2.href = "https://mail.google.com/mail/?view=cm&fs=1&to=berbesidaniel@gmail.com";
-			myA2.textContent = perfil.email;
+			$(myA2).attr("href", "https://mail.google.com/mail/?view=cm&fs=1&to=berbesidaniel@gmail.com");
+			$(myA2).text(perfil.email);
 			
-			myP6.appendChild(myA2);
+			$(myP6).append(myA2);
 
-			myDiv.appendChild(myP6);
+			$(myDiv).append(myP6);
 			
-			section.appendChild(myDiv);
+			$(section).append(myDiv);
 
 			
-		</script>
+		</script src = "http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js">
 
 	</body>
 </html>
