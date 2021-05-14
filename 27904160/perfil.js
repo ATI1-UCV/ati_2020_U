@@ -1,24 +1,29 @@
+$(document).ready(function(){
+	setHeader()
+	setInformacion()
+	setTabla()
+});
+
+
 function setHeader(){
-	let misElementos =document.querySelectorAll('nav ul li')
+	let misElementos = $('nav ul li')
 	misElementos[0].innerHTML=config.sitio[0]+'<small>'+config.sitio[1]+'</small>'+config.sitio[2]
 	misElementos[1].innerHTML=config.saludo+','+perfil.nombre
-	misElementos[2].getElementsByTagName('a')[0].innerHTML=config.home
+	$('nav ul li a').html(config.home)
 }
 
 function setInformacion() {
-	document.getElementsByTagName('h1')[0].innerHTML=perfil.nombre
-	document.querySelectorAll('.container-info > p')[0].innerHTML=perfil.descripcion
+	$('h1').html(perfil.nombre)
+	$('.container-info > p').html(perfil.descripcion)
 	let myEmail=config.email
 	myEmail=myEmail.replace('[email]',`<a href="mailto:${perfil.email}">${perfil.email}</a>`)
-	console.log(myEmail)
-	document.querySelectorAll('.container-info > p')[1].innerHTML=myEmail
-	document.getElementsByTagName('footer')[0].innerHTML=config.copyRight
-	document.getElementsByTagName('img')[0].src=perfil.imagen
-
+	$('.container-info > p')[1].innerHTML=myEmail
+	$('footer').html(config.copyRight)
+	$('img').attr("src",perfil.imagen)
 }
 
 function setTabla() {
-	let misElementos =document.querySelectorAll('tbody tr td')
+	let misElementos =$('tbody tr td')
 	misElementos[0].innerHTML=config.color
 	misElementos[1].innerHTML=perfil.color
 	misElementos[2].innerHTML=config.libro
@@ -32,7 +37,3 @@ function setTabla() {
 }
 
 
-
-setHeader()
-setInformacion()
-setTabla()
