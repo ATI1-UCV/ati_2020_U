@@ -1,5 +1,18 @@
+.cont-padre{
+	height: 10px;
+}
+
+.ListaPerfiles{
+	position:relative;
+  	display:block;
+  	width:50vh;
+  	height:100vw;
+  	overflow:scroll;
+  	transform-origin:100% 0%;
+  	transform:rotate(-90deg) translateY(-56vh);
+  }
+
 .perfil{
-	display: inline-block;
 	width:200px;
 	height:250px; 
 	padding-left:50px;
@@ -7,6 +20,7 @@
 	background-color: rgb(234,247,245);
 	margin: 20px;
 	box-shadow: 3px 3px #888888;
+	transform:rotate(90deg)
 }
 
 .perfil:hover{
@@ -26,5 +40,8 @@ ul li p{
 
 @keyframes rotacion{
 	0%	 {transform: rotate(); background-color: rgb(234,247,245);	width:200px; height:250px; }
-	100% {transform: rotate(5deg); background-color:#99c5dd; width:210px; height:260px; padding-left:60px; padding-top: 35px;}
+	100% {transform: rotate(88deg); background-color:#99c5dd; width:210px; height:260px; padding-left:60px; padding-top: 35px;}
+}
+::-webkit-scrollbar {
+    display: none;
 }
