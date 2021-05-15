@@ -1,3 +1,7 @@
+html{
+	font-size: 62.5%;
+}
+
 .imagen{
 		position: relative;
 		height: 450px;
@@ -19,13 +23,13 @@
 		box-shadow: 3px 3px #888888;
 	}
 	#texto1{/*Titulo*/
-		font-size: 60px;
+		font-size: 6rem;
 		color: blue;
 		font-family:"verdana";
 
 	}
 	#texto2{/*Descripcion*/
-		font-size: 18px;
+		font-size: 1.8rem;
 	}
 	#texto3{/*Negritas*/
 		font-weight: bold;
@@ -36,3 +40,9 @@
 	a:visited{
 		color: red;
 	}
+
+@media (max-width: 600px) {
+	html{
+		font-size: 70px;
+	}
+}
