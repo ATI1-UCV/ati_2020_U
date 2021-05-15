@@ -1,6 +1,13 @@
 html{
-    font-size: 50%;
-    /* 1rem = 8px */
+    font-size: 32.5%;
+    /* 1rem = 6px */
+}
+
+@media (min-width: 480px){
+    html{
+        font-size: 50%; 
+        /* 1rem = 8px */
+    }
 }
 
 @media (min-width: 1200px){
@@ -52,6 +59,11 @@ h1 {
     margin-top: 0;
     margin-bottom: 2rem;
 }
+
+section.main{
+    min-height: calc(100% - 13.4rem);
+    margin-bottom: 0;
+}
 /* nav{
     padding: 0;
 }
@@ -101,14 +113,8 @@ span {
     border: 0.1rem solid rgb(20, 0, 48);
     box-shadow: 0.5rem 0.5rem 0.5rem rgb(20, 0, 48);
     padding: 3rem !important;
-    margin-bottom: 12rem !important;
+    margin-bottom: 3rem !important;
     max-width: 90%;
-}
-
-@media (min-width: 768px){
-    .perfil-info{
-        margin-bottom: 3rem !important;
-    }
 }
 
 a {
@@ -127,5 +133,6 @@ table {
 footer{
     height: auto;
     padding: 2rem 0;
-    /* position: static; */
+    position: static;
+    
 }
