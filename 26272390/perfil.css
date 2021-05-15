@@ -1,9 +1,38 @@
-.shadow {
-    display:inline-block;
-    height: 280px;
+@media (max-width: 768px) {
+    #shadow {
+        margin-bottom: 6rem;
+    }
+}
+
+#shadow {
+    max-height: 100%;
+    width: 100%;
     padding-left: 5px;
     border: 1px solid black;
     box-shadow: 10px 10px 5px blue;
+}
+
+#contacto a {
+    color: orange;
+}
+
+#contacto a:visited {
+    color: red;
+}
+
+.fcenter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.size {
+    height: 80%;
+    width: 100%;
+}
+
+.botspace {
+    margin-bottom: 2rem;
 }
 
 .bold {
@@ -16,21 +45,59 @@
     word-break: break-word;
 }
 
+.logo {
+    font-size: 2.5rem;
+}
+
+.logo small {
+    font-size: 1.5rem;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 h1 {
     color:#0000FF;
-    font-size: 2em;
-}
-
-a {
-    color: orange;
-}
-
-a:visited {
-    color: red;
+    font-size: 2rem;
 }
 
 img {
     border-radius: 60px 0px 0px 0px;
-    height: 280px;
-    width: 300px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+header {
+    min-height: 5rem;
+    height: auto;
+    width: 100%;
+}
+
+
+footer {
+    height: auto;
+    width: 100%;
+}
+
+nav ul li {
+    line-height: 100%;
+} 
+
+ul, li, #nav {
+    clear: left;
+    min-height: 5rem;
+    height: 100%; 
+    width: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+p, a {
+    font-size: 1.6rem;
 }
