@@ -17,11 +17,14 @@
 #table{
     border: black 1px solid;
     box-shadow: 5px 5px 2px 0px gray;
+    height: auto;
 }
 #photo{
     border-radius: 40px 0px 0px 0px;
-    height: 213px;
+    height: auto;
+    margin-top: 0 !important;
 }
+    
 .lp{
     font-weight: bold;
 }
@@ -35,17 +38,18 @@ td{
     text-align: left;
     align-content: left;
 }
-#general_content{
-    display: grid;
-    grid-template-areas: "photo_content table_content"; 
+.general_content{ 
+    width: 100%;
+    margin: 0 !important;
+    max-width: 500rem !important;
 }
-#photo_content{
-    grid-area: photo_content;
+.general_content img, .general_content table{
+    margin: 2rem auto;
 }
-#table_content{
-    grid-area: table_content;
-    margin-left: 0px;
-}
+
 span{
     font-size: small;
 }
+
+
+
