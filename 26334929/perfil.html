@@ -32,7 +32,6 @@
 	</head>
 	<body>
 	    <header>
-
         <nav>
           <ul>
             <li class="logo" id="especial-logo"></li>
@@ -44,40 +43,47 @@
           </ul>	
         </nav> 
 	    </header>
-	    <section >
-        <section id="foto-perfil"> 
-          <img src="26334929.jpeg" alt="foto de perfil"> 
+	    <section class="container">
+        <section class="row" id="foto-perfil"> 
+          <div class="col">
+            <picture>
+              <source srcset="./ProfilePic.jpg" media="(min-width: 800px)">
+              <img src="26334929.jpeg" alt="foto de perfil"> 
+            </picture>
+          </div>
         </section>
-        <article id="contenido">
-          <h1 id="nombre" class="traducir-perfil" data-json-key="nombre"></h1>
-          <p>
-          <em class="traducir-perfil" data-json-key="descripcion"></em>
-          </p>
-          <table>
-            <tbody>
-              <tr>
-                <td class="traducir-config" data-json-key="color"></td>
-                <td class="traducir-perfil" data-json-key="color"></td>
-              </tr>
-              <tr>
-                <td class="traducir-config" data-json-key="libro"></td>
-                <td class="traducir-perfil" data-json-key="libro"></td>
-              </tr>
-              <tr>
-                <td class="traducir-config" data-json-key="musica"></td>
-                <td class="traducir-perfil" data-json-key="musica"></td>
-              </tr>
-              <tr>
-                <td class="traducir-config" data-json-key="video_juego"></td>
-                <td class="traducir-perfil" data-json-key="video_juego"></td>
-              </tr>
-              <tr>
-                <td><strong class="traducir-config" data-json-key="lenguajes"></strong></td>
-                <td><strong class="traducir-perfil" data-json-key="lenguajes"></strong></td>
-              </tr>
-            </tbody>
-          </table>
-          <p><span class="traducir-config" data-json-key="email"></span><a href="mailto:diegosandmg@gmail.com" class="traducir-perfil" data-json-key="email"></a></p>
+        <article class="row" id="contenido">
+          <div class="col">
+            <h1 id="nombre" class="traducir-perfil" data-json-key="nombre"></h1>
+            <p>
+            <em class="traducir-perfil" data-json-key="descripcion"></em>
+            </p>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="traducir-config" data-json-key="color"></td>
+                  <td class="traducir-perfil" data-json-key="color"></td>
+                </tr>
+                <tr>
+                  <td class="traducir-config" data-json-key="libro"></td>
+                  <td class="traducir-perfil" data-json-key="libro"></td>
+                </tr>
+                <tr>
+                  <td class="traducir-config" data-json-key="musica"></td>
+                  <td class="traducir-perfil" data-json-key="musica"></td>
+                </tr>
+                <tr>
+                  <td class="traducir-config" data-json-key="video_juego"></td>
+                  <td class="traducir-perfil" data-json-key="video_juego"></td>
+                </tr>
+                <tr>
+                  <td><strong class="traducir-config" data-json-key="lenguajes"></strong></td>
+                  <td><strong class="traducir-perfil" data-json-key="lenguajes"></strong></td>
+                </tr>
+              </tbody>
+            </table>
+            <p><span class="traducir-config" data-json-key="email"></span><a href="mailto:diegosandmg@gmail.com" class="traducir-perfil" data-json-key="email"></a></p>
+          </div>
         </article>
 	    </section>
 	    <footer class="traducir-config" data-json-key="copyRight">

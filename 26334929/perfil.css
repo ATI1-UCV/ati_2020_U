@@ -13,12 +13,40 @@
   border-top-left-radius: 50px 50px;
 }
 
+@media screen and (max-width: 1399px){
+  #foto-perfil{
+    width: inherit;
+    float: unset;
+  }
+
+  #foto-perfil div[class=col]:first-of-type{
+    display: flex;
+    justify-content: center;
+  }
+
+  #foto-perfil img{
+    border: unset;
+    border-top-left-radius: unset;
+    margin: 10px 0;
+    box-shadow: 0px 0px 5px rgba(0,0,0, 0.3);
+  }
+
+}
+
 #contenido{
   float: left;
   box-shadow: 3px 3px grey;
   border: 1px solid black;
   padding: 10px;
   max-width: 900px;
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 1399px){
+  #contenido {
+    float: unset;
+    max-width: 100%;
+  }
 }
 
 a[href="mailto:diegosandmg@gmail.com"]{
