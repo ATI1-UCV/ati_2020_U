@@ -5,19 +5,24 @@
 		<meta charset="UTF-8">
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
-		<link rel="stylesheet" href="css/index.css"  type="text/css">
+		<link rel="stylesheet" href="css/index.css"  type="text/css">	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="conf/configES.json"  type="text/css"> </script>
+		<script type="text/javascript" src="datos/index.json" > </script>
+		<script type="text/javascript" src="27449007/perfil.json" > </script>
+		
 		<title>ATI[UCV] 2020-U</title>
 	</head>
 	<body>
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2020-U</li>
-					<li class="saludo">Hola, Aaron Morillo</li>
-					<li class="busqueda">
+					<li id="logo" class="logo"></li>
+					<li id="saludo" class="saludo"></li>
+					<li id="busqueda" class="busqueda">
 						<form>
-							<input type="text" placeholder="Buscar..." >
-							<input type="submit" value="Aceptar">
+							<input id="textoABuscar" type="text" placeholder="Buscar..." >
+							<button id="submitBusqueda">Aceptar</button>
 						</form>
 					</li>
 				</ul>	
@@ -25,61 +30,14 @@
 	    </header>
 	    <section id="contenedor_lista">
 	       
-			<ul id="listado">
-				<li class="image" id="item_1">
-					<img src="./27449007/27449007.jpg" width="70" height="80">
-					Aaron Morillo
-				</li>
-				<li class="image" id="item_2">
-					<img src="./dummy1/dummy.jpg" width="70" height="80">
-					Ana Morales
-				</li>
-				<li class="image" id="item_3">
-					<img src="./dummy2/dummy.jpg" width="70" height="80">
-					Maria Henandez
-				</li>
-				<li class="image" id="item_4">
-					<img src="./dummy3/dummy.jpg" width="70" height="80">
-					Estefania Perez
-				</li>
-				<li class="image" id="item_5">
-					<img src="./dummy4/dummy.jpg" width="70" height="80">
-					Marcos Ruiz
-				</li>
-				<li class="image" id="item_6">
-					<img src="./dummy5/dummy.jpg" width="70" height="80">
-					Vicencio Torrealba
-				</li>
-				<li class="image" id="item_7">
-					<img src="./dummy6/dummy.jpg" width="70" height="80">
-					Jose Martinez
-                </li>
-                <li class="image" id="item_8">
-					<img src="./dummy1/dummy.jpg" width="70" height="80">
-					Marta Sanchez
-				</li>
-				<li class="image" id="item_9">
-					<img src="./dummy2/dummy.jpg" width="70" height="80">
-					Alba Montenegro
-				</li>
-				<li class="image" id="item_10">
-					<img src="./dummy3/dummy.jpg" width="70" height="80">
-					Anabela Marcano
-				</li>
-				<li class="image" id="item_11">
-					<img src="./dummy4/dummy.jpg" width="70" height="80">
-					Carlos Ramona
-				</li>
-				<li class="image" id="item_12">
-					<img src="./dummy5/dummy.jpg" width="70" height="80">
-					Miguel Ventura
-				</li>
+			<ul id="listado" class="found">
 	
 			</ul>
 			 
 	    </section>
-	    <footer>
-	        Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados
+	    <footer id="footer">
+	        
 	    </footer>
+		<script type="text/javascript" src="js/index.js"></script>
 	</body>
 </html>
