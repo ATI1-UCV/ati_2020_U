@@ -57,7 +57,7 @@ function busqueda(){
     for( i=0; i < splides.length; i++){
         new Splide(splides[i],{ 
             type    : 'loop',
-            perPage : 3,
+            perPage : 4,
             autoplay: true,
             rewind: true,
             pagination: false
