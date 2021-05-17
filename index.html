@@ -6,7 +6,21 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">	
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<!-- Bootstrap CSS-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
+
+		<!-- or the reference on CDN -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+
+
+
 		<script type="text/javascript" src="conf/configES.json"  type="text/css"> </script>
 		<script type="text/javascript" src="datos/index.json" > </script>
 		<script type="text/javascript" src="27449007/perfil.json" > </script>
@@ -22,19 +36,25 @@
 					<li id="busqueda" class="busqueda">
 						<form>
 							<input id="textoABuscar" type="text" placeholder="Buscar..." >
-							<button id="submitBusqueda">Aceptar</button>
+							<input value="Aceptar" type="submit" id="submitBusqueda">
 						</form>
 					</li>
 				</ul>	
 			</nav> 
 	    </header>
-	    <section id="contenedor_lista">
-	       
-			<ul id="listado" class="found">
-	
-			</ul>
-			 
-	    </section>
+
+		<!-- Carrusel -->
+		
+
+	    
+		<div id="carrusel" class="splide">
+			<div class="splide__track">
+				<ul id="listado" class="splide__list">
+
+				</ul>
+			</div>
+		</div>		
+		
 	    <footer id="footer">
 	        
 	    </footer>
