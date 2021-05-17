@@ -38,7 +38,7 @@ function traducir(traducirStr, type) {
  * Returns a list of students rendered in a list
  * Depends on global variable "listado"
  ***/
-function renderStudents(listId, students) {
+function renderStudents(listId, students, slider) {
   const ulElement = document.getElementById(listId);
 
   // Clear any students
@@ -47,13 +47,22 @@ function renderStudents(listId, students) {
   students.forEach((student) => {
     const template = document.createElement('template');
     template.innerHTML = `
-    <li>
-      <img src="${student.imagen}" alt="profile-pic">
-      <p>${student.nombre}</p>
+    <li class="splide__slide">
+      <div class="splide__slide__container">
+        <div class="student-card">
+          <img src="${student.imagen}" alt="profile-pic">
+          <p>${student.nombre}</p>
+        </div>
+      </div>
     </li>
   `;
     ulElement.appendChild(template.content.cloneNode(true))
   });
+
+  if( students.length <= 4){
+    slider.options = { perPage: students.length };
+  }
+  slider.refresh();
 }
 
 function searchStudent(keyword){
@@ -73,16 +82,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("especial-logo").innerHTML = `${config.sitio[0]} <small>${config.sitio[1]}</small> ${config.sitio[2]}`;
 
-  // Render student list
-  renderStudents("students-list", listado);
+
+  const slider = new Splide( '.splide',{
+    perPage: 4,
+    perMove: 1,
+    arrows: false,
+    autoplay: true,
+    keyboard: true,
+    gap: "10px",
+    interval: 5000,
+    type: "loop",
+  }).mount();
 
   // Search input
   const input = document.getElementById("search-students");
   input.addEventListener("input", ()=>{
     const students = searchStudent(input.value);
-
+  
     if (students.length !== 0){
-      renderStudents("students-list", students);
+      renderStudents("students-list", students, slider);
     }else{
       // Render an empty student list with a message
       const ulElement = document.getElementById("students-list");
@@ -95,6 +113,19 @@ document.addEventListener("DOMContentLoaded", () => {
       </li>
     `;
       ulElement.appendChild(template.content.cloneNode(true))
+
+      slider.options = { perPage: 4 };
+      slider.refresh();
+    }
+
+    if(input.value === "" || input.value === " "){
+      slider.options = { perPage: 4 };
+      slider.refresh();
     }
   });
+
+
+  // Render student list
+  renderStudents("students-list", listado, slider);
+
 });

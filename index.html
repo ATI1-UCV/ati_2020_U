@@ -6,6 +6,7 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 		<title>ATI[UCV] 2020-U</title>
 
     <!--JS -->
@@ -32,10 +33,15 @@
 			</nav> 
 	    </header>
 	    <section>
-        <ul id="students-list">
-        </ul>
+        <div class="splide">
+          <div class="splide__track">
+            <ul class="splide__list" id="students-list">
+            </ul>
+          </div>
+        </div>
 	    </section>
 	    <footer class="traducir-config" data-json-key="copyRight">
 	    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 	</body>
 </html>
