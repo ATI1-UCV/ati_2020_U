@@ -9,7 +9,7 @@ function renderInner(el, translated) {
   }
 
   if (el instanceof HTMLInputElement) {
-    if (el.type === "text") {
+    if (el.type === "text" || el.type === "search") {
       el.placeholder = transStr;
     }
 
@@ -38,10 +38,13 @@ function traducir(traducirStr, type) {
  * Returns a list of students rendered in a list
  * Depends on global variable "listado"
  ***/
-function renderStudents(listId) {
+function renderStudents(listId, students) {
   const ulElement = document.getElementById(listId);
 
-  listado.forEach((student) => {
+  // Clear any students
+  ulElement.innerHTML = "";
+
+  students.forEach((student) => {
     const template = document.createElement('template');
     template.innerHTML = `
     <li>
@@ -53,6 +56,17 @@ function renderStudents(listId) {
   });
 }
 
+function searchStudent(keyword){
+  const result = [];
+  for (const student of listado){
+    // keyword in student name
+    if (student.nombre.search(new RegExp(keyword, "gi")) !== -1) {
+      result.push(student);
+    }
+  }
+  return result;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // Select elements to translate
   traducir("traducir-config", "config");
@@ -60,5 +74,27 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("especial-logo").innerHTML = `${config.sitio[0]} <small>${config.sitio[1]}</small> ${config.sitio[2]}`;
 
   // Render student list
-  renderStudents("students-list");
+  renderStudents("students-list", listado);
+
+  // Search input
+  const input = document.getElementById("search-students");
+  input.addEventListener("input", ()=>{
+    const students = searchStudent(input.value);
+
+    if (students.length !== 0){
+      renderStudents("students-list", students);
+    }else{
+      // Render an empty student list with a message
+      const ulElement = document.getElementById("students-list");
+      ulElement.innerHTML = "";
+      const template = document.createElement('template');
+      noStudentsMessage = config["noEstudiantes"].replace("[query]", input.value);
+      template.innerHTML = `
+      <li>
+        <p>${noStudentsMessage}</p>
+      </li>
+    `;
+      ulElement.appendChild(template.content.cloneNode(true))
+    }
+  });
 });
