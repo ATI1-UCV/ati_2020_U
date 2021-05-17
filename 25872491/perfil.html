@@ -4,6 +4,8 @@
 	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta charset="UTF-8">
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> -->
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
 		<script src="config.json"></script>
@@ -22,22 +24,31 @@
 	    </header>
 	    <section>
 	       
-			 <div class="perfil">
-				<img id="img-perfil">
-				<div class="descripcion">
-					<h1 id="nombre-perfil"></h1>
-							
-					<p id="desc-perfil"></p>
-				
-					<table id="tabla-perfil"></table>
+			 <div class="container perfil">
+				 <div class="row">
+					 <div class="col-xs-12 col-md-6">
+						 <img id="img-perfil" class="mx-auto d-block">
+					 </div>
+					 <div class="col-xs-12 col-md-6 descripcion">
+						<h1 id="nombre-perfil"></h1>
+								
+						<p id="desc-perfil"></p>
 					
-					<p id="contacto-perfil"></p>
-				</div>
+						<table id="tabla-perfil"></table>
+						
+						<p id="contacto-perfil"></p>
+					</div>
+				 </div>
+				
+				
 			</div>
 			 
 	    </section>
-		<footer></footer>
-		<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+		<footer><div class="footer"></div></footer>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	    <script src="perfil.js"></script>
 	</body>
 </html>

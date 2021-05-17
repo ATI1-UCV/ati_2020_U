@@ -1,16 +1,11 @@
-.perfil{
-	display: flex;
-}
-
 #img-perfil{
-	border-top-left-radius: 30px;
-	margin: 5px; 
+	border-top-left-radius: 30px; 
+	margin: 5px;
 }
 
 .descripcion{
 	border: 1px solid #000;
 	box-shadow: 5px 5px #777;
-	margin-left:auto; 
 	padding: 5px;
 }
 

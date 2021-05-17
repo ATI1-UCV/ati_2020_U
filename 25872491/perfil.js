@@ -8,7 +8,7 @@ const imagenPerfil = $('#img-perfil')
 const descPerfil = $('#desc-perfil')
 const tablaPerfil = $('#tabla-perfil')
 const contactoPerfil = $('#contacto-perfil')
-const footer = $('footer')
+const footer = $('.footer')
 
 let infoTabla = [
 	[config.color,perfil.color],
@@ -56,4 +56,4 @@ let textContacto = `<a href="mailto:${perfil.email}">${perfil.email}</a>`
 textContacto = config.email.replace('[email]', textContacto)
 contactoPerfil.html(textContacto)
 
-footer.text(config.copyRight)
+footer.html(`<p>${config.copyRight}</p>`)
