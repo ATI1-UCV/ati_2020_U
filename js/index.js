@@ -4,7 +4,7 @@ var listadoEstudiantes = JSON.parse(JSON.stringify(listado));
 var splides = $(".splide");
 
 
-$(".splide__pagination").css("display", "none");
+
 
 $("#submitBusqueda").on("click",function(event){
     event.preventDefault();
@@ -24,7 +24,7 @@ for( i=0; i < splides.length; i++){
 }
 
 function busqueda(){
-    $('#listado li, #listado h3, #listado li.splide__slide--clone').remove()
+    $('#listado li, #listado h3 ').remove()
     var textoABuscar = $('#textoABuscar').val()
     console.log(textoABuscar)
     var listadoBusqueda = listadoEstudiantes.map(estudiante => {
