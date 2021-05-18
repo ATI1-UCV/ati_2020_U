@@ -8,95 +8,68 @@
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
 		<script type="text/javascript" src="config.json"></script>
 		<script type="text/javascript" src="perfil.json"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
 		<title>Daniel Berbesi</title>
 		
 
 	</head>
 	<body>
-	    <header id = "myHeader">
-			
-	    </header>
+
+	    <div class="container-fluid">
+	    <div class="row" id="r1">
+	    	<div class="col" id="r11"></div>
+	    	<div class="col" id="r12"></div>
+	    	<button class="col" id="r13" type="button">a</button>
+	    </div>
+	    <div class="row" id="r2">
+	    	<img class="img-fluid" id="r21"></img>
+	    	<div class="col" id="r22"></div>
+	    </div>
+	    <div class="row" id="r3">
+	    	<div class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" id="r31">Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados</div>
+	    </div>
+		</div>
 	    <section id = "mySection">
 	       
 	    </section>
-	    <footer>
-	        Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados
-	    </footer>
 		
 		<script>
 
-			const header = document.getElementById("myHeader");
+			const r11 = document.getElementById("r11");
+			$(r11).text(config.sitio[0]+' '+ config.sitio[1]+' '+ config.sitio[2]);
 
-			const myNav = document.createElement('nav');
+			const r12 = document.getElementById("r12");
+			$(r12).text(config.saludo + perfil.nombre);
 
-			const myUl = document.createElement('ul');
-
-
-			const myLi1 = document.createElement('li');
-			$(myLi1).text(config.sitio[0]);
-			$(myLi1).addClass('logo');
-
-
-			const mySmall = document.createElement('small');
-			$(mySmall).text(config.sitio[1]);
-
-			$(myLi1).append(mySmall);
-
-			$(myLi1).text($(myLi1).text() + ' '+ config.sitio[2]);
-
-			$(myUl).append(myLi1);
+			const r13 = document.getElementById("r13");
+			$(r13).attr("href", "perfil.html");
+			$(r13).text(config.inicio);
 
 
-			const myLi2 = document.createElement('li');
-			$(myLi2).addClass('saludo');
-			$(myLi2).text(config.saludo + perfil.nombre);
-			$(myUl).append(myLi2);
-
-			const myLi3 = document.createElement('li');
-			$(myLi3).addClass('busqueda');
-
-			const myA = document.createElement('a');
-			$(myA).attr("href", "perfil.html");
-			$(myA).text(config.inicio);
-			$(myLi3).append(myA);
-			
-			$(myUl).append(myLi3);
-
-			$(header).append(myNav);
-
-			$(myNav).append(myUl);		
-
-
-
-			
-			const section = document.getElementById("mySection");
-
-			const myImg = document.createElement('img');
-			myImg.id = "im";
-			$(myImg).attr("src", "28015794.jpg");
-
-			$(section).append(myImg);
-			
-
-			const myDiv = document.createElement('div');
-			myDiv.id = "all";
+			const r21 = document.getElementById("r21");
+			$(r21).attr("src", "28015794.jpg");
 
 
 			const myP = document.createElement('p');
 			myP.id = "primero";
 
 			$(myP).text(perfil.nombre);
-			$(myDiv).append(myP);
 
-			$(myDiv).append(document.createElement('br'));
+			const r22 = document.getElementById("r22");
+			$(r22).append(myP);
 
-			
+			$(r22).append(document.createElement('br'));
+
+
 			const myI = document.createElement('i');
 			myI.id = "segundo";
 			$(myI).text(perfil.descripcion);
 
-			$(myDiv).append(myI);
+			$(r22).append(myI);
 
 
 			const myP2 = document.createElement('p');
@@ -104,35 +77,35 @@
 			$(myP2).addClass('tercero');
 
 			$(myP2).text(config.color + perfil.color);
-			$(myDiv).append(myP2);
-			$(myDiv).append(document.createElement('br'));
+			$(r22).append(myP2);
+			$(r22).append(document.createElement('br'));
 
 
 			const myP3 = document.createElement('p');
 			$(myP3).addClass('tercero');
 
 			$(myP3).text(config.libro + perfil.libro);
-			$(myDiv).append(myP3);
-			$(myDiv).append(document.createElement('br'));
+			$(r22).append(myP3);
+			$(r22).append(document.createElement('br'));
 
 
 			const myP4 = document.createElement('p');
 			$(myP4).addClass('tercero');
 
 			$(myP4).text(config.video_juego + perfil.video_juego);
-			$(myDiv).append(myP4);
-			$(myDiv).append(document.createElement('br'));
+			$(r22).append(myP4);
+			$(r22).append(document.createElement('br'));
 
 
 			const myP5 = document.createElement('p');
 			$(myP5).addClass('tercero', 'extra');
 
 			$(myP5).text(config.lenguajes + perfil.lenguajes);
-			$(myDiv).append(myP5);
-			$(myDiv).append(document.createElement('br'));
+			$(r22).append(myP5);
+			$(r22).append(document.createElement('br'));
 
-			$(myDiv).append(document.createElement('br'));
-			$(myDiv).append(document.createElement('br'));
+			$(r22).append(document.createElement('br'));
+			$(r22).append(document.createElement('br'));
 
 			const myP6 = document.createElement('p');
 			$(myP6).addClass('tercero');
@@ -144,9 +117,7 @@
 			
 			$(myP6).append(myA2);
 
-			$(myDiv).append(myP6);
-			
-			$(section).append(myDiv);
+			$(r22).append(myP6);
 
 			
 		</script src = "http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js">

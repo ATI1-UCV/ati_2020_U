@@ -1,21 +1,38 @@
-#all {
-	position: absolute;
+#r11 {
+	font-size: 200%;
+	color: white;
+}
+
+#r12 {
+	font-size: 170%;
+	color: white;
+}
+
+#r13 {
+	font-size: 170%;
+	color: white;
+}
+
+#r21 {
+	max-width: 25%;
+	height: 10%;
+	margin-left: 10%;
+	border-top-left-radius: 100px;
+}
+
+#r22 {
+	max-width: 50%;
+	background-color: transparent; 
 	border: 2px solid rebeccapurple;
-	padding-top: 8px;
-	padding-left: 20px;
-	padding-bottom: 10px;
-	padding-right: 30px;
-	margin-left: 340px;
-	margin-right: 350px;
-	top: 80px;
+	margin-left: 10%;
 	box-shadow: 5px 10px #888888;
 }
 
-#im {
-	width: 330px;
-	height: 450px;
-	display: inline;
-	border-top-left-radius: 100px;
+#r31{
+  	font-size: 110%;
+  	width: 100%;  
+  	text-align: right;
+  	background-color:#86b1ef; 
 }
 
 #primero {
@@ -36,9 +53,6 @@
 	font-size: 20px;
 }
 
-strong {
-	font-size: 20px;
-}
 
 a:link {
 	color: orange;
