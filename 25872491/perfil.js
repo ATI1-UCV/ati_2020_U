@@ -56,4 +56,4 @@ let textContacto = `<a href="mailto:${perfil.email}">${perfil.email}</a>`
 textContacto = config.email.replace('[email]', textContacto)
 contactoPerfil.html(textContacto)
 
-footer.html(`<p>${config.copyRight}</p>`)
+footer.text(config.copyRight)

@@ -3,22 +3,27 @@
 	<head> 
 	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta charset="UTF-8">
+<!-- links y scripts -->
+	<!-- icon  -->
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
+	<!-- boostrap 4.6.0 -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-		<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> -->
-		<link rel="stylesheet" href="../css/style.css"  type="text/css">
+	<!-- hojas css  -->
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
+		<link rel="stylesheet" href="../css/style.css"  type="text/css">
+	<!-- archivos de config json  -->
 		<script src="config.json"></script>
 		<script src="perfil.json"></script>
 		<title></title>
 	</head>
+
 	<body>
 	    <header>
-			<nav>
-				<ul>
-					<li class="logo"></li>
-					<li class="saludo"></li>
-					<li class="busqueda"><a href="../index.html"></a></li>
+			<nav class="container-fluid">
+				<ul class="row">
+					<li class="col-xs-12 col-sm-12 col-md-5 logo"></li>
+					<li class="col-xs-12 col-sm-6 col-md-3 saludo"></li>
+					<li class="col-xs-11 col-sm-5 col-md-3 busqueda"><a href="../index.html"></a></li>
 				</ul>	
 			</nav> 
 	    </header>
@@ -26,10 +31,10 @@
 	       
 			 <div class="container perfil">
 				 <div class="row">
-					 <div class="col-xs-12 col-md-6">
+					 <div class="col-xs-12 col-sm-12 col-md-6 justify-content-center">
 						 <img id="img-perfil" class="mx-auto d-block">
 					 </div>
-					 <div class="col-xs-12 col-md-6 descripcion">
+					 <div class="col-xs-12 col-sm-12 col-md-6 descripcion">
 						<h1 id="nombre-perfil"></h1>
 								
 						<p id="desc-perfil"></p>
@@ -39,16 +44,19 @@
 						<p id="contacto-perfil"></p>
 					</div>
 				 </div>
-				
-				
 			</div>
-			 
-	    </section>
+			
+		</section>
+		
 		<footer><div class="footer"></div></footer>
-		<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> -->
+	
+<!-- scripts -->
+	<!-- jquery 3.5.1 -->
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-	    <script src="perfil.js"></script>
+	<!-- boostrap 4.6.0 -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<!-- javascript - perfil.js -->
+		<script src="perfil.js"></script>
 	</body>
 </html>

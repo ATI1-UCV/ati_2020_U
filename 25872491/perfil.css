@@ -1,3 +1,7 @@
+body{
+	font-size: 11pt;
+}
+
 #img-perfil{
 	border-top-left-radius: 30px; 
 	margin: 5px;
@@ -27,3 +31,35 @@ a{
 a:visited{
 	color: #D92626;
 }
+
+footer{
+	display: flex;
+	align-items: center !important;
+	justify-content: center !important;
+	padding: 5px !important;
+}
+
+@media (max-width: 767px){
+	header{
+		height: auto !important;
+		max-height: 20% !important;
+		padding-bottom: 0.2em !important;
+	}
+
+	ul li{
+		border: none !important;
+		text-align: center !important;
+		font-size: 1em !important;
+		padding: 0.2em 0 0.2em 0 !important;
+		margin: 0.1em !important;
+		line-height: 1.6 !important;
+	}
+
+	.logo{
+		font-size: 1.5em !important;
+	}
+
+
+}
+
+

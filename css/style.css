@@ -31,6 +31,7 @@ nav ul li {
 
 nav ul li:last-child {
   border-right: none;
+  text-align: right;
 }
 
 nav ul li a, nav ul li a:link, nav ul li a:visited {
@@ -87,7 +88,7 @@ footer {
   padding: 1rem;
   background-color: #86b1ef;
   text-align: center;
-  height: 20px;	
+  max-height: 10%;	
   font-size: 9pt;
 }
 
