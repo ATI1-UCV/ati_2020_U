@@ -1,19 +1,16 @@
-body{
-	font-size: 25px;
-}
+
 h1{
 	color:green;
-	font-size: 40px
 }
 img{
-	display: inline;
-	float: left;
-	height: 500px;
 	border-top-left-radius:120px;
+	width:100%;
+}
+.busqueda{
+	text-align:center !important;
 }
 .container-info{
 	padding: 10px;
-	height: 480px;
 	width: 70%;
 	display: block;
 	float:left;
@@ -32,3 +29,10 @@ a:visited  {
 tbody tr:last-child td{
 	font-weight: 700
 }
+
+
+footer{
+	height:auto;
+	font-size:1vw !important;
+}
+
