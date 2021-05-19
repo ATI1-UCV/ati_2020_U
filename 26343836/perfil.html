@@ -9,41 +9,48 @@
 		<title>Diego Chacón</title>
 		<script type="text/javascript" src="config.json"></script>
 		<script type="text/javascript" src="perfil.json"></script>
-		<script type="text/javascript">
-			function llenar(){
-				
-				document.title = perfil.nombre;
-				document.getElementById("footer").innerHTML = config.copyRight;
-				
-				document.getElementById("logo").innerHTML = config.sitio[0] + "<span>" + config.sitio[1] +  "</span> " + config.sitio[2];
-				
-				document.getElementById("saludo").innerHTML = config.saludo + ", Diego";
-				document.getElementById("busqueda").innerHTML = "<a href='../index.html'>" + config.home + "</a>";
-				
-				document.getElementById("nombre").innerHTML = perfil.nombre;
-				document.getElementById("descripcion").innerHTML = perfil.descripcion;
-				
-				document.getElementById("imagen").src = perfil.imagen;
-				
-				document.getElementById("color_fav").innerHTML = config.color;
-				document.getElementById("color").innerHTML = perfil.color;
-				document.getElementById("libro_fav").innerHTML = config.libro;
-				document.getElementById("libro").innerHTML = perfil.libro;
-				document.getElementById("musica_fav").innerHTML = config.musica;
-				document.getElementById("musica").innerHTML = perfil.musica;
-				document.getElementById("video_juego_fav").innerHTML = config.video_juego;
-				document.getElementById("video_juego").innerHTML = perfil.video_juego.toString();
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.js"
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			crossorigin="anonymous">
+		</script>
+		<script>
+			$(function() {
 
-				document.getElementById("lenguajes_fav").innerHTML = config.lenguajes;
-				document.getElementById("lenguajes").innerHTML = perfil.lenguajes.toString();
+				$("title").text(perfil.nombre);
+				$("#footer").text(config.copyRight);
+
+				$("#logo").html(config.sitio[0] + "<span>" + config.sitio[1] +  "</span> " + config.sitio[2]);
+
+				$("#saludo").text(config.saludo + ", Diego");
+				$("#busqueda").html("<a href='../index.html'>" + config.home + "</a>");
+
+				$("#nombre").text(perfil.nombre);
+				$("#descripcion").text(perfil.descripcion);
+
+				$("#imagen").attr("src", perfil.imagen);
+				
+				$("#color_fav").text(config.color);
+				$("#color").text(perfil.color);
+				$("#libro_fav").text(config.libro);
+				$("#libro").text(perfil.libro);
+				$("#musica_fav").text(config.musica);
+				$("#musica").text(perfil.musica);
+				$("#video_juego_fav").text(config.video_juego);
+				$("#video_juego").text(perfil.video_juego.toString());
+
+				$("#lenguajes_fav").text(config.lenguajes);
+				$("#lenguajes").text(perfil.lenguajes.toString());
 
 				var correoEnlace = "<a href=\"mailto: [email]\">[email]</a>".replace("[email]", perfil.email).replace("[email]", perfil.email);
 
-				document.getElementById("correo").innerHTML = config.email.replace("[email]", correoEnlace);	
-			}
+				$("#correo").html(config.email.replace("[email]", correoEnlace));
+			});
 		</script>
+
+
 	</head>
-	<body onload="llenar()">
+	<body>
 	    <header>
 			<nav>
 				<ul>
