@@ -1,9 +1,149 @@
-section li {
+html {
+    font-size: 62.5%;
+}
+
+header {
+    height: 8%;
+    width: 100%;
+}
+
+footer {
+    height: 5%;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+section {
+    height: 82%;
+}
+
+li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+}
+
+p, a {
+    font-size: 1.6rem;
+}
+
+#carrusel, div {
+    height: 100%;
+}
+
+#busqueda {
+    margin-left: 2%;
+}
+
+#name {
+    height: 80%;
+}
+
+img {
+    height: 80%;
+    width: 100%;
+    object-fit: fill; 
+}
+
+.conten {
+    height: 99%;
+    box-shadow: 2px 2px 2px #86b1ef;
+    padding: 1px;
+    margin: 0.1rem;
+    background-color: #f5f7f9;
+}
+
+.saludo {
+    width: 100%;
+}
+
+.logo {
+    font-size: 2.5rem;
+}
+
+.logo small {
+    font-size: 1.5rem;
+}
+
+.center {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    background-color: #86b1ef;
+}
+
+ul, li, #nav {
+    clear: left;
+    height: 100%; 
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#busqueda {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.carousel-item.active {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+  transform: translateX(25%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.carousel-inner .carousel-item-left.active, 
+.carousel-inner .carousel-item-prev {
+  transform: translateX(-25%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+  
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+} 
+
+
+
+
+/* section li {
     float: left;
     display: inline-block;
     padding-bottom: 10000px;
     margin-bottom: -10000px;
-    text-align: center;
     direction: rtl;
     width: calc(25% - 12px);
     box-shadow: 2px 2px 2px #86b1ef;
@@ -44,4 +184,4 @@ section ul {
         background-color: #99c5dd;
         transform: rotate(10deg) scale(1.2);
     }
-}
+} */
