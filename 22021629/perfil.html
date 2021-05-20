@@ -9,37 +9,39 @@
 		<title> Jose Daniel </title>
         <script type="text/javascript" src="config.json"></script>
         <script type="text/javascript" src="perfil.json"></script>
-        <script type="text/javascript">
+		<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" >
             function llenar(){
-				
 				document.title = perfil.nombre;
-				document.getElementById("footer").innerHTML = config.copyRight;
+				$("#footer").html( config.copyRight)
 				
-				document.getElementById("logo").innerHTML = config.sitio[0] + "<span>" + config.sitio[1] +  "</span> " + config.sitio[2];
+				$("#logo").html( config.sitio[0] + "<span>" + config.sitio[1] +  "</span> " + config.sitio[2])
 				
-				document.getElementById("saludo").innerHTML = config.saludo + ", Jose Perez";
-				document.getElementById("busqueda").innerHTML = "<a href='../index.html'>" + config.home + "</a>";
+				$("#saludo").html(config.saludo + perfil.nombre)
+				$("#busqueda").html( "<a href='../index.html'>" + config.home + "</a>")
 				
-				document.getElementById("nombre").innerHTML = perfil.nombre;
-				document.getElementById("descripcion").innerHTML = perfil.descripcion;
+				$("#nombre").html(perfil.nombre)
+				$("#descripcion").html( perfil.descripcion)
 				
-				document.getElementById("imagen").src = perfil.imagen;
 				
-				document.getElementById("color_fav").innerHTML = config.color;
-				document.getElementById("color").innerHTML = perfil.color;
-				document.getElementById("libro_fav").innerHTML = config.libro;
-				document.getElementById("libro").innerHTML = perfil.libro;
-				document.getElementById("musica_fav").innerHTML = config.musica;
-				document.getElementById("musica").innerHTML = perfil.musica;
-				document.getElementById("video_juego_fav").innerHTML = config.video_juego;
-				document.getElementById("video_juego").innerHTML = perfil.video_juego.toString();
+				
+				$("#color_fav").html( config.color)
+				$("#color").html( perfil.color)
+				$("#libro_fav").html( config.libro)
+				$("#libro").html( perfil.libro)
+				$("#musica_fav").html( config.musica)
+				$("#musica").html( perfil.musica)
+				$("#video_juego_fav").html( config.video_juego)
+				$("#video_juego").html( perfil.video_juego.toString())
 
-				document.getElementById("lenguajes_fav").innerHTML = config.lenguajes;
-				document.getElementById("lenguajes").innerHTML = perfil.lenguajes.toString();
+				$("#lenguajes_fav").html( config.lenguajes)
+				$("#lenguajes").html( perfil.lenguajes.toString())
 
-				var correoEnlace = "<a href=\"[email]\">[email]</a>".replace("[email]", perfil.email).replace("[email]", perfil.email);
+				correoEnlace = "<a href=\"[email]\">[email]</a>".replace("[email]", perfil.email).replace("[email]", perfil.email);
 
-				document.getElementById("correo").innerHTML = config.email.replace("[email]", correoEnlace);	
+				$("#correo").html( config.email.replace("[email]", correoEnlace))
+
+				
 			}
 		</script>
 	</head>
@@ -56,24 +58,29 @@
 	    <section>
 	       
 			
-<table class="css_table1" id="perfil">
-  <tr>
-    <td id="foto"><img  class="css_img" id="imagen" src="" alt="BT"></td>
-    <table  class="css_td1">
-		<h1 class="css_h1"  id="nombre" ></h1>
-		<p class="css_p1"><i id="descripcion"></i>
-        </p>
-		
-        <tr><td id="color_fav"></td><td id="color"></td></tr>
-        <tr><td id="libro_fav"></td><td id="libro"></td></tr>
-        <tr><td id="musica_fav"></td><td id="musica"></td></tr>
-        <tr><td id="video_juego_fav"></td><td id="video_juego"></td></tr>
-        <tr><td ><span class="negrita" id="lenguajes_fav"></span></td><td><span class="negrita" id="lenguajes"></span></td></tr>
-        <tr><td id="correo"></td></tr>
-            </table>
-  </tr>
-</table>
-			 
+ <table id="perfil">
+				<tr><td id="foto"><img class="css_img" id="imagen" src="22021629.jpg"></td>
+				    <td id="contenido" >
+					  <table>
+						<tr><td><p id="nombre"></p></td></tr>
+						<tr><td><p id="descripcion"></p>
+							</td>
+						</tr>
+						<tr><td>
+							  <table id="agenda">
+								<tr><td id="color_fav"></td><td id="color"></td></tr>
+								<tr><td id="libro_fav"></td><td id="libro"></td></tr>
+								<tr><td id="musica_fav"></td><td id="musica"></td></tr>
+								<tr><td id="video_juego_fav"></td><td id="video_juego"></td></tr>
+								<tr><td ><span class="negrita" id="lenguajes_fav"></span></td><td><span class="negrita" id="lenguajes"></span></td></tr>
+							  </table>
+							</td>
+						</tr>
+						<tr><td id="correo"></td></tr>
+					  </table>
+				    </td>
+				</tr>
+			</table>
 	    </section>
 	    <footer id="footer">
 	        
