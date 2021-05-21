@@ -55,20 +55,6 @@ window.onload = function() {
     busqueda.nextElementSibling[1].setAttribute("value", config.buscar)
     footer.text(config.copyRight) 
 
-    
-    //listado de estudiantes
-    // for(let i=0; i < listado.length; i++){
-    //     const nuevoDiv = document.createElement('div')
-    //     nuevoDiv.classList.add('swiper-slide')
-    //         nuevoDiv.innerHTML = `
-                
-    //                 <img src="${listado[i].imagen}" alt="${listado[i].nombre}">
-    //                 <a href="./${listado[i].ci}/perfil.html">${listado[i].nombre}</a>
-    //             `
-    //         sectionListado.appendChild(nuevoDiv)
-    // }
-    // swiper.update()
-
     //listado de estudiantes
     for(let i=0; i < listado.length; i++){
             sectionListado.append(`
