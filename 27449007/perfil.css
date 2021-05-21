@@ -33,6 +33,7 @@
 }
 td{
     font-family: 'Times New Roman', Times, serif;
+    padding: .5rem;
 }
 .aligned{
     text-align: left;
