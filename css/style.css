@@ -75,6 +75,20 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
   float: right;
 }
 
+.busqueda input[type=button] {
+    padding: 6px;
+    background: #f5f7f9;
+    border: none;
+    cursor: pointer;
+	 color: #86b1ef;
+}
+
+.busqueda input[type=text] {
+  padding: 6px;
+  border: none;
+  margin-right: 10px;
+}
+
 section { 
   width: 95%;
   margin-top:10px;
@@ -134,10 +148,20 @@ footer {
   color: #86b1ef;
   font-size: 15px;
 }
+.image p{
+  height: auto;
+}
 
-#listado{
+.found{
   display: grid;
   grid-template-columns: auto auto auto auto;
+  list-style: none;
+}
+.not_found{
+  display: grid;
+  grid-template-columns: auto;
+  list-style: none;
+  text-align: center;
 }
 img{
   height: 200px;
@@ -153,4 +177,5 @@ img{
   transform: rotate(15deg);
   background-color: #99c5dd;
 }
+
 
