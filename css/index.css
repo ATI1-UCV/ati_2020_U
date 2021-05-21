@@ -33,7 +33,7 @@ img {
     margin: 0 auto
 }
 
-/* header {
+header {
     height: auto;
     font-size: 2rem;
 }
@@ -42,6 +42,11 @@ img {
     header{
         font-size: inherit;
     }
+}
+
+.row{
+    margin: 0;
+    align-items: center;
 }
 
 nav ul li{
@@ -62,10 +67,11 @@ section.main{
 }
 
 footer{
+    margin: 0;
     height: auto;
     padding: 2rem 0;
     position: static;
-} */
+}
 
 .myUL{
     padding-block-start: 5rem;

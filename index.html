@@ -17,29 +17,31 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li class="logo"><small></small></li>
-                <li class="saludo"></li>
-                <li class="busqueda">
-                    <form>
+            <ul class="row">
+                <li class="logo sitio col-12 col-md-3"><small></small></li>
+                <li class="saludo col-12 col-md-3"></li>
+                <li class="busqueda col-12 col-md-5">
+                    <form onsubmit="fillMain()">
                         <input type="text" id="myInput" placeholder="Nombre...">
-                        <input type="button" onclick="myFunction()" value="Buscar">
+                        <input type="button" onclick="fillMain()" onsubmit="fillMain()" value="Buscar">
                     </form>
                 </li>
             </ul>
         </nav>
     </header>
+
+
     <section class="main">
-
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-
+        <section id="carouselExampleControls" data-ride="carousel" class="carousel slide container-main">
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </section>
     </section>
     <footer>
     </footer>
