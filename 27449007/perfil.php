@@ -3,11 +3,11 @@
 			$decoded_profile_data = json_decode($profile_data, true);
 
 			if($_GET['len'] == 'pt'){
-				$config_data = file_get_contents("configPT.json");				
+				$config_data = file_get_contents("conf/configPT.json");				
 			}else if($_GET['len'] == 'en'){
-				$config_data = file_get_contents("configEN.json");				
+				$config_data = file_get_contents("conf/configEN.json");				
 			}else if($_GET['len'] == 'es'){
-				$config_data = file_get_contents("configES.json");	
+				$config_data = file_get_contents("conf/configES.json");	
 			}
 			$decoded_config_data = json_decode($config_data, true);
 		
