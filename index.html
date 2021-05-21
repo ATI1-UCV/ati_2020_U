@@ -4,6 +4,15 @@
 	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta charset="UTF-8">
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
+	<!-- Swiper -->
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.css"  type="text/css">
+	<link rel="stylesheet" href="css/bootstrap-grid.css"  type="text/css">
+
+	<!-- estilos -->
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
 		<script src="conf/configES.json"></script>
@@ -11,22 +20,33 @@
 		<script src="js/index.js"></script>
 		<title></title>
 	</head>
-	<body>
+	<body> 
 	    <header>
-			<nav>
-				<ul>
-					<li class="logo"></li>
-					<li class="saludo"></li>
-					<li class="busqueda">
+			<nav class="container-fluid">
+				<ul class="row">
+					<li class="col-xs-12 col-sm-12 col-md-5 logo"></li>
+					<li class="col-xs-12 col-sm-5 col-md-3 saludo"></li>
+					<li class="col-xs-12 col-sm-6 col-md-3 busqueda">
 						<form>
-							<input id="nombreBusqueda" type="text">
-							<input type="button" >
+							<div class="form-group form-inline d-flex justify-content-end">
+								<input class="form-control" id="nombreBusqueda" type="text">
+								<input class="form-control" type="button" >
+							</div>
+							
 						</form>
 					</li>
 				</ul>	
 			</nav> 
 	    </header>
-	    <section></section>
-	    <footer></footer>
+	    <section>
+			<div class="swiper-container">
+				<div class="swiper-wrapper"></div>
+			</div>
+		</section>
+		<footer></footer>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="./js/bootstrap.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	</body>
 </html>
