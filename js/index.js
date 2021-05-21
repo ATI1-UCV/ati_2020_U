@@ -18,7 +18,7 @@ buscar.setAttribute("value",config["buscar"])
 					<p>Eduardo Suarez</p>
                 </li>*/
 //en teoria yo deberia de iterar por index.json
-var lista_perfiles = document.getElementsByClassName("Lista de perfiles")[0]
+var lista_perfiles = document.getElementsByClassName("ListaPerfiles")[0]
 // nombre = texto
 // buscar = boton
 function filtrar() {
@@ -29,16 +29,16 @@ function filtrar() {
         let nombre = elemento.nombre.toLowerCase()
         if (nombre.indexOf(texto_b) !== -1) {
             lista_perfiles.innerHTML += `
-            <li class="perfil">
-            <img class="imagen_perfil" src="${elemento.imagen}" height="50" width="40">
-            <p>${elemento.nombre}</p>
-            </li>
+            <div class="perfil">
+                <img class="imagen_perfil" src="${elemento.imagen}" height="50" width="40">
+                <p>${elemento.nombre}</p>
+            </div>
             `
         }
     }
     if(lista_perfiles.innerHTML===''){
         lista_perfiles.innerHTML=`
-        <li>${config.error} ${texto_b}</li>
+        <li class="error"><p>${config.error}</p> ${texto_b}</li>
         `
     }
 }
