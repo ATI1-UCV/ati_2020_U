@@ -21,6 +21,17 @@
      		border-top-left-radius: 80px;
      	}
 
+
+#busqueda a{
+     float:right;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto; /* ie8 */
+}
+
 /* unvisited link */
 a:link {
 		  color: orange;
