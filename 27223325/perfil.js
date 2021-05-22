@@ -3,6 +3,13 @@
 $( document ).ready(function() {
     $("#profile_photo").attr("src"   ,perfil.imagen)
 	$("#profile_photo").attr("alt"   ,"Cesar Salazar Foto")
+	$("#profile_photo").attr("srcset"   , perfil.imagen + " 320w,"+
+										  perfil.imagen + " 480w,"+
+										  perfil.imagen + " 800w")
+
+	$("#profile_photo").attr("sizes"   , "(max-width: 320px) 280px, (max-width: 480px) 440px, 800px")
+
+
 
 	$("#logo").html(config.sitio[0]+"<small>"+config.sitio[1]+"</small>"+config.sitio[2]) 
 	$("#saludo").html(config.saludo+", "+config.nombre)
