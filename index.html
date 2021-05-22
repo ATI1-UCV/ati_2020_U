@@ -6,6 +6,13 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
+		<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
 		<title>ATI[UCV] 2020-U</title>
 	</head>
 	<body>
@@ -14,34 +21,44 @@
 				<ul>
 					<li class="logo">ATI<small>[UCV]</small> 2020-U</li>
 					<li class="saludo">Hola, Daniel Berbesi</li>
-					<li class="busqueda"> <input type="text" placeholder="Nombre..."> <input type="button" value="Buscar"> </li>
+					<li class="busqueda"> <input id = "place" type="text" placeholder="Nombre..."> <input id = "boton" type="button" value="Buscar"> </li>
 				</ul>	
 			</nav> 
 	    </header>
 	    <section>
-	       
-			<nav>
-			
-			<ul>
-				
-				<li class="dum"> <img src="28015794/28015794.jpg" alt="Foto" > <FONT class="texto" > Daniel Berbesi </FONT> </li>
-
-				<li class="dum"> <img src="dummy1/dummy.jpg" alt="Foto" > <FONT class="texto" > Argen Avlacse </FONT> </li>
-
-				<li class="dum"> <img src="dummy2/dummy.jpg" alt="Foto" > <FONT class="texto" > Aldri Normie </FONT> </li>
-
-				<li class="dum"> <img src="dummy3/dummy.jpg" alt="Foto" > <FONT class="texto" > Daslas Timaprime </FONT> </li>
-
-				<li class="dum"> <img src="dummy4/dummy.jpg" alt="Foto" > <FONT class="texto" > David Rastapeluca </FONT> </li>
-
-				<li class="dum"> <img src="dummy5/dummy.jpg" alt="Foto" > <FONT class="texto" > Mr. D. Barbas </FONT> </li>
-
-				<li class="dum"> <img src="dummy6/dummy.jpg" alt="Foto" > <FONT class="texto" > Hipster Moncad </FONT> </li>
-
-			</ul>
-
-			</nav>
-			 
+	      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+	    	<div class="carousel-inner">
+	    		<div class="carousel-item active">
+      				<img class="d-block dum" src="28015794/28015794.jpg" alt="Foto" width="150"> <FONT class="texto" > Daniel Berbesi</FONT>
+    			</div>
+    			<div class="carousel-item">
+      				<img class="d-block dum" src="dummy1/dummy.jpg" alt="Foto" width="150"> <FONT class="texto" > Argen Avlacse </FONT>
+    			</div>
+    			<div class="carousel-item">
+      				<img class="d-block dum" src="dummy2/dummy.jpg" alt="Foto" width="150"> <FONT class="texto" > Aldri Normie </FONT>
+    			</div>
+    			<div class="carousel-item">
+      				<img class="d-block dum" src="dummy3/dummy.jpg" alt="Foto" width="150"> <FONT class="texto" > Daslas Timaprime </FONT>
+    			</div>
+    			<div class="carousel-item">
+      				<img class="d-block dum" src="dummy4/dummy.jpg" alt="Foto" width="150"> <FONT class="texto" > David Rastapeluca </FONT>
+    			</div>
+    			<div class="carousel-item">
+      				<img class="d-block dum" src="dummy5/dummy.jpg" alt="Foto" width="150"> <FONT class="texto" > Mr. D. Barbas </FONT>
+    			</div>
+    			<div class="carousel-item">
+      				<img class="d-block dum" src="dummy6/dummy.jpg" alt="Foto" width="150"> <FONT class="texto" > Hipster Moncad </FONT>
+    			</div>
+  			</div>
+  			<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev" style="background-color:grey;">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next" style="background-color:grey;">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+		  </div>
 	    </section>
 	    <footer>
 	        Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados
