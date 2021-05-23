@@ -119,6 +119,9 @@
         </div>
 
         <footer class="text-center p-3  bg-primary text-white" style="background-color: rgba(0, 0, 0, 0.2);">
+            <?php
+                echo $itemC["copyRight"];
+            ?>
         </footer>
 
 		<!-- <script src="jquery-3.6.0.min.js"></script>  -->
