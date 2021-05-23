@@ -1,4 +1,4 @@
-let config = {
+{
 	"sitio": ["ATI","[UCV]","2020-U"],
 	"home": "Inicio",
 	"saludo": "Hola",
@@ -10,5 +10,5 @@ let config = {
 	"musica":"Mi estilo de música preferida",
 	"video_juego":"Vídeo juegos favoritos",
 	"lenguajes":"Lenguajes aprendidos",
-	"email":"Si necesitan comunicarse conmigo me pueden escribir a :eduardosuarez.ucv@gmail.com"
+	"email":"Si necesitan comunicarse conmigo me pueden escribir a : "
 }
