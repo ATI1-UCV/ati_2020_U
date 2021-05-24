@@ -1,7 +1,12 @@
-version: 3.8
+version: "3.8"
 services:
   webapp:
-    context: ./
-    dockerfile: Dockerfile
+    build:
+      context: ./
+      dockerfile: Dockerfile
     container_name: phpwebapp
+    ports:
+      - 8080:80
+    volumes:
+      - .:/var/www/html/
 
