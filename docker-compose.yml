@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  app:
+    container_name: "miUbuntu"
+    image: diegosanchezp/ubuntu_ati:latest
+    command: apachectl -D FOREGROUND
+    ports:
+      - 8080:80
+    stdin_open: true
+    tty: true
