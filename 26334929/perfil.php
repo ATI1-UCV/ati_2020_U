@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta charset="UTF-8">
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
-    
+
     <!-- Responsive meta tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -43,87 +43,98 @@
       }
 
       // Abrir config dependiendo del idioma
-      //
+
+      $conf_dir = "../conf/conf/";
       $language = $_GET["len"];
       if ($language){
         if($language === "es"){
-          $config_json_string = file_get_contents("../conf/configES.json"); 
+          $config_json_string = file_get_contents($conf_dir . "configES.json");
         }elseif ($language === "en"){
-          $config_json_string = file_get_contents("../conf/configEN.json"); 
+          $config_json_string = file_get_contents($conf_dir . "configEN.json");
         }elseif ($language === "pt"){
-          $config_json_string = file_get_contents("../conf/configPT.json");  
+          $config_json_string = file_get_contents($conf_dir . "configPT.json");
         }
       }
-      
+      if (!$config_json_string){
+          echo "<p>Unable to open language.json<p>";
+      }
+
       $config = json_decode($config_json_string, true);
+
+      if(!$config){
+        echo "<p>Unable to decode config *.json<p>";
+      }
+      ?>
 	    <header>
         <nav>
           <ul>
-            <li class="logo" id="especial-logo"></li>
-            <li class="saludo">
-              <span class="traducir-config" data-json-key="saludo">$config["saludo"]</span>
-              <span class="traducir-perfil" data-json-key="nombre">$perfil["nombre"]</span>
+            <li class="logo">
+            <?php
+              echo($config["sitio"][0]), "<small>", ($config["sitio"][1]), "</small>" ?>
             </li>
-            <li class="busqueda"><a href="../index.html" class="traducir-config" data-json-key="home">$config["home"]</a></li>
-          </ul>	
-        </nav> 
+            <li class="saludo">
+            <span class="traducir-config" data-json-key="saludo"><?php echo($config["saludo"]) ?></span>
+            <span class="traducir-perfil" data-json-key="nombre"><?php echo($perfil["nombre"]) ?></span>
+            </li>
+            <li class="busqueda"><a href="../index.html" class="traducir-config" data-json-key="home"><?php echo($config["home"]) ?></a></li>
+          </ul>
+        </nav>
 	    </header>
 	    <section class="container">
-        <section class="row" id="foto-perfil"> 
+        <section class="row" id="foto-perfil">
           <div class="col">
             <picture>
               <source srcset="./ProfilePic.jpg" media="(min-width: 800px)">
-              <img src="26334929.jpeg" alt="foto de perfil"> 
+              <img src="26334929.jpeg" alt="foto de perfil">
             </picture>
           </div>
         </section>
         <article class="row" id="contenido">
           <div class="col">
-            <h1 id="nombre" class="traducir-perfil" data-json-key="nombre">$perfil[""]</h1>
+          <h1 id="nombre" class="traducir-perfil" data-json-key="nombre"><?php echo($perfil["nombre"]) ?></h1>
             <p>
-            <em class="traducir-perfil" data-json-key="descripcion">$perfil[""]</em>
+            <em class="traducir-perfil" data-json-key="descripcion"><?php echo($perfil["descripcion"]) ?></em>
             </p>
             <table>
               <tbody>
                 <tr>
-                  <td class="traducir-config" data-json-key="color">echo($config["color"]);</td>
-                  <td class="traducir-perfil" data-json-key="color">echo($perfil["color"]);</td>
+                <td class="traducir-config" data-json-key="color"><?php echo($config["color"]); ?></td>
+                <td class="traducir-perfil" data-json-key="color"><?php echo($perfil["color"]); ?></td>
                 </tr>
                 <tr>
-                  <td class="traducir-config" data-json-key="libro">echo($config["libro"]);</td>
-                  <td class="traducir-perfil" data-json-key="libro">echo($perfil["libro"]);</td>
+                <td class="traducir-config" data-json-key="libro"><?php echo($config["libro"]); ?></td>
+                <td class="traducir-perfil" data-json-key="libro"><?php echo($perfil["libro"]); ?></td>
                 </tr>
                 <tr>
-                  <td class="traducir-config" data-json-key="musica">echo($config["musica"]);</td>
-                  <td class="traducir-perfil" data-json-key="musica">echo($perfil["musica"]);</td>
+                <td class="traducir-config" data-json-key="musica"><?php echo($config["musica"]); ?></td>
+                <td class="traducir-perfil" data-json-key="musica"><?php echo($perfil["musica"]); ?></td>
                 </tr>
                 <tr>
-                  <td class="traducir-config" data-json-key="video_juego">echo($config["video_juego"]);</td>
+                <td class="traducir-config" data-json-key="video_juego"><?php echo($config["video_juego"]); ?></td>
                   <td class="traducir-perfil" data-json-key="video_juego">
-                    implode(", ", $perfil["video_juego"]);
+                    <?php echo(implode(", ", $perfil["video_juego"])); ?>
                   </td>
                 </tr>
                 <tr>
                 <td><strong class="traducir-config" data-json-key="lenguajes"></strong>
-                echo($config["lenguajes"]);
+                  <?php echo($config["lenguajes"]); ?>
                 </td>
-                  <td><strong class="traducir-perfil" data-json-key="lenguajes">implode(", ", $perfil["lenguajes"])</strong>
-</td>
+                <td>
+                  <strong class="traducir-perfil" data-json-key="lenguajes"><?php echo(implode(", ", $perfil["lenguajes"])); ?></strong>
+                </td>
                 </tr>
               </tbody>
             </table>
             <p>
               <span class="traducir-config" data-json-key="email">
-                echo(str_replace("[email]", $config["email"], $config["email"]));
+                <?php echo(str_replace("[email]", $config["email"], $config["email"])); ?>
               </span>
             </p>
           </div>
         </article>
 	    </section>
 	    <footer class="traducir-config" data-json-key="copyRight">
-        echo($config["copyRight"]);
-	    </footer>
-
-    ?>
+        <?php echo($config["copyRight"]); ?>
+      </footer>
 	</body>
 </html>
