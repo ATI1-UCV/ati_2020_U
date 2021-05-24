@@ -1,21 +1,68 @@
-$( document ).ready(function() {
-    $("#profile_photo").attr("src"   ,perfil.imagen)
-	$("#profile_photo").attr("alt"   ,"Cesar Salazar Foto")
-	$("#profile_photo").attr("width" ,"200")
-	$("#profile_photo").attr("height","300")
 
-	$("#logo").html(config.sitio[0]+"<small>"+config.sitio[1]+"</small>"+config.sitio[2]) 
-	$("#saludo").html(config.saludo+", "+config.nombre)
-	$("#busqueda").html("<a href=\"../index.html\">"+config.home+"</a>")
+function AddUserProfile() {
+    var fragment = document.createDocumentFragment();
+    console.log("LISTADOS LEN: ", listado.length)
 
-	$("#name_person").html(config.nombre)
+    for (var i = 0; i < listado.length; i++) {
+        var e = document.createElement("li");
+        e.className = "square_display_profile";
+        e.innerHTML = "<img src=\""+listado[i].imagen+"\" alt=\""+listado[i].nombre+"\" width=\"100px\" height=\"120px\"> <h3>"+listado[i].nombre+"</h3>"	;
+        fragment.appendChild(e);
+    }
 
-	$("#description_person").html("<i>" + config.descripcion + "</i>")  
+    var e = document.createElement("li");
+    	e.id = "notFoundID";
+    	e.style.display = "none";
+        e.innerHTML = "<h3> No hay alumnos que tengan en su nombre: </h3>"	;
+        fragment.appendChild(e);
 
-	$("#like_person").html(config.color +": "+ perfil.color + "<br>" + config.libro +": "+ perfil.libro + "<br>" + config.musica +": "+ perfil.musica + "<br>" + config.video_juego +": "+ perfil.video_juego + "<br>" + config.lenguajes+": "+ "<b>"+perfil.lenguajes+"</b>")  
+    var UlElement = document.getElementById('listadosPerfiles');
+    UlElement.appendChild(fragment);
+}
 
-	$("#contact_person").html(config.email + "<a href = \"mailto: bitemecesar@gmail.com\">"+perfil.email+"</a>")
+function filterList() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  var displayed = false;
+  
+  input = document.getElementById('buscadorID');
+  filter = input.value.toUpperCase();
 
-	$("footer").hmtl(config.copyRight)
+  ul = document.getElementById("listadosPerfiles");
+  li = ul.getElementsByTagName('li');
+  li[101].style.display = "none";
 
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("h3")[0];
+    txtValue = a.textContent || a.innerText;
+
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+      displayed = true;
+
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+
+  if (displayed == false) {
+  	console.log("Not found, ",li.length);
+  	li[101].innerHTML = "<h3> No hay alumnos que tengan en su nombre: "+ filter +" </h3>";
+  	li[101].style.display = "";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+
+	
+
+	AddUserProfile();
+	
+	document.getElementById("logo").innerHTML = config.sitio[0]+"<small>"+config.sitio[1]+"</small>"+config.sitio[2];
+	document.getElementById("saludo").innerHTML   = config.saludo+", "+config.nombre;
+
+	document.getElementById("buscadorID").placeholder = config.buscar;
+
+	document.getElementsByTagName("footer")[0].innerHTML = config.copyRight;
 });

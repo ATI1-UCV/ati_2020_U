@@ -6,9 +6,11 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
-		<link href="conf/configES.json"  type="text/json">
-
+		
+		<script type="text/javascript" src="conf/configES.json"></script>
+		<script type="text/javascript" src="datos/index.json"></script>
 		<script type="text/javascript" src="js/index.js"></script>
+
 	
 		<title>ATI[UCV] 2020-U</title>
 
@@ -18,30 +20,31 @@
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo"></li>
-					<li class="saludo"></li>
-					<li class="busqueda"><form>
-											<input type="search" name="searchNav" />
-											<input type="button" name="searchNavB" />
-										</form>
+					<li class="logo"     id="logo"></li>
+					<li class="saludo"   id="saludo"></li>
+					<li class="busqueda" id="busqueda">
+						<form onsubmit="filterList();return false">
+							<input id="buscadorID" type="text" name="searchNav" onkeyup="filterList()"/>
+							<input type="submit" name="searchNavB" value="Buscar">
+						</form>
 					</li>
 				</ul>	
 			</nav> 
 	    </header>
+
 	    <section>
 	       
 	       	<div class="container">
-			<ul class="row">
-				<li class="square_display_profile">
-						<img src="27223325/27223325.jpeg" alt="Cesar pic" width="100px" height="120px">
-						<h3>Cesar Salazar</h3>	
-				</li>
-			</ul>
+				<ul id="listadosPerfiles" class="row">
+					<li class="square_display_profile">
+							<img src="27223325/27223325.jpeg" alt="Cesar pic" width="100px" height="120px">
+							<h3>Cesar Salazar</h3>	
+					</li>
+				</ul>
 			</div>
 			 
 	    </section>
-	    <footer>
-	        
-	    </footer>
+
+	    <footer></footer>
 	</body>
 </html>
