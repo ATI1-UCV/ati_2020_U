@@ -1,4 +1,4 @@
-let perfil = {
+{
     "nombre": "Daniel Vieira",
     "descripcion": "Soy estudiante de computación de la Universidad Central de Venezuela. Estoy interesado en la rama de Inteligencia Artificial debido a eso he realizado diversos cursos respecto a eso. En mi tiempo libre me gusta ir a jugar fútbol.",
     "color": "Azul",
