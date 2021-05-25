@@ -1,3 +1,5 @@
+// THIS FILE WILL NOT RUN ANYMORE, ITS DONE BY PHP ON THE SERVER SIDE
+
 document.title = `${perfil.nombre}`;
 // $(document).attr("title", "New Title"); // does not work on IE
 

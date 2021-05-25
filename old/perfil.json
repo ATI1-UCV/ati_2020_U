@@ -1,4 +1,4 @@
-{
+let perfil = {
   "nombre": "Vittorio Adesso",
   "descripcion": "Soy estudiante de computación en la UCV, preparador del curso de Algoritmo y Estructura de Datos, actualmente contribuyendo al proyecto de GDQTech.com, desarrollandome en las areas de la seguridad informática e Inteligencia Artificial.",
   "color": "Amarillo azulado",

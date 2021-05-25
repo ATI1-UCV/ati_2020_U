@@ -1,3 +1,7 @@
+p.email:first-letter {
+  text-transform: uppercase;
+}
+
 main {
   margin: 0 auto;
   max-width: 90%;

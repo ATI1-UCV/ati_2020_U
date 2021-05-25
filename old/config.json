@@ -1,4 +1,4 @@
-{
+let config = {
 	"sitio": ["ATI","[UCV]","2021-1"],
 	"home": "Inicio",
 	"login": "Entrar",
