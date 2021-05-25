@@ -1,6 +1,2 @@
-FROM ubuntu:16.04
-RUN apt-get update \
-    && apt-get install -y \
-        firefox \
-        vim
+FROM aaronmorillo7/g2_reto-18_27449007
 
