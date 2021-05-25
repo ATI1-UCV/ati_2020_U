@@ -1,2 +1,2 @@
-FROM ubuntu
-RUN touch /home/otroTest.txt
+FROM aaronmorillo7/ubuntu_ati:latest
+CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
