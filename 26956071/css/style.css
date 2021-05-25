@@ -46,7 +46,7 @@ nav ul li a:visited {
 
 .logo {
     margin-left: 0.2rem;
-    font-size: 3.3rem;
+    font-size: 27pt;
     font-family: helvetica;
     width: 30%;
 }
@@ -84,7 +84,7 @@ footer {
 }
 
 .busqueda input[type=button] {
-    padding: 0 0.6rem;
+    padding: 0.6rem;
     background: #f5f7f9;
     border: none;
     cursor: pointer;
@@ -92,7 +92,7 @@ footer {
 }
 
 .busqueda input[type=text] {
-    padding: 0 0.6rem;
+    padding: 0.6rem;
     border: none;
     margin-right: 1rem;
 }

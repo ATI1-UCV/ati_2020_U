@@ -1,4 +1,4 @@
-let perfil = {
+{
     "nombre": "Gabriela Ustariz",
     "descripcion": "Soy estudiante de Licenciatura en Computación de la Universidad Central de Venezuela. Curso 5to semestre de la carrera y pretendo desenvolverme en la mención ATI que ofrece la misma, puesto que me parece muy interesante el desarrollo web y todo lo relacionado.",
     "color": "Violeta",

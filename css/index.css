@@ -1,37 +1,124 @@
+html{
+    font-size: 32.5%;
+    box-sizing: border-box;
+    /* 1rem = 6px */
+}
+
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+@media (min-width: 480px){
+    html{
+        font-size: 50%; 
+        /* 1rem = 8px */
+    }
+}
+
+@media (min-width: 1200px){
+    html{
+        font-size: 62.5%; 
+        /* 1rem = 10px */
+    }
+}
+
+body{
+    font-size: 1.6rem;
+}
+
 img {
     width: 60%;
-    height: 200px;
+    height: 25rem;
+    margin: 0 auto
 }
 
-section ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 35px;
-    list-style-type: none;
-    margin-block-start: 35px;
+header {
+    height: auto;
+    font-size: 2rem;
 }
 
-section ul li {
-    display: block;
-    border-style: outset;
-    background-color: rgba(134, 178, 239, 0.2);
-    height: 240px;
+@media (min-width: 992px){
+    header{
+        font-size: inherit;
+    }
+}
+
+.row{
+    margin: 0;
+    align-items: center;
+}
+
+nav ul li{
     text-align: center;
-    padding-top: 20px;
-    transition: 0.6s;
+    border-bottom: 0.1rem solid #fff;
 }
 
-section ul li:last-child {
+@media (min-width: 768px){
+    .busqueda{
+        text-align: right;
+        padding-right: 3rem;
+    }
+}
+
+section.main{
+    min-height: calc(100% - 13.4rem);
+    margin-bottom: 0;
+}
+
+footer{
+    margin: 0;
+    height: auto;
+    padding: 2rem 0;
+    position: static;
+}
+
+.myUL{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+    padding-block-start: 5rem;
+}
+
+.carousel-inner{
+    overflow: visible;
+    width: 90%;
+    margin: 0 auto;
+}
+
+section .myUL .container-visible {
+    border: none;
+    border-style: outset;
+    border-color: white;
+    background-color: rgba(134, 178, 239, 0.2);
+    height: 35rem;
+    display: grid;
+    place-content: center;
+    transition: 0.6s;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+section .myUL .container-visible > a {
+    border: none;
+}
+
+section .myUL > div:last-child {
     margin-block-end: 85px;
 }
 
-section ul li:hover {
+section .myUL .container-visible:hover {
     background-color: #99c5dd;
     transform: rotate(5deg) scale(1.07);
 }
 
-section ul li a {
+/* section .myUL .container-visible {
     display: block;
+    width: 100%;
+    margin: 0;
+    border: none;
     text-decoration: none;
     color: rgb(83, 148, 240);
-}
+} */
