@@ -30,46 +30,39 @@ div ul li h3{
   color: #86b1ef;
 }
 
-/* Container info */
-.container{
+.square {
+  position: relative;
+  width: 50%;
+}
+
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 15 0%;
+}
+
+.content {
+  position: absolute;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  height: 100%;
 }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
+.center {
+  margin: auto;
+  width: 50%;
+  /*border: 3px solid green;
+  padding: 10px;*/
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-@media (min-width: 992px) {
-  .container{
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
-
-/* Row inside container info */
-.row {
-  display: -ms-flexbox;
+.container {
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  justify-content: center;
+  align-items: center;
 }
+

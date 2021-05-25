@@ -1,7 +1,7 @@
 
 function AddUserProfile() {
     var fragment = document.createDocumentFragment();
-    console.log("LISTADOS LEN: ", listado.length)
+    console.log("LISTADOS LEN: ", listado.length);
 
     for (var i = 0; i < listado.length; i++) {
         var e = document.createElement("li");
@@ -18,6 +18,40 @@ function AddUserProfile() {
 
     var UlElement = document.getElementById('listadosPerfiles');
     UlElement.appendChild(fragment);
+}
+
+function AddUserProfileCarousel() {
+    var fragment = document.createDocumentFragment();
+    var fragment2 = document.createDocumentFragment();
+    console.log("LISTADOS LEN: ", listado.length);
+
+    for (var i = 0; i < listado.length; i++) {
+
+        // <div class="carousel-item active">
+        var carouselItem = document.createElement("div");
+        carouselItem.className = "carousel-item";
+        // <img class="d-block w-100 h-100" src="./sample/Desert.jpg" alt="First slide">
+        carouselItem.innerHTML = "<img class=\"d-block w-100 h-100\" src=\""+listado[i].imagen+"\" width=\"100px\" height=\"120px\" /><div class=\"carousel-caption d-none d-md-block\"><h5>"+listado[i].nombre+"</h5></div>";
+
+        fragment.appendChild(carouselItem);
+
+
+        // <li data-target="#carouselID" data-slide-to="0" class="active"></li>
+        var li = document.createElement("li");
+        num = i+1;
+        li.setAttribute("data-target", "#carouselID");
+        li.setAttribute("data-slide", num.toString());
+
+        fragment2.appendChild(li)
+
+    }
+
+    var carouselInner = document.getElementById('carouselInnerID');
+    carouselInner.appendChild(fragment);
+
+    var carouselIndicators = document.getElementById('carouselIndicatorsID');
+    carouselIndicators.appendChild(fragment2);
+
 }
 
 function filterList() {
@@ -55,9 +89,7 @@ function filterList() {
 
 document.addEventListener("DOMContentLoaded", function(){
 
-	
-
-	AddUserProfile();
+  AddUserProfileCarousel();
 	
 	document.getElementById("logo").innerHTML = config.sitio[0]+"<small>"+config.sitio[1]+"</small>"+config.sitio[2];
 	document.getElementById("saludo").innerHTML   = config.saludo+", "+config.nombre;
