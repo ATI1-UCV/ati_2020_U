@@ -1,0 +1,38 @@
+
+#name{
+	font-size: xx-large; color: rgb(255,0,0);
+}
+#italic{
+	font-style:italic;
+}
+#bold{
+	font-weight:bold;
+}
+.imagen{
+	width:15%;
+	margin: inherit;
+	float: left;
+	text-align: right;
+	display: inline-flex;}
+.imagen img{
+	width: 100%;
+	height: auto;
+	border-top-left-radius: 40% 40%;
+}
+.texto{
+	width:75%;
+	margin: inherit;
+	border-width: 1px;
+	border-style: solid;
+	border-color: red;
+	box-shadow: 5px 5px 5px #999;
+	float: left;
+	text-align: left;
+	display: inline-block;
+}
+a:link{
+	color:orange;
+}
+a:visited{
+	color:red;
+}
