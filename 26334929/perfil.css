@@ -1,0 +1,35 @@
+#nombre{
+  color: orange;
+}
+
+#foto-perfil{
+  float: left;
+  margin: 0px 10px 0px 0px;
+  width: auto;
+}
+
+#foto-perfil img{
+  border: 1px solid black;
+  border-top-left-radius: 50px 50px;
+}
+
+#contenido{
+  float: left;
+  box-shadow: 3px 3px grey;
+  border: 1px solid black;
+  padding: 10px;
+  max-width: 900px;
+}
+
+a[href="mailto:diegosandmg@gmail.com"]{
+  color: orange;
+}
+
+a[href="mailto:diegosandmg@gmail.com"]:visited{
+  color: red;
+}
+
+#contenido td{
+  padding: 0px 10px 0px 0px;
+}
+
