@@ -1,3 +1,24 @@
+/*fetch('./perfil.php',{
+	method: 'POST',
+headers:{
+	'Content-Type':'application/json',
+},
+body:JSON.stringify({len:'es'}),
+})
+.then(()=>console.log('ok'))
+.catch((er)=>console.log(er))
+
+const data = new FormData()
+data.append('len','es')
+fetch('./perfil.php',{
+	method:'POST',
+	body:data
+})
+.then((res)=>res.json())
+.then((res)=>{
+console.log(res)})
+*/
+/*
 //Variables y selectores
 const title = $('title')
 const logo = $('.logo')
@@ -9,6 +30,14 @@ const descPerfil = $('#desc-perfil')
 const tablaPerfil = $('#tabla-perfil')
 const contactoPerfil = $('#contacto-perfil')
 const footer = $('.footer')
+
+let fetchData = { 
+	method: 'POST',
+	body: {len:'es'},
+	headers: new Headers()
+}
+
+fetch('../25872491/perfil.php', fetchData)
 
 let infoTabla = [
 	[config.color,perfil.color],
@@ -57,3 +86,4 @@ textContacto = config.email.replace('[email]', textContacto)
 contactoPerfil.html(textContacto)
 
 footer.text(config.copyRight)
+*/

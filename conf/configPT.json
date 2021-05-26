@@ -1,8 +1,8 @@
-config = {
-	"sitio": ["ATI","[UCV]","2020-U"],
+{
+	"sitio": ["ATI","[UCV]","2021-1"],
 	"home": "Início",
 	"login": "Sessão",
-	"copyRight":"Copyright © 2020 Escola de informática - ATI. Todos os direitos reservados",
+	"copyRight":"Copyright © 2021 Escola de informática - ATI. Todos os direitos reservados",
 	"nombre":"Nome",
 	"descripcion":"",
 	"color":"Minha cor favorita é",
@@ -12,6 +12,5 @@ config = {
 	"lenguajes":"Linguagems aprendidas",
 	"email":"Se precisar me contatar pode me escrever em [email]",
 	"buscar": "Procurar",
-	"saludo": "Olá",
-	"mensajeBusqueda":"não há alunos com seus nomes: [query]"
+	"saludo": "Olá"
 }

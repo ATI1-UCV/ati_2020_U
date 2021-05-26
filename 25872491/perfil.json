@@ -1,4 +1,4 @@
-let perfil =  {
+{
 	"nombre":"Katherin Mozo",
 	"descripcion":"Soy una estudiante de la carrera licenciatura en computación en la UCV. Me interesan temas como la tecnología, los deportes y las artes.",
 	"color":"azul",
