@@ -1,0 +1,51 @@
+#name{
+    color: green;
+    font-size: 250%;
+    font-family: 'Times New Roman', Times, serif;
+}
+#email{
+    color: orange;
+    font-family: 'Times New Roman', Times, serif;
+}
+#email:visited{
+    color:red;
+}
+#description{
+    font-family: sans-serif;
+    font-style: italic;
+}
+#table{
+    border: black 1px solid;
+    box-shadow: 5px 5px 2px 0px gray;
+}
+#photo{
+    border-radius: 40px 0px 0px 0px;
+    height: 213px;
+}
+.lp{
+    font-weight: bold;
+}
+.content{
+    margin: 2px;
+}
+td{
+    font-family: 'Times New Roman', Times, serif;
+}
+.aligned{
+    text-align: left;
+    align-content: left;
+}
+#general_content{
+    display: grid;
+    grid-template-areas: "photo_content table_content"; 
+}
+#photo_content{
+    grid-area: photo_content;
+}
+#table_content{
+    grid-area: table_content;
+    margin-left: 0px;
+}
+span{
+    font-size: small;
+}

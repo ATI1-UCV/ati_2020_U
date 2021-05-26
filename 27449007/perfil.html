@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta charset="UTF-8">
+		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="../css/style.css"  type="text/css">
+		<link rel="stylesheet" href="perfil.css"  type="text/css">
+		<script type="text/javascript" src="config.json"></script>
+		<script type="text/javascript" src="perfil.json"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<title>Aaron Morillo</title>
+	</head>
+	<body>
+	    <header>
+			<nav>
+				<ul id="header-content">
+					<li id="logo" class="logo"></li>
+					<li id="saludo" class="saludo"></li>
+					<li class="busqueda"><a id="home" href="../index.html"></a></li>
+				</ul>	
+			</nav> 
+	    </header>
+	    <section id="general_content">
+			<section id="photo_content">
+				<img  align="left" id="photo" class="content">
+			</section>
+			<section id="table_content" align="right" >   
+
+				<table id="table" class="content">
+
+				</table>
+			</section>
+			 
+	    </section>
+	    <footer id="footer">
+
+		</footer>
+		<script> 
+		var config_j = JSON.parse(JSON.stringify(config));
+		var perfil_j = JSON.parse(JSON.stringify(perfil));
+		console.log(perfil_j.nombre);
+		//JSON en la tabla
+			$("#table").append('<tr>' + 
+			'<td colspan="2" class="aligned" id="name">' + perfil_j.nombre + '</td>'+'</tr>');
+			$("#table").append('<tr>' + 
+			'<td colspan="2" class="aligned" id="description">' + perfil_j.descripcion + '</td>'+'</tr>');
+			$("#table").append('<tr>' + 
+			'<td class="aligned">' + config_j.color + '</td>'+
+			'<td class="aligned">' + perfil_j.color + '</td>'+'</tr>');
+			$("#table").append('<tr>' + 
+			'<td class="aligned">' + config_j.libro + '</td>'+
+			'<td class="aligned">' + perfil_j.libro + '</td>'+'</tr>');
+			$("#table").append('<tr>' + 
+			'<td class="aligned">' + config_j.musica + '</td>'+
+			'<td class="aligned">' + perfil_j.musica+ '</td>'+'</tr>');
+			$("#table").append('<tr>' + 
+			'<td class="aligned">' + config_j.video_juego + '</td>'+
+			'<td class="aligned">' + perfil_j.video_juego + '</td>'+'</tr>');
+			$("#table").append('<tr>' + 
+			'<td class="aligned lp">' + config_j.lenguajes + '</td>'+
+			'<td class="aligned lp">' + perfil_j.lenguajes + '</td>'+'</tr>');
+			$("#table").append('<tr>' + 
+			'<td colspan="2" class="aligned">' + (config_j.email).replace('[email]','') + '<a href="https://www.aaronmorillo7@gmail.com" id="email">' + perfil_j.email +'</a>' + '</td>'+ '</tr>');
+			//JSON en el footer
+			$("#footer").append(config_j.copyRight);
+			//JSON en la imagen
+			document.getElementById("photo").src=perfil_j.imagen;
+			//JSON en el header
+			$("#logo").append(config_j.sitio[0] + '<span>' + config_j.sitio[1] + '</span>' + ' ' +config_j.sitio[2] )
+			$("#saludo").append(config_j.saludo + ', ' + perfil_j.nombre)
+			$("#home").append(config_j.home)
+			console.log(perfil_j.lenguajes[1])
+		</script>
+	</body>
+</html>
