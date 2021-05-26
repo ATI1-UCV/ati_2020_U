@@ -1,0 +1,15 @@
+let perfil = {
+	"nombre" : "Victor Daniel Tafuri Vidal",
+        "descripcion" : "Estudiante de 6to Semestre en la Escuela de Computacion de la UCV, Supervisor Departamento de NEXGO de DISGLOBAL, Auxiliar Docente del Laboratorio de Postgrado en la Facultad de Ciencias de la UCV Segunda Linea del Equipo de Rugby UCVRFC ",
+        
+	"color" : "Azul",  
+	"libro" : "Tormenta de Espadas ",
+	"musica" : "Cualquiera", 
+	"video_juego": "The last of us",
+	"lenguajes" : 	["c++","java"],
+	"email" : "victortafuri2@gmail.com",
+	"ci" : "25504486", 
+	"genero": "masculino",
+	"fecha_nacimiento" : "09/10/1996",
+	"imagen": "25504486.jpeg"
+}
