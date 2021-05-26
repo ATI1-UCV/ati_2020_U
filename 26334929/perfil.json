@@ -1,4 +1,4 @@
-let perfil = {	
+{	
   "nombre": "Diego Sánchez",
   "descripcion": "Estudiante de ciencias de la computación en La UCV. Interesado en el desarrollo web y las aplicaciones que puede tener la tecnología internet.",
   "color": "Amarillo",
@@ -7,7 +7,7 @@ let perfil = {
   "video_juego": ["IL-2 Sturmovik 1946"],
   "lenguajes": ["C/C++", "javascript", "python3"],
   "email": "diegosandmg@gmail.com",
-  "ci": 26334929,
+  "ci": "26334929",
   "genero": "masculino",
   "fecha_nacimiento": "14/9/1998",
 	"imagen": "26334929.jpg"
