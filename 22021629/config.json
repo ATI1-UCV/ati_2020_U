@@ -3,7 +3,7 @@ let config = {
 	"home": "Inicio",
 	"saludo": "Hola",
 	"copyRight":"Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados",
-	"nombre":"",
+	"nombre":"Jose Perez",
 	"descripcion":"",
 	"color":"Mi color favorito es",
 	"libro":"Mi libro favorito es",

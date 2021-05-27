@@ -1,4 +1,4 @@
-listado = [
+let listado = [
     {
         "ci": "22021629",
         "imagen": "22021629\/22021629.jpg",
