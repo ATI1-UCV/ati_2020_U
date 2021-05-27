@@ -1,10 +1,6 @@
-table {
-	width: 100%;
-}
 
-td {
-    vertical-align: top;
-}
+
+
 
 a:link {
 	text-decoration:none;   
@@ -25,14 +21,18 @@ a:visited {
 
 #contenido {
 	border: 1px solid black;
-	width: 80%;
+	width: 100%;
 	box-shadow: 5px 5px gray;
+	padding: 6px;
+	
+	justify-content: space-evenly;
+	max-width: 80rm;
+	border: 0.2rem solid black;
+	box-shadow: 0.5rem 0.5rem gray;
+	padding: 2rem;
 }
 
-#contenido  {
-	border: 1px solid black;
-	padding: 6px;
-}
+
 
 #nombre {
 	color: orange; 
@@ -56,9 +56,20 @@ a:visited {
 .negrita {
 	font-weight: bold;
 }
-img.css_img  {
+#imagen  {
 	border-radius: 60px 0px 0px 0px;
-  
+
+	
   border: 0px solid black;
 	width: 100%;
 }
+
+.row {
+	margin: auto 0;
+  }
+  
+  
+  
+  .bold {
+	font-weight: bold;
+  }

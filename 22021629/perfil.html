@@ -4,9 +4,17 @@
 	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta charset="UTF-8">
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
 		<title> Jose Daniel </title>
+		<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+	  />
         <script type="text/javascript" src="config.json"></script>
         <script type="text/javascript" src="perfil.json"></script>
 		<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
@@ -58,10 +66,14 @@
 	    <section>
 	       
 			
- <table id="perfil">
-				<tr><td id="foto"><img class="css_img" id="imagen" src="22021629.jpg"></td>
-				    <td id="contenido" >
-					  <table>
+ 
+	<div  class="container-fluid">
+        <div class="row">
+				<div class="col-xl-3 col-md-6 col-12 " > <img  id="imagen" src="22021629.jpg"> </div>
+					
+				 	
+				    <div id="contenido" class="col-xl-9 col-md-6 col-12" >
+					  
 						<tr><td><p id="nombre"></p></td></tr>
 						<tr><td><p id="descripcion"></p>
 							</td>
@@ -73,17 +85,30 @@
 								<tr><td id="musica_fav"></td><td id="musica"></td></tr>
 								<tr><td id="video_juego_fav"></td><td id="video_juego"></td></tr>
 								<tr><td ><span class="negrita" id="lenguajes_fav"></span></td><td><span class="negrita" id="lenguajes"></span></td></tr>
+								<tr><td id="correo"></td></tr>
 							  </table>
+							 
 							</td>
 						</tr>
-						<tr><td id="correo"></td></tr>
-					  </table>
-				    </td>
-				</tr>
-			</table>
+						
+					 
+				    
+				</div>	
+			</div>
+		</div>
+	
 	    </section>
-	    <footer id="footer">
+	    <footer id="footer"  class="text-center p-3  bg-primary text-white" style="background-color: rgba(0, 0, 0, 0.2);">
 	        
 	    </footer>
+		 <!-- Bootstrap -->
+		
+   
+	   <!-- JQuery -->
+	   <script
+		 src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+		 integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+		 crossorigin="anonymous"
+	   ></script>
 	</body>
 </html>
