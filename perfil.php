@@ -1,6 +1,7 @@
 <?php 
 	session_start();
-	$profile_data = file_get_contents('datos/perfil.json');
+	$profile = $_GET['ci'] ? $_GET['ci']."/perfil.json" : 'datos/perfil.json';
+	$profile_data = file_get_contents($profile);
 	$decoded_profile_data = json_decode($profile_data, true);
 
 	if($_GET['len'] == 'pt'){
@@ -12,7 +13,8 @@
 	}
 	$decoded_config_data = json_decode($config_data, true);
 	$_SESSION['nombre'] = $decoded_profile_data['nombre'];
-	$_SESSION['len']= $_GET['len'] ? : "es";
+	$_SESSION['len']= $_GET['len'] ? $_GET['len'] : "es";
+	$_COOKIE['contador'] += 1;
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -48,12 +50,12 @@
 	    <section id="general_content" class="general_content container">
 			<picture>
 				<source media="(max-width:767px)"
-				srcset="27449007/27449007first.jpg"
+				srcset="<?php $mobile_image = $decoded_profile_data['imagen'] ? $_GET['ci']."/".$decoded_profile_data['imagen'] : "27449007/27449007first.jpg"; echo $mobile_image;?>"
 				>
 				<source media="(min-width:768px)"
-				srcset="27449007/27449007second.jpg"
+				srcset="<?php $desktop_image = $decoded_profile_data['imagen'] ? $_GET['ci']."/".$decoded_profile_data['imagen'] : "27449007/27449007second.jpg"; echo $desktop_image;?>"
 				>
-				<img  align="left" id="photo" class="col-lg-5" src="<?php echo $decoded_profile_data['imagen']; ?> ">
+				<img  align="left" id="photo" class="col-lg-5" src="<?php $mobile_image = $decoded_profile_data['imagen'] ? $_GET['ci']."/".$decoded_profile_data['imagen'] : "27449007/27449007first.jpg"; echo $mobile_image;?> ">
 			</picture>
 
 			<table id="table" class="col-lg-5">

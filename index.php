@@ -1,3 +1,4 @@
+<?php $value = 1; setcookie("contador", $value); ?>
 <!DOCTYPE HTML>
 <html>
 	<head>
