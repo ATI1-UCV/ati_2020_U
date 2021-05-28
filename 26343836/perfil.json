@@ -1,0 +1,14 @@
+{	
+	"nombre":"Diego Chacón",
+	"descripcion":"Hola muy buenas, mi nombre es Diego, soy estudiante de Computación de la U.C.V. y desarrollador web en Java con springboot y en Angular. También practico Kung Fu, soy aficionado a las artes marciales, el fútbol y la música. Toco la batería desde los 9 años y me gusta hacer covers de canciones de metal progresivo.",
+	"color":"Anaranjado",
+	"libro":"Mi jardín",
+   "musica":"Metal progresivo",
+   "video_juego": ["Pokemon", "FIFA", "Call of Duty", "Super Smash Bros", "Zelda"],
+   "lenguajes": ["Java", "Javascript", "C++", "C"],
+   "email": "diegochz98@gmail.com",
+   "ci": "26343836",
+   "genero": "Masculino",
+   "fecha_nacimiento": "16-01-1998",
+   "imagen": "fotoPerfil.jpg"
+}
