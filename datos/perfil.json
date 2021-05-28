@@ -1,4 +1,4 @@
-perfil = {
+{
 	"nombre": "Aaron Morillo",
 	"descripcion": "Soy un estudiante de la escuela de computacion del sexto semestre. Inicié esta carrera en el año 2018 y estoy entusiasmado por aprender sobre este mundo cada vez más. Actualmente estoy en el proceso y con el interes de aprender sobre tecnologias destacadas en la web, especificamente sobre frameworks como Laravel o Angular 10.",
 	"color":"Verde",
