@@ -19,8 +19,8 @@ $perfil = json_decode(file_get_contents("./perfil.json"), true);
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="../css/style.css"  type="text/css">
-		<link rel="stylesheet" href="../css/index.css"  type="text/css">
+		<link rel="stylesheet" href="./css/style.css"  type="text/css">
+		<link rel="stylesheet" href="./css/index.css"  type="text/css">
 		<link rel="stylesheet" href="./perfil.css"  type="text/css">
 		<title> Jose Daniel </title>
 		<link
@@ -31,6 +31,8 @@ $perfil = json_decode(file_get_contents("./perfil.json"), true);
 		<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
         <script type="text/javascript" >
            /* function llenar(){
+			   para funcionar http://192.168.99.100/
+			   con firewall abajo
 				document.title = perfil.nombre;
 				$("#footer").html( config.copyRight)
 				
@@ -64,7 +66,7 @@ $perfil = json_decode(file_get_contents("./perfil.json"), true);
 			}*/
 		</script>
 	</head>
-	<body>
+	<body >
 	    <header>
 			<nav>
 				<ul>
@@ -81,7 +83,9 @@ $perfil = json_decode(file_get_contents("./perfil.json"), true);
 					  ?></li>
 					<li class="saludo" id="saludo"><?php
 						echo $config["saludo"];
-					  ?> </li>
+					  ?><?php
+					  echo $perfil["nombre"];
+					?>  </li>
 					<li class="busqueda" id="busqueda"><a href="../index.html">
 						<?php
 						  echo $config["home"];
