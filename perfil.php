@@ -12,9 +12,18 @@
 		$config_data = file_get_contents("conf/configES.json");	
 	}
 	$decoded_config_data = json_decode($config_data, true);
-	$_SESSION['nombre'] = $decoded_profile_data['nombre'];
+	$_SESSION['usuario'] = $decoded_profile_data['nombre'];
 	$_SESSION['len']= $_GET['len'] ? $_GET['len'] : "es";
-	$_COOKIE['contador'] += 1;
+
+	if(isset($_COOKIE['contador'])){
+		$_COOKIE['contador'] += 1;
+	}else{
+		$value = 1; 
+		setcookie("contador", $value);
+	}
+	$currentFile = $_SERVER['PHP_SELF'];	
+	
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -25,32 +34,23 @@
 		<link rel="stylesheet" href="/css/style.css"  type="text/css">
 		<link rel="stylesheet" href="/css/perfil.css"  type="text/css">
 
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<!-- Bootstrap -->	
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+		
 
-		<title><?php echo $_SESSION['nombre']; ?></title>
+		<title><?php echo $_SESSION['usuario']; ?></title>
 	</head>
 	<body>
 		
-	    <header class="header">
-			<nav class="container">
-				<ul id="header-content" class="col-lg-12">
-					<li id="logo" class="logo col-md-4"><?php echo ($decoded_config_data['sitio'])[0] . '<span>'. ($decoded_config_data['sitio'])[1] .'</span>'. ($decoded_config_data['sitio'])[2]; ?></li>
+	    <?php require 'pre.php'; ?>
 
-					<li id="saludo" class="saludo col-md-4"> <?php echo $decoded_config_data['saludo'] . ', ' . $_SESSION['nombre']; ?></li>
-
-					<li class="busqueda col-md-3 pull-right"><a id="home" href="../index.html"><?php echo $decoded_config_data['home'] ?></a></li>
-				</ul>	
-			</nav> 
-	    </header>
 	    <section id="general_content" class="general_content container">
 			<picture>
 				<source media="(max-width:767px)"
-				srcset="<?php $mobile_image = $decoded_profile_data['imagen'] ? $_GET['ci']."/".$decoded_profile_data['imagen'] : "27449007/27449007first.jpg"; echo $mobile_image;?>"
+				srcset="<?php $mobile_image = $decoded_profile_data['imagen'] ? $_GET['ci']."/".$decoded_profile_data['imagen'] : "27449007/27449007.jpg"; echo $mobile_image;?>"
 				>
 				<source media="(min-width:768px)"
 				srcset="<?php $desktop_image = $decoded_profile_data['imagen'] ? $_GET['ci']."/".$decoded_profile_data['imagen'] : "27449007/27449007second.jpg"; echo $desktop_image;?>"
@@ -61,26 +61,25 @@
 			<table id="table" class="col-lg-5">
 				<tr> <td colspan="2" class="aligned" id="name"> <?php echo $decoded_profile_data['nombre']; ?></td></tr>
 				<tr><td colspan="2" class="aligned" id="description"> <?php echo $decoded_profile_data['descripcion']; ?> </td></tr>
-				<tr><td class="aligned"><?php echo $decoded_config_data['color']; ?> </td>
+				<tr><td id="color" class="aligned"><?php echo $decoded_config_data['color']; ?> </td>
 					<td class="aligned"><?php echo $decoded_profile_data['color']; ?> </td></tr>	
-				<tr><td class="aligned"><?php echo $decoded_config_data['libro']; ?> </td>
+				<tr><td id="libro" class="aligned"><?php echo $decoded_config_data['libro']; ?> </td>
 					<td class="aligned"><?php echo $decoded_profile_data['libro']; ?> </td></tr>
-				<tr><td class="aligned lp"> <?php echo $decoded_config_data['lenguajes']; ?></td>
+				<tr><td id="lenguajes" class="aligned lp"> <?php echo $decoded_config_data['lenguajes']; ?></td>
 					<td class="aligned lp"><?php $lenguajes = ''; 
 												foreach( $decoded_profile_data['lenguajes'] as $lenguaje) { $lenguajes .= $lenguaje.', ';
 												}
 												echo trim($lenguajes, ',');
 											?></td></tr>
-				<tr><td colspan="2" class="aligned"> <?php echo str_replace( '[email]', '', $decoded_config_data['email']); ?> <a href="<?php echo $decoded_profile_data['email_url']; ?>" id="email"><?php echo $decoded_profile_data['email']; ?></a> </td></tr>
+				<tr><td id="email" colspan="2" class="aligned"> <?php echo str_replace( '[email]', '', $decoded_config_data['email']); ?> <a href="<?php echo $decoded_profile_data['email_url']; ?>" id="email"><?php echo $decoded_profile_data['email']; ?></a> </td></tr>
 			
 			</table>
 			
  
 	    </section>
-	    <footer id="footer" class="dk-footer">
-			<?php echo $decoded_config_data['copyRight']; ?>
-		</footer>
+	    <?php require 'pos.php'; ?>
 		
 		
 	</body>
+	<script src="js/datos.js"></script>
 </html>

@@ -56,10 +56,9 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
 }
 			
 .logo {
-	margin-left: 2px;
 	font-size: 27pt;
    font-family: helvetica;
-	width: 30%;
+   height: 4.35rem;
 }
 
 .logo small {
@@ -67,12 +66,7 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
 }
 
 .saludo {
-  width: 29%;
   text-align: center;
-}
-
-.busqueda {
-  float: right;
 }
 
 .busqueda input[type=button] {
@@ -176,6 +170,15 @@ img{
 .image:hover{
   transform: rotate(15deg);
   background-color: #99c5dd;
+}
+#textoABuscar, #submitBusqueda{
+  line-height: 1rem !important;
+}
+#busqueda form{
+  display: inline-flex;
+}
+#lenguaje{
+  display: inline-block;
 }
 
 

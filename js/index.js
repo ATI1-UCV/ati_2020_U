@@ -1,19 +1,37 @@
-var config_json = JSON.parse(JSON.stringify(config));
-var perfilJson = JSON.parse(JSON.stringify(perfil));
-var listadoEstudiantes = JSON.parse(JSON.stringify(listado));
+function busquedaFetch(){
+    var url = "http://"+ window.location.host + "/datos/index.json";
 
-console.log(listadoEstudiantes)
+    //Usando fetch
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(function(response) {
+        console.log('response =', response);
+        return response.json();
+    })
+    .then(function(data) {
+        console.log('data = ', data);
+        busqueda(data);
+    })
+    .catch(function(err) {
+        console.error(err);
+    });
+
+}
+//Busqueda
 
 $("#submitBusqueda").on("click",function(event){
     event.preventDefault();
-    // resto de tu codigo
  });
 
-listadoEstudiantes.forEach(estudiante => {
-    $('#listado').append('<li class="image" ><img width="70" height="80" src="'+ estudiante.imagen + '"> <p>'+ estudiante.nombre + '</p></li>');
-})
 
-function busqueda(){
+
+function busqueda(listado){
+    var listadoEstudiantes =JSON.parse(JSON.stringify(listado));
+    console.log(listadoEstudiantes)
     $('#listado li, #listado h3').remove()
     var textoABuscar = $('#textoABuscar').val()
     console.log(textoABuscar)
@@ -38,20 +56,15 @@ function busqueda(){
     }else {
         $('#listado').removeClass('found')
         $('#listado').addClass('not_found')
-        $('#listado').append('<h3>'+ config_json.notFound + textoABuscar + '</h3>')
+        $('#listado').append('<h3> No se han encontrado resultados con: ' + textoABuscar + '</h3>')
         
     }
     
 }
 
-$('#textoABuscar').keyup( busqueda );
+busquedaFetch();
 
-$('#submitBusqueda').click(busqueda);
+$('#textoABuscar').keyup( busquedaFetch );
 
-//JSON en el footer
-$("#footer").append(config_json.copyRight);
+$('#submitBusqueda').click(busquedaFetch);
 
-//JSON en el header
-$("#logo").append(config_json.sitio[0] + '<span>' + config_json.sitio[1] + '</span>' + ' ' + config_json.sitio[2] )
-$("#saludo").append(config_json.saludo + ', ' + perfilJson.nombre)
-$("#home").append(config_json.home);

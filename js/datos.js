@@ -1,43 +1,73 @@
-//Llenado de datos
-var config_json = JSON.parse(JSON.stringify(config));
-var perfil_json = JSON.parse(JSON.stringify(perfil));
-//JSON en la tabla
-$("#table").append('<tr>' + 
-'<td colspan="2" class="aligned" id="name">' + perfil_json.nombre + '</td>'+'</tr>');
+$("#lenguaje").change( function(){ 
+    //obteniendo el url
+    let url;
+    let len = $("#lenguaje").val();
+    console.log(len);
 
-$("#table").append('<tr>' + 
-'<td colspan="2" class="aligned" id="description">' + perfil_json.descripcion + '</td>'+'</tr>');
+    if(len == "es"){
+        url = "http://"+ window.location.host + "/conf/configES.json";
 
-$("#table").append('<tr>' + 
-'<td class="aligned">' + config_json.color + '</td>'+
-'<td class="aligned">' + perfil_json.color + '</td>'+'</tr>');
+    }else if(len == "en"){
+        url = "http://"+ window.location.host + "/conf/configEN.json";
 
-$("#table").append('<tr>' + 
-'<td class="aligned">' + config_json.libro + '</td>'+
-'<td class="aligned">' + perfil_json.libro + '</td>'+'</tr>');
+    }else if(len == "pt"){
+        url = "http://"+ window.location.host + "/conf/configPT.json";
 
-$("#table").append('<tr>' + 
-'<td class="aligned">' + config_json.musica + '</td>'+
-'<td class="aligned">' + perfil_json.musica+ '</td>'+'</tr>');
+    }else{
+        return
+    }
+    //Usando fetch
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(function(response) {
+        console.log('response =', response);
+        return response.json();
+    })
+    .then(function(data) {
+        console.log('data = ', data);
+        console.log(data.sitio);
+        llenadoDatos(data);
 
-$("#table").append('<tr>' + 
-'<td class="aligned">' + config_json.video_juego + '</td>'+
-'<td class="aligned">' + perfil_json.video_juego + '</td>'+'</tr>');
+    })
+    .catch(function(err) {
+        console.error(err);
+    });
+})
 
-$("#table").append('<tr>' + 
-'<td class="aligned lp">' + config_json.lenguajes + '</td>'+
-'<td class="aligned lp">' + perfil_json.lenguajes + '</td>'+'</tr>');
+function llenadoDatos(config){
 
-$("#table").append('<tr>' + 
-'<td colspan="2" class="aligned">' + (config_json.email).replace('[email]','') + '<a href="https://www.aaronmorillo7@gmail.com" id="email">' + perfil_json.email +'</a>' + '</td>'+ '</tr>');
+    //Llenado de datos
+    var config_json = JSON.parse(JSON.stringify(config));
+    
+    //JSON en la tabla
+    $("#logo").empty();
+    $("#logo").append((config_json['sitio'])[0] + '<span>' + (config_json['sitio'])[1] + '</span>'+ (config_json['sitio'])[2]);
 
-//JSON en el footer
-$("#footer").append(config_json.copyRight);
-//JSON en la imagen
+    $("#saludoSinNombre").empty();
+    $("#saludoSinNombre").append(config_json['saludo']);
 
-$("#photo").attr('src', perfil_json.imagen);
-//JSON en el header
+    $("#home").empty();
+    $("#home").append(config_json['home']);
 
-$("#logo").append(config_json.sitio[0] + '<span>' + config_json.sitio[1] + '</span>' + ' ' +config_json.sitio[2] )
-$("#saludo").append(config_json.saludo + ', ' + perfil_json.nombre)
-$("#home").append(config_json.home)
+    $("#color").empty();
+    $("#color").append(config_json['color']);
+
+    $("#libro").empty();
+    $("#libro").append(config_json['libro']);
+
+    $("#lenguajes").empty();
+    $("#lenguajes").append(config_json['lenguajes']);
+
+    //JSON en el footer
+    $("#footer").empty();
+    $("#footer").append(config_json['copyRight']);
+
+
+
+}
+
+

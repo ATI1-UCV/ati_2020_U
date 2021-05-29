@@ -51,6 +51,19 @@ td{
 span{
     font-size: small;
 }
-
+nav .container{
+    margin: 0 !important;
+}
+/* Dropdown*/
+.dropdown{
+    position: static !important;
+}
+ul.dropdown-menu.show li a{
+    color: black !important;
+}
+select.form-select{
+    width: auto !important;
+    display: inline-block !important;
+}
 
 
