@@ -1,4 +1,4 @@
-FROM php:7.4-apache
-COPY ./22021629/ /var/www/html/
-
-EXPOSE 80
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install -y firefox
+RUN apt-get install -y vim
