@@ -1,3 +1,14 @@
+<?php
+$configs = [
+  "en" => "configEN.json",
+  "es" => "configES.json",
+  "pt" => "configPT.json",
+];
+
+$file_name = $configs[$_GET["len"] ?? "es"];
+$config = json_decode(file_get_contents("./$file_name"), true);
+$perfil = json_decode(file_get_contents("./perfil.json"), true);
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -9,17 +20,17 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
-		<link rel="stylesheet" href="perfil.css"  type="text/css">
+		<link rel="stylesheet" href="../css/index.css"  type="text/css">
+		<link rel="stylesheet" href="./perfil.css"  type="text/css">
 		<title> Jose Daniel </title>
 		<link
 		rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
 	  />
-        <script type="text/javascript" src="config.json"></script>
-        <script type="text/javascript" src="perfil.json"></script>
+       
 		<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
         <script type="text/javascript" >
-            function llenar(){
+           /* function llenar(){
 				document.title = perfil.nombre;
 				$("#footer").html( config.copyRight)
 				
@@ -49,17 +60,33 @@
 
 				$("#correo").html( config.email.replace("[email]", correoEnlace))
 
-				
-			}
+				 onload="llenar()"
+			}*/
 		</script>
 	</head>
-	<body onload="llenar()">
+	<body>
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo" id="logo"></li>
-					<li class="saludo" id="saludo"> </li>
-					<li class="busqueda" id="busqueda"></li>
+					<li class="logo" id="logo"> <?php
+						echo $config["sitio"][0];
+					  ?>
+					  <small>
+						<?php
+						  echo $config["sitio"][1];
+						?>
+					  </small>
+					  <?php
+						echo $config["sitio"][2];
+					  ?></li>
+					<li class="saludo" id="saludo"><?php
+						echo $config["saludo"];
+					  ?> </li>
+					<li class="busqueda" id="busqueda"><a href="../index.html">
+						<?php
+						  echo $config["home"];
+						?>
+					  </a></li>
 				</ul>	
 			</nav> 
 	    </header>
@@ -74,18 +101,49 @@
 				 	
 				    <div id="contenido" class="col-xl-9 col-md-6 col-12" >
 					  
-						<tr><td><p id="nombre"></p></td></tr>
-						<tr><td><p id="descripcion"></p>
-							</td>
-						</tr>
+						<tr><td><p id="nombre"><?php
+							echo $perfil["nombre"];
+						  ?></p></td></tr>
+						<tr><td><p id="descripcion"><?php
+							echo $perfil["descripcion"];
+						  ?></p></td></tr>
 						<tr><td>
 							  <table id="agenda">
-								<tr><td id="color_fav"></td><td id="color"></td></tr>
-								<tr><td id="libro_fav"></td><td id="libro"></td></tr>
-								<tr><td id="musica_fav"></td><td id="musica"></td></tr>
-								<tr><td id="video_juego_fav"></td><td id="video_juego"></td></tr>
-								<tr><td ><span class="negrita" id="lenguajes_fav"></span></td><td><span class="negrita" id="lenguajes"></span></td></tr>
-								<tr><td id="correo"></td></tr>
+								<tr><td id="color_fav"><?php
+									echo $config["color"];
+								  ?></td><td id="color"> <?php
+									echo $perfil["color"];
+								  ?></td></tr>
+								<tr><td id="libro_fav"> <?php
+									echo $config["libro"];
+								  ?></td><td id="libro"><?php
+									echo $perfil["libro"];
+								  ?></td></tr>
+								<tr><td id="musica_fav"> <?php
+									echo $config["musica"];
+								  ?></td><td id="musica"> <?php
+									echo $perfil["musica"];
+								  ?></td></tr>
+								<tr><td id="video_juego_fav"> <?php
+									echo $config["video_juego"];
+								  ?></td><td id="video_juego"><?php
+									echo join(", ", $perfil["video_juego"]);
+								  ?></td></tr>
+								<tr><td ><span class="negrita" id="lenguajes_fav"><?php
+									echo $config["lenguajes"];
+								  ?>
+								</td></span></td><td><span class="negrita" id="lenguajes"><?php
+									echo join(", ", $perfil["lenguajes"]);
+								  ?></span></td></tr>
+								<tr><td id="correo">   <?php
+									$email = $perfil["email"];
+									$mailto = $config["email"];
+									echo str_replace(
+									  "[email]",
+									  "<a href='mailto: $email'> $email </a>",
+									  $mailto,
+									);
+								  ?></td></tr>
 							  </table>
 							 
 							</td>
@@ -99,7 +157,9 @@
 	
 	    </section>
 	    <footer id="footer"  class="text-center p-3  bg-primary text-white" style="background-color: rgba(0, 0, 0, 0.2);">
-	        
+	        <?php
+        echo $config["copyRight"];
+      ?>
 	    </footer>
 		 <!-- Bootstrap -->
 		
