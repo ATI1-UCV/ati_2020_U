@@ -1,8 +1,8 @@
-config = {
-	"sitio": ["ATI","[UCV]","2020-U"],
+{
+	"sitio": ["ATI","[UCV]","2021-1"],
 	"home": "Início",
 	"login": "Sessão",
-	"copyRight":"Copyright © 2020 Escola de informática - ATI. Todos os direitos reservados",
+	"copyRight":"Copyright © 2021 Escola de informática - ATI. Todos os direitos reservados",
 	"nombre":"Nome",
 	"descripcion":"",
 	"color":"Minha cor favorita é",
