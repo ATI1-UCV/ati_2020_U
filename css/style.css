@@ -180,5 +180,9 @@ img{
 #lenguaje{
   display: inline-block;
 }
+/** Carrusel */
+.splide__pagination{
+  display: none !important;
+}
 
 

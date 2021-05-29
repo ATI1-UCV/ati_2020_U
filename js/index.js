@@ -1,3 +1,4 @@
+
 function busquedaFetch(){
     var url = "http://"+ window.location.host + "/datos/index.json";
 
@@ -46,9 +47,11 @@ function busqueda(listado){
     if(listadoBusqueda.some(estudiante => estudiante !== undefined) ){
         $('#listado').removeClass('not_found')
         $('#listado').addClass('found')
+        $('#carrusel').addClass('splide')
+        $(".splide__arrows").css("display", "block")
         listadoBusqueda.forEach(estudiante => {
             if(estudiante !== undefined){
-                $('#listado').append('<li class="image" ><img width="70" height="80" src="'+ estudiante.imagen + '"> <p>'+ estudiante.nombre + '</p></li>');
+                $('#listado').append('<li class="image splide__slide" ><img src="'+ estudiante.imagen + '"> <p>'+ estudiante.nombre + '</p></li>');
             }
             
         })
@@ -56,8 +59,18 @@ function busqueda(listado){
     }else {
         $('#listado').removeClass('found')
         $('#listado').addClass('not_found')
-        $('#listado').append('<h3> No se han encontrado resultados con: ' + textoABuscar + '</h3>')
-        
+        $('#listado').append('<h3>No se han encontrado resultados con: ' + textoABuscar + '</h3>')
+        $('#carrusel').removeClass('splide')
+        $(".splide__arrows").css("display", "none")
+    }
+    for( i=0; i < splides.length; i++){
+        new Splide(splides[i],{ 
+            type    : 'loop',
+            perPage : 4,
+            autoplay: true,
+            rewind: true,
+            pagination: false
+            }).mount()
     }
     
 }
@@ -68,3 +81,15 @@ $('#textoABuscar').keyup( busquedaFetch );
 
 $('#submitBusqueda').click(busquedaFetch);
 
+//Splide
+var splides = $(".splide");
+
+document.addEventListener( 'DOMContentLoaded', function () {
+    new Splide( '.splide' , {
+        type    : 'loop',
+        perPage : 5,
+        rewind: true,
+        clone: false,
+        autoplay: true,
+    }).mount();
+} );
