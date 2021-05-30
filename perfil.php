@@ -4,8 +4,8 @@
      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta charset="UTF-8">
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="../css/style.css"  type="text/css">
-		<link rel="stylesheet" href="perfil.css"  type="text/css">
+		<link rel="stylesheet" href="/css/style.css"  type="text/css">
+		<link rel="stylesheet" href="/css/perfil.css"  type="text/css">
 
     <!-- Responsive meta tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +29,13 @@
 	<body>
       <?php
       // Abrir perfil
-      $student = $_GET["estudiante"];
+      include_once("./get_config.php");
+
+      $language = $_GET["len"];
+
+      $config = get_config($language);
+
+      $student = $_GET["ci"];
       if(!$student){
         echo "<p>No se especifico estudiante <p>";
         exit;
@@ -48,28 +54,6 @@
           exit;
       }
 
-      // Abrir config dependiendo del idioma
-
-      $conf_dir = "./conf/";
-      $language = $_GET["len"];
-      if ($language){
-        if($language === "es"){
-          $config_json_string = file_get_contents($conf_dir . "configES.json");
-        }elseif ($language === "en"){
-          $config_json_string = file_get_contents($conf_dir . "configEN.json");
-        }elseif ($language === "pt"){
-          $config_json_string = file_get_contents($conf_dir . "configPT.json");
-        }
-      }
-      if (!$config_json_string){
-          echo "<p>Unable to open language.json<p>";
-      }
-
-      $config = json_decode($config_json_string, true);
-
-      if(!$config){
-        echo "<p>Unable to decode config *.json<p>";
-      }
       ?>
 	    <header>
         <nav>
@@ -82,17 +66,14 @@
             <span class="traducir-config" data-json-key="saludo"><?php echo($config["saludo"]) ?></span>
             <span class="traducir-perfil" data-json-key="nombre"><?php echo($perfil["nombre"]) ?></span>
             </li>
-            <li class="busqueda"><a href="../index.html" class="traducir-config" data-json-key="home"><?php echo($config["home"]) ?></a></li>
+            <li class="busqueda"><a href="index.php" class="traducir-config" data-json-key="home"><?php echo($config["home"]) ?></a></li>
           </ul>
         </nav>
 	    </header>
 	    <section class="container">
         <section class="row" id="foto-perfil">
           <div class="col">
-            <picture>
-              <source srcset="./ProfilePic.jpg" media="(min-width: 800px)">
-              <img src="26334929.jpeg" alt="foto de perfil">
-            </picture>
+            <img src="<?php echo("/" . $student . "/" . $perfil["imagen"]); ?>" alt="foto de perfil">
           </div>
         </section>
         <article class="row" id="contenido">
