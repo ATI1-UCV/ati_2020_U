@@ -59,8 +59,8 @@ function llenadoDatos(config){
     $("#libro").empty();
     $("#libro").append(config_json['libro']);
 
-    $("#home").empty();
-    $("#home").append(config_json['video_juego']);
+    $("#juego").empty();
+    $("#juego").append(config_json['video_juego']);
 
     $("#lenguajes").empty();
     $("#lenguajes").append(config_json['lenguajes']);
