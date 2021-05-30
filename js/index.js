@@ -49,7 +49,9 @@ function renderStudents(listId, students) {
     template.innerHTML = `
     <li>
       <img src="${student.imagen}" alt="profile-pic">
-      <p>${student.nombre}</p>
+      <a href="/perfil.php?ci=${student.ci}">
+        <p>${student.nombre}</p>
+      </a>
     </li>
   `;
     ulElement.appendChild(template.content.cloneNode(true))

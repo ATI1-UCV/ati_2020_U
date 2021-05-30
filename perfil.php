@@ -53,7 +53,6 @@
           echo "<p>Unable to decode perfil.json<p>";
           exit;
       }
-
       ?>
 	    <header>
         <nav>
@@ -73,7 +72,7 @@
 	    <section class="container">
         <section class="row" id="foto-perfil">
           <div class="col">
-            <img src="<?php echo("/" . $student . "/" . $perfil["imagen"]); ?>" alt="foto de perfil">
+            <img src="<?php echo("/" . $student . "/" . $student . ".jpg"); ?>" alt="foto de perfil">
           </div>
         </section>
         <article class="row" id="contenido">

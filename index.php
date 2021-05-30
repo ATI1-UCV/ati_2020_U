@@ -10,7 +10,6 @@
 
     <!--JS -->
     <script defer src="js/index.js"></script>
-<!-- TODO: hacer un funcion de php que obtengo config.php e importarla con un include --> 
 	</head> 
 	<body>
       <!-- TODO: funcion php que me consiga estudiantes -->
@@ -18,7 +17,6 @@
         $estudiantes_json_string = file_get_contents("./datos/index.json");
 
         $language = $_GET["len"];
-
         include_once("./get_config.php");
         $config = get_config($language);
         if(!$estudiantes_json_string){
@@ -65,7 +63,7 @@
             $li = <<<"EOT"
             <li data-student='{"ci":"$cedula_student","imagen":"$imagen_url","nombre": "$student_nombre"}'>
               <img src="$imagen_url" alt="profile-pic">
-              <p><a href="index.php?estudiante=$cedula_student">$student_nombre</a></p>
+              <p><a href="/perfil.php?ci=$cedula_student&len=$language">$student_nombre</a></p>
 
             </li>
             EOT;
