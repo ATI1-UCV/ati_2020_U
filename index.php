@@ -59,7 +59,11 @@
 				</ul>
 			</div>
 		</div>
-	     
+		<div>
+			<ul id="informacion" class="list-group">
+
+			</ul>
+		</div>
 		<?php require 'pos.php'; ?>
 
 	</body>

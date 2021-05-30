@@ -34,6 +34,7 @@ function busqueda(listado){
     var listadoEstudiantes =JSON.parse(JSON.stringify(listado));
     console.log(listadoEstudiantes)
     $('#listado li, #listado h3').remove()
+    $('#informacion li').remove()
     var textoABuscar = $('#textoABuscar').val()
     console.log(textoABuscar)
     var listadoBusqueda = listadoEstudiantes.map(estudiante => {
@@ -51,7 +52,68 @@ function busqueda(listado){
         $(".splide__arrows").css("display", "block")
         listadoBusqueda.forEach(estudiante => {
             if(estudiante !== undefined){
-                $('#listado').append('<li class="image splide__slide" ><img src="'+ estudiante.imagen + '"> <p>'+ estudiante.nombre + '</p></li>');
+                //usando fetch 
+                var url = "http://"+ window.location.host + "/" + estudiante.ci + "/" + "perfil.json";
+                fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(function(response) {
+                    console.log('response =', response);
+                    return response.json();
+                })
+                .then(function(data) {
+                    console.log('data = ', data);
+                    var perfil = JSON.parse(JSON.stringify(data));
+                    var url
+
+                    if($("#lenguaje").val() == 'en'){
+                        url = "http://"+ window.location.host + "/conf/configEN.json";
+                    }else if($("#lenguaje").val() == 'pt'){
+                        url = "http://"+ window.location.host + "/conf/configPT.json";
+                    }else{
+                        url = "http://"+ window.location.host + "/conf/configES.json";
+                    }
+                    fetch(url, {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                    .then(function(response) {
+                        console.log('response =', response);
+                        return response.json();
+                    })
+                    .then(function(data) {
+                        console.log('data = ', data);
+                        $config = JSON.parse(JSON.stringify(data));
+                        $('#informacion').append('<li class="list-group-item">'+ 
+                            '<table class="table">'+
+                                '<tr>'+
+                                    '<td>'+ config.nombre +'</td><td>'+ config.nombre +'</td>'+
+                                    '<td colspawn="2">'+ config.descripcion +'</td>'+
+                                    '<td>'+ config.color +'</td><td>'+ config.color +'</td>'+
+                                    '<td>'+ config.libro +'</td><td>'+ config.libro +'</td>'+
+                                    '<td>'+ config.video_juego +'</td><td>'+ config.video_juego +'</td>'+
+                                    '<td>'+ config.lenguajes +'</td><td>'+ config.lenguajes +'</td>'
+                                +'</tr>'
+                            +'</table>'
+                        +'</li>')
+                    })
+                    .catch(function(err) {
+                        console.error(err);
+                    });
+
+
+                    $('#informacion').append('<li class="list-group-item">' + perfil.nombre + " "+ perfil.libro + " " + perfil.color + " " + perfil.ci + " " + perfil.descripcion + '</li>')
+                })
+                .catch(function(err) {
+                    console.error(err);
+                });
+                $('#listado').append('<li class="image splide__slide"><img src="'+ estudiante.imagen + '"> <p>'+ estudiante.nombre + '</p><p class="cedula">'+ estudiante.ci +'</p></li>');
+                
             }
             
         })
