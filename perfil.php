@@ -66,7 +66,10 @@
 				<tr><td id="libro" class="aligned"><?php echo $decoded_config_data['libro']; ?> </td>
 					<td class="aligned"><?php echo $decoded_profile_data['libro']; ?> </td></tr>
 				<tr><td id="juego" class="aligned"><?php echo $decoded_config_data['video_juego']; ?> </td>
-					<td class="aligned"><?php echo $decoded_profile_data['video_juego']; ?> </td></tr>
+					<td class="aligned"><?php $juegos = ''; 
+												foreach( $decoded_profile_data['video_juego'] as $juego) { $juegos .= $juego.', ';
+												}
+												echo trim($juegos, ','); ?> </td></tr>
 				<tr><td id="lenguajes" class="aligned lp"> <?php echo $decoded_config_data['lenguajes']; ?></td>
 					<td class="aligned lp"><?php $lenguajes = ''; 
 												foreach( $decoded_profile_data['lenguajes'] as $lenguaje) { $lenguajes .= $lenguaje.', ';

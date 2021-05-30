@@ -67,7 +67,7 @@ function busqueda(listado){
                 .then(function(data) {
                     console.log('data = ', data);
                     var perfil = JSON.parse(JSON.stringify(data));
-                    var url
+                    var url = '';
 
                     if($("#lenguaje").val() == 'en'){
                         url = "http://"+ window.location.host + "/conf/configEN.json";
@@ -88,7 +88,7 @@ function busqueda(listado){
                     })
                     .then(function(data) {
                         console.log('data = ', data);
-                        $config = JSON.parse(JSON.stringify(data));
+                        var config = JSON.parse(JSON.stringify(data));
                         $('#informacion').append('<li class="list-group-item">'+ 
                             '<table class="table">'+
                                 '<tr>'+
@@ -105,9 +105,6 @@ function busqueda(listado){
                     .catch(function(err) {
                         console.error(err);
                     });
-
-
-                    $('#informacion').append('<li class="list-group-item">' + perfil.nombre + " "+ perfil.libro + " " + perfil.color + " " + perfil.ci + " " + perfil.descripcion + '</li>')
                 })
                 .catch(function(err) {
                     console.error(err);
