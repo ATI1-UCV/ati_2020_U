@@ -29,7 +29,13 @@
 	<body>
       <?php
       // Abrir perfil
-      $json_perfil_string = file_get_contents("./perfil.json");
+      $student = $_GET["estudiante"];
+      if(!$student){
+        echo "<p>No se especifico estudiante <p>";
+        exit;
+      }
+
+      $json_perfil_string = file_get_contents("./" . $student .  "/perfil.json");
       if (!$json_perfil_string) {
           echo "<p>Unable to open perfil.json<p>";
           exit;
@@ -44,7 +50,7 @@
 
       // Abrir config dependiendo del idioma
 
-      $conf_dir = "../conf/conf/";
+      $conf_dir = "./conf/";
       $language = $_GET["len"];
       if ($language){
         if($language === "es"){
