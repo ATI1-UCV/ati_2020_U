@@ -111,7 +111,7 @@
             </table>
             <p>
               <span class="traducir-config" data-json-key="email">
-                <?php echo(str_replace("[email]", $config["email"], $config["email"])); ?>
+                <?php echo(str_replace("[email]", $perfil["email"], $config["email"])); ?>
               </span>
             </p>
           </div>
