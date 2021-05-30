@@ -10,10 +10,10 @@
 
     <!--JS -->
     <script defer src="js/index.js"></script>
-	</head> 
+	</head>
 	<body>
       <!-- TODO: funcion php que me consiga estudiantes -->
-      <?php 
+      <?php
         $estudiantes_json_string = file_get_contents("./datos/index.json");
 
         $language = $_GET["len"];
@@ -23,38 +23,34 @@
           echo "<p>No se econtro datos/index.json<p>";
           exit;
         }
-      
+
         $estudiantes = json_decode($estudiantes_json_string, true);
-        
+
         if (!$estudiantes) {
             echo "<p>Unable to decode index/datos.json<p>";
             exit;
         }
-      
       ?>
-	    <header>
-			<nav>
-				<ul>
-          <li class="logo" id="especial-logo">
-            <?php
-              echo($config["sitio"][0]), "<small>", ($config["sitio"][1]), "</small>" ?>
-          </li>
-          <li class="saludo">
-            <span class="traducir-config" data-json-key="saludo"><?php echo($config["saludo"]) ?></span>
-            <span class="traducir-perfil" data-json-key="nombre"><?php echo($perfil["nombre"]) ?></span>
-          </li>
-					<li class="busqueda">
-            <form>
-            <input class="traducir-config" id="search-students" placeholder="<?php echo($config["nombre"]) ?>" type="search" data-json-key="nombre">
-              <input class="traducir-config" type="button" value="<?php echo($config["buscar"]) ?>" data-json-key="buscar">
-            </form>
-          </li>
-				</ul>	
-			</nav> 
-	    </header>
+      <?php
+        // substitue perfil_nombre
+        $perfil_nombre = $perfil["nombre"];
+        $config_nombre = $config["nombre"];
+        $config_buscar = $config["buscar"];
+      ?>
+      <?php ob_start(); ?>
+        <form>
+          <input class="traducir-config" id="search-students" placeholder="<?php echo($config_nombre) ?>" type="search" data-json-key="nombre">
+          <input class="traducir-config" type="button" value="<? echo($config_buscar); ?>" data-json-key="buscar">
+        </form>
+
+      <?php $extend_header = ob_get_clean(); ?>
+
+      <?php
+        include_once("pre.php");
+      ?>
 	    <section>
         <ul id="students-list">
-        <?php 
+        <?php
           foreach($estudiantes as $student){
             $imagen_url = $student["imagen"];
             $cedula_student = $student["ci"];
@@ -72,7 +68,6 @@
         ?>
         </ul>
 	    </section>
-	    <footer class="traducir-config" data-json-key="copyRight">
-	    </footer>
 	</body>
+    <?php include_once("post.php"); ?>
 </html>

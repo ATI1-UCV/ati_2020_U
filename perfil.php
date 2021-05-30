@@ -42,6 +42,7 @@
       }
 
       $json_perfil_string = file_get_contents("./" . $student .  "/perfil.json");
+
       if (!$json_perfil_string) {
           echo "<p>Unable to open perfil.json<p>";
           exit;
@@ -53,23 +54,19 @@
           echo "<p>Unable to decode perfil.json<p>";
           exit;
       }
+
+      $perfil_nombre = $perfil["nombre"];
       ?>
-	    <header>
-        <nav>
-          <ul>
-            <li class="logo">
-            <?php
-              echo($config["sitio"][0]), "<small>", ($config["sitio"][1]), "</small>" ?>
-            </li>
-            <li class="saludo">
-            <span class="traducir-config" data-json-key="saludo"><?php echo($config["saludo"]) ?></span>
-            <span class="traducir-perfil" data-json-key="nombre"><?php echo($perfil["nombre"]) ?></span>
-            </li>
-            <li class="busqueda"><a href="index.php" class="traducir-config" data-json-key="home"><?php echo($config["home"]) ?></a></li>
-          </ul>
-        </nav>
-	    </header>
-	    <section class="container">
+
+      <?php ob_start(); ?>
+      <a href="index.php" class="traducir-config" data-json-key="home"><?php echo($config["home"]) ?></a>
+
+      <?php $extend_header = ob_get_clean(); ?>
+
+      <?php
+        include_once("pre.php");
+      ?>
+      <section class="container">
         <section class="row" id="foto-perfil">
           <div class="col">
             <img src="<?php echo("/" . $student . "/" . $student . ".jpg"); ?>" alt="foto de perfil">
@@ -119,8 +116,6 @@
           </div>
         </article>
 	    </section>
-	    <footer class="traducir-config" data-json-key="copyRight">
-        <?php echo($config["copyRight"]); ?>
-      </footer>
+      <?php include_once("post.php"); ?>
 	</body>
 </html>
