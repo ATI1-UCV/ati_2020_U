@@ -92,12 +92,22 @@ function busqueda(listado){
                         $('#informacion').append('<li class="list-group-item">'+ 
                             '<table class="table">'+
                                 '<tr>'+
-                                    '<td>'+ config.nombre +'</td><td>'+ config.nombre +'</td>'+
-                                    '<td colspawn="2">'+ config.descripcion +'</td>'+
-                                    '<td>'+ config.color +'</td><td>'+ config.color +'</td>'+
-                                    '<td>'+ config.libro +'</td><td>'+ config.libro +'</td>'+
-                                    '<td>'+ config.video_juego +'</td><td>'+ config.video_juego +'</td>'+
-                                    '<td>'+ config.lenguajes +'</td><td>'+ config.lenguajes +'</td>'
+                                    '<td>'+ config.nombre +'</td><td>'+ perfil.nombre +'</td>'+
+                                '</tr>'+
+                                '<tr>'+
+                                    '<td colspawn="2">'+ perfil.descripcion +'</td>'+
+                                '</tr>'+
+                                '<tr>'+
+                                    '<td>'+ config.color +'</td><td>'+ perfil.color +'</td>'+
+                                '</tr>'+
+                                '<tr>'+
+                                    '<td>'+ config.libro +'</td><td>'+ perfil.libro +'</td>'+
+                                '</tr>'+
+                                '<tr>'+
+                                    '<td>'+ config.video_juego +'</td><td>'+ perfil.video_juego +'</td>'+
+                                '</tr>'+
+                                '<tr>'+
+                                    '<td>'+ config.lenguajes +'</td><td>'+ perfil.lenguajes +'</td>'
                                 +'</tr>'
                             +'</table>'
                         +'</li>')
