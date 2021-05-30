@@ -1,53 +1,76 @@
-document.title = `${config.sitio.join(" ")}`;
+var datos = [];
+var config = [];
 
-putText = (selec, text) => (document.querySelector(selec).innerText = text);
-putHtml = (selec, text) => (document.querySelector(selec).innerHTML = text);
+const main = () => {
+  document.title = `${config.sitio.join(" ")}`;
 
-putHtml(
-  ".logo",
-  `${config.sitio[0]} <small>${config.sitio[1]}</small> ${config.sitio[2]}`
-);
+  putText = (selec, text) => (document.querySelector(selec).innerText = text);
+  putHtml = (selec, text) => (document.querySelector(selec).innerHTML = text);
 
-putText(".saludo", `${config.saludo}, ${perfil.nombre}`);
+  putHtml(
+    ".logo",
+    `${config.sitio[0]} <small>${config.sitio[1]}</small> ${config.sitio[2]}`
+  );
 
-input = document.querySelector(".busqueda input[type=text]");
-input.placeholder = `${config.nombre}`;
-button = document.querySelector(".busqueda input[type=button]");
-button.value = `${config.buscar}`;
+  putText(".saludo", `${config.saludo}, ${user} (visita ${views})`);
 
-putText("footer", `${config.copyRight}`);
+  input = document.querySelector(".busqueda input[type=text]");
+  input.placeholder = `${config.nombre}`;
+  button = document.querySelector(".busqueda input[type=button]");
+  button.value = `${config.buscar}`;
 
-renderGrid = () => {
-  query = document.querySelector(".busqueda input[type=text]").value;
-  pattern = query.toLowerCase();
+  putText("footer", `${config.copyRight}`);
 
-  res = datos.filter((elem) => elem.nombre.toLowerCase().startsWith(pattern));
+  renderGrid = () => {
+    query = document.querySelector(".busqueda input[type=text]").value;
+    pattern = query.toLowerCase();
 
-  content = res
-    .sort((a, b) => b.nombre < a.nombre)
-    .map(
-      (elem) => `
-<a href="${
-        elem.ci === "26838989" ? elem.ci + "/perfil.php" : "#"
-      }" class="grid-item">
+    res = datos.filter((elem) => elem.nombre.toLowerCase().startsWith(pattern));
+
+    content = res
+      .sort((a, b) => b.nombre < a.nombre)
+      .map(
+        (elem) => `
+<a href="/perfil.php/?ci=${elem.ci}" class="grid-item">
   <img src="${elem.imagen}" alt="no foto">
   <span>${elem.nombre}</span>
 </a>`
-    );
+      );
 
-  content.length && putHtml(".grid-container", content.join("\n"));
-  putText(
-    ".error-notfound",
-    content.length ? "" : `${config.error.replace("[query]", query)}`
-  );
+    content.length && putHtml(".grid-container", content.join("\n"));
+    putText(
+      ".error-notfound",
+      content.length ? "" : `${config.error.replace("[query]", query)}`
+    );
+  };
+
+  renderGrid();
+
+  button.addEventListener("click", renderGrid);
+  input.addEventListener("keydown", (event) => {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      button.click();
+    }
+  });
 };
 
-renderGrid();
+const get_config = async () => {
+  const configs = {
+    en: "configEN.json",
+    es: "configES.json",
+    pt: "configPT.json",
+  };
 
-button.addEventListener("click", renderGrid);
-input.addEventListener("keydown", (event) => {
-  if (event.keyCode === 13) {
-    event.preventDefault();
-    button.click();
-  }
-});
+  const resp = await fetch(`/conf/${configs[lang]}`);
+  return await resp.json();
+};
+
+(async () => {
+  const resp = await fetch("/datos/index.json");
+  datos = await resp.json();
+  datos = datos.sort((a, b) => b.nombre - a.nombre);
+
+  config = await get_config();
+  main();
+})();
