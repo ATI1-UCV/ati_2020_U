@@ -3,7 +3,7 @@
     <ul>
       <li class="logo" id="especial-logo">
   <?php
-  echo($config["sitio"][0]), "<small>", ($config["sitio"][1]), "</small>" ?>
+  echo($config["sitio"][0]), " <small>", ($config["sitio"][1]), "</small> ", ($config["sitio"][2]) ?>
       </li>
       <li class="saludo">
         <span class="traducir-config" data-json-key="saludo"><?php echo($config["saludo"]) ?></span>
