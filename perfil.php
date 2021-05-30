@@ -1,4 +1,35 @@
 <!DOCTYPE HTML>
+
+<?php
+  // Abrir perfil
+  include_once("./get_config.php");
+
+  $language = $_GET["len"];
+
+  $config = get_config($language);
+
+  $student = $_GET["ci"];
+  if(!$student){
+    echo "<p>No se especifico estudiante <p>";
+    exit;
+  }
+
+  $json_perfil_string = file_get_contents("./" . $student .  "/perfil.json");
+
+  if (!$json_perfil_string) {
+      echo "<p>Unable to open perfil.json<p>";
+      exit;
+  }
+  // Convertir json string a array asociativo
+  $perfil = json_decode($json_perfil_string, true);
+
+  if (!$perfil) {
+      echo "<p>Unable to decode perfil.json<p>";
+      exit;
+  }
+
+  $perfil_nombre = $perfil["nombre"];
+?>
 <html>
 	<head>
      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -10,7 +41,7 @@
     <!-- Responsive meta tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>Diego Sánchez</title>
+    <title><?php echo($perfil["nombre"]); ?></title>
 
     <!-- SOYDEV danger zone -->
 
@@ -27,36 +58,6 @@
 	</head>
 
 	<body>
-      <?php
-      // Abrir perfil
-      include_once("./get_config.php");
-
-      $language = $_GET["len"];
-
-      $config = get_config($language);
-
-      $student = $_GET["ci"];
-      if(!$student){
-        echo "<p>No se especifico estudiante <p>";
-        exit;
-      }
-
-      $json_perfil_string = file_get_contents("./" . $student .  "/perfil.json");
-
-      if (!$json_perfil_string) {
-          echo "<p>Unable to open perfil.json<p>";
-          exit;
-      }
-      // Convertir json string a array asociativo
-      $perfil = json_decode($json_perfil_string, true);
-
-      if (!$perfil) {
-          echo "<p>Unable to decode perfil.json<p>";
-          exit;
-      }
-
-      $perfil_nombre = $perfil["nombre"];
-      ?>
 
       <?php ob_start(); ?>
       <a href="index.php" class="traducir-config" data-json-key="home"><?php echo($config["home"]) ?></a>
