@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(isset($_COOKIE["contador"])){
+  setcookie("contador", $_COOKIE["contador"] + 1);
+}else{
+  setcookie("contador", 1);
+}
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>

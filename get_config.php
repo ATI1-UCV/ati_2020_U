@@ -1,8 +1,18 @@
 <?php
   function get_config($language = "es"){
     $conf_dir = "./conf/";
-    
-    if(!$language){
+
+    $session_lang = isset($_SESSION["language"]);
+
+    // if no parameter and language defined
+    if(!$language && $session_lang){
+      $language = $_SESSION["language"];
+    }
+  
+    // If no language from parameter, and no session_lang
+    // define default language
+    if(!$language && !$session_lang){
+      $_SESSION["language"] = "es"; 
       $language = "es";
     }
 

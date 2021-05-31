@@ -50,7 +50,7 @@ function getStudentList(listId){
   return studentsList;
 }
 document.addEventListener("DOMContentLoaded", async () => {
-
+  const listado = getStudentList("students-list");
   // Search input
   const input = document.getElementById("search-students");
   input.addEventListener("input", ()=>{

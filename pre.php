@@ -7,7 +7,16 @@
       </li>
       <li class="saludo">
         <span class="traducir-config" data-json-key="saludo"><?php echo($config["saludo"]) ?></span>
-        <span><?php echo($perfil_nombre) ?></span>
+        <span><?php echo($_SESSION["usuario"]); ?></span>
+      </li>
+      <li>
+      <?php 
+        if(!isset($_COOKIE["contador"])){
+          echo("(visita " . 1 . " )");
+        }else{
+          echo("(visita " . ($_COOKIE["contador"]) . " )");
+        }
+      ?>
       </li>
       <li>
         <select name="language" id="select-lang">

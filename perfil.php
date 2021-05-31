@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 
 <?php
@@ -29,6 +32,11 @@
   }
 
   $perfil_nombre = $perfil["nombre"];
+
+  // Set nombre
+  if(!isset($_SESSION["usuario"])){
+    $_SESSION["usuario"] = $perfil["nombre"];
+  }
 ?>
 <html>
 	<head>
