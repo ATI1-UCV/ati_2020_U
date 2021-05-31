@@ -1,18 +1,47 @@
+* {
+	box-sizing: content-box;
+}
+
+button, input{
+	line-height: initial !important;
+}
+
+#nav{
+	overflow: visible;
+}
+
+.dropdown-menu{
+	overflow: hidden;
+	color:black;
+}
+.dropdown-item{
+	color: black;
+}
+
 .perfil{
 	display: inline-block;
 	width:200px;
 	height:250px; 
 	padding-left:50px;
 	padding-top: 25px;
-	background-color: rgb(234,247,245);
+	background-color: rgb(197, 233, 228);
 	margin: 20px;
 	box-shadow: 3px 3px #888888;
+	box-sizing:content-box;
+}
+
+button, input{
+	line-height: initial !important;
 }
 
 .perfil:hover{
 	animation-name: rotacion;
 	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
+}
+
+.perfil a{
+	text-decoration: none;
 }
 
 .imagen_perfil{

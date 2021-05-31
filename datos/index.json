@@ -1,4 +1,4 @@
-listado = [
+[
     {
         "ci": "24463392",
         "imagen": "24463392\/24463392.jpg",
@@ -500,8 +500,83 @@ listado = [
         "nombre": "Daniel Giannotti"
     },
     {
-        "ci":"25641651",
-        "imagen":"25641651\/25641651.jpg",
-        "nombre":"Eduardo Suarez"
+        "ci": "21759251",
+        "imagen": "21759251\/21759251.jpg",
+        "nombre": "Johan Velasquez"
+    },
+    {
+        "ci": "26838989",
+        "imagen": "26838989\/26838989.jpg",
+        "nombre": "Vittorio Adesso"
+    },
+    {
+        "ci": "26343836",
+        "imagen": "26343836\/26343836.jpg",
+        "nombre": "Diego Chac\u00f3n"
+    },
+    {
+        "ci": "27904160",
+        "imagen": "27904160\/27904160.jpg",
+        "nombre": "Jose Gregorio Hernandez"
+    },
+    {
+        "ci": "14444733",
+        "imagen": "14444733\/14444733.jpg",
+        "nombre": "Mar\u00eda Paula Herrero"
+    },
+    {
+        "ci": "28015794",
+        "imagen": "28015794\/28015794.jpg",
+        "nombre": "Daniel Berbesi"
+    },
+    {
+        "ci": "25504486",
+        "imagen": "25504486\/25504486.jpeg",
+        "nombre": "Victor Daniel Tafuri Vidal"
+    },
+    {
+        "ci": "25641651",
+        "imagen": "25641651\/25641651.jpg",
+        "nombre": "Eduardo Suarez"
+    },
+    {
+        "ci": "25872491",
+        "imagen": "25872491\/25872491.PNG",
+        "nombre": "Katherin Mozo"
+    },
+    {
+        "ci": "13852255",
+        "imagen": "13852255\/13852255.png",
+        "nombre": "Betty Torres"
+    },
+    {
+        "ci": "26956071",
+        "imagen": "26956071\/26956071.jpg",
+        "nombre": "Gabriela Ustariz"
+    },
+    {
+        "ci": "26334929",
+        "imagen": "26334929\/26334929.jpeg",
+        "nombre": "Diego S\u00e1nchez"
+    },
+    {
+        "ci": "27223325",
+        "imagen": "27223325\/27223325.jpeg",
+        "nombre": "Cesar Salazar"
+    },
+    {
+        "ci": "27449007",
+        "imagen": "27449007\/27449007.jpg",
+        "nombre": "Aaron Morillo"
+    },
+    {
+        "ci": "22021629",
+        "imagen": "22021629\/22021629.jpg",
+        "nombre": "Jose Perez"
+    },
+    {
+        "ci": "26272390",
+        "imagen": "26272390\/26272390.jpg",
+        "nombre": "Daniel Vieira"
     }
 ]

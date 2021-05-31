@@ -1,0 +1,63 @@
+html{
+	font-size: 62.5%;
+}
+
+.imagen{
+		position: relative;
+		height: 450px;
+		width: 400px;
+		border-top-left-radius: 100px;
+	}
+	.grid-container {
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+	.grid-item {
+		background-color: rgba(255, 255, 255, 0.8);
+		padding: 10px;
+	}
+	.grid-item-marco {
+		background-color: rgba(255, 255, 255, 0.8);
+		border: 1px solid;
+		padding: 10px;
+		box-shadow: 3px 3px #888888;
+	}
+	#texto1{/*Titulo*/
+		font-size: 6rem;
+		color: blue;
+		font-family:"verdana";
+
+	}
+	#texto2{/*Descripcion*/
+		font-size: 1.8rem;
+	}
+	#texto3{/*Negritas*/
+		font-weight: bold;
+	}
+	#texto4{/*Naranja*/
+		color: orange;
+	}
+	a:visited{
+		color: red;
+	}
+	.perfil p{
+		text-decoration: none;
+	}
+.dropdown-item{
+	color: black;
+}
+
+.dropdown-menu{
+	overflow: hidden;
+	color:black;
+}
+
+.row{
+	overflow: visible;
+}
+
+@media (max-width: 600px) {
+	html{
+		font-size: 70px;
+	}
+}
