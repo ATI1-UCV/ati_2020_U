@@ -1,6 +1,16 @@
 <?php 
 	session_start();
-	$value = 1; setcookie("contador", $value); 
+	
+	if(!headers_sent()){
+
+		if(isset($_COOKIE['contador'])){
+			$_COOKIE['contador'] += 1;
+		}else{
+			$value = 1; 
+			setcookie("contador", $value);
+		}
+		
+	}
 
 	$profile = $_GET['ci'] ? $_GET['ci']."/perfil.json" : 'datos/perfil.json';
 	$profile_data = file_get_contents($profile);
@@ -21,13 +31,6 @@
 	$decoded_config_data = json_decode($config_data, true);
 	$_SESSION['nombre'] = $_SESSION['nombre'] ?  $_SESSION['nombre'] : $decoded_profile_data['nombre'];
 	$_SESSION['len']= $_GET['len'] ? $_GET['len'] : "es";
-
-	if(isset($_COOKIE['contador'])){
-		$_COOKIE['contador'] += 1;
-	}else{
-		$value = 1; 
-		setcookie("contador", $value);
-	}
 
 	$currentFile = $_SERVER['PHP_SELF'];
 
