@@ -10,6 +10,7 @@
 
     <!--JS -->
     <script defer src="js/index.js"></script>
+    <script defer src="js/traducir.js"></script>
 	</head>
 	<body>
       <!-- TODO: funcion php que me consiga estudiantes -->

@@ -43,6 +43,7 @@
 
     <title><?php echo($perfil["nombre"]); ?></title>
 
+    <script defer src="js/traducir.js"></script>
     <!-- SOYDEV danger zone -->
 
     <!-- Javascript useless bloatware -->
@@ -75,42 +76,42 @@
         </section>
         <article class="row" id="contenido">
           <div class="col">
-          <h1 id="nombre" class="traducir-perfil" data-json-key="nombre"><?php echo($perfil["nombre"]) ?></h1>
+          <h1 id="nombre"  data-json-key="nombre"><?php echo($perfil["nombre"]) ?></h1>
             <p>
-            <em class="traducir-perfil" data-json-key="descripcion"><?php echo($perfil["descripcion"]) ?></em>
+            <em  data-json-key="descripcion"><?php echo($perfil["descripcion"]) ?></em>
             </p>
             <table>
               <tbody>
                 <tr>
                 <td class="traducir-config" data-json-key="color"><?php echo($config["color"]); ?></td>
-                <td class="traducir-perfil" data-json-key="color"><?php echo($perfil["color"]); ?></td>
+                <td  data-json-key="color"><?php echo($perfil["color"]); ?></td>
                 </tr>
                 <tr>
                 <td class="traducir-config" data-json-key="libro"><?php echo($config["libro"]); ?></td>
-                <td class="traducir-perfil" data-json-key="libro"><?php echo($perfil["libro"]); ?></td>
+                <td  data-json-key="libro"><?php echo($perfil["libro"]); ?></td>
                 </tr>
                 <tr>
                 <td class="traducir-config" data-json-key="musica"><?php echo($config["musica"]); ?></td>
-                <td class="traducir-perfil" data-json-key="musica"><?php echo($perfil["musica"]); ?></td>
+                <td  data-json-key="musica"><?php echo($perfil["musica"]); ?></td>
                 </tr>
                 <tr>
                 <td class="traducir-config" data-json-key="video_juego"><?php echo($config["video_juego"]); ?></td>
-                  <td class="traducir-perfil" data-json-key="video_juego">
+                  <td  data-json-key="video_juego">
                     <?php echo(implode(", ", $perfil["video_juego"])); ?>
                   </td>
                 </tr>
                 <tr>
-                <td><strong class="traducir-config" data-json-key="lenguajes"></strong>
+                <td class="traducir-config" data-json-key="lenguajes">
                   <?php echo($config["lenguajes"]); ?>
                 </td>
                 <td>
-                  <strong class="traducir-perfil" data-json-key="lenguajes"><?php echo(implode(", ", $perfil["lenguajes"])); ?></strong>
+                  <strong  data-json-key="lenguajes"><?php echo(implode(", ", $perfil["lenguajes"])); ?></strong>
                 </td>
                 </tr>
               </tbody>
             </table>
             <p>
-              <span class="traducir-config" data-json-key="email">
+            <span class="traducir-perfil" data-json-key="email" data-replace="<?php echo($perfil["email"]); ?>">
                 <?php echo(str_replace("[email]", $perfil["email"], $config["email"])); ?>
               </span>
             </p>
