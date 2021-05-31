@@ -12,9 +12,6 @@ body {
 }
 
 header {
-    height: 62px;
-    top: 0;
-    position: relative;
     background-color: #86b1ef;
 }
 
@@ -33,6 +30,13 @@ nav ul li {
     color: white;
 }
 
+@media (min-width: 768px){
+    nav ul li{
+        text-align: center;
+        border-bottom: none;
+    }
+}
+
 nav ul li:last-child {
     border-right: none;
 }
@@ -45,10 +49,10 @@ nav ul li a:visited {
 }
 
 .logo {
-    margin-left: 0.2rem;
-    font-size: 3.3rem;
+    /* margin-left: 0.2rem; */
+    font-size: 3.0rem;
     font-family: helvetica;
-    width: 30%;
+    /* width: 30%; */
 }
 
 .logo small {
@@ -74,17 +78,12 @@ section {
 
 footer {
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    padding: 1rem;
     background-color: #86b1ef;
     text-align: center;
-    height: 2rem;
-    font-size: 9pt;
 }
 
 .busqueda input[type=button] {
-    padding: 0 0.6rem;
+    /* padding: 0 0.6rem; */
     background: #f5f7f9;
     border: none;
     cursor: pointer;
@@ -92,7 +91,23 @@ footer {
 }
 
 .busqueda input[type=text] {
-    padding: 0 0.6rem;
+    /* padding: 0 0.6rem; */
     border: none;
     margin-right: 1rem;
+}
+
+select{
+    border: none;
+    font-weight: lighter;
+    color: #86b1ef;
+    background: #f5f7f9;
+}
+
+input, select{
+    line-height: 1.5;
+    padding: 0.5rem 0.6rem;
+}
+
+select:hover{
+    cursor: pointer;
 }

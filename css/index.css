@@ -55,6 +55,12 @@ nav ul li{
 }
 
 @media (min-width: 768px){
+    nav ul li{
+        border-bottom: none;
+    }
+}
+
+@media (min-width: 768px){
     .busqueda{
         text-align: right;
         padding-right: 3rem;
@@ -75,10 +81,30 @@ footer{
 
 .myUL{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 4rem;
     padding-block-start: 5rem;
 }
+
+@media (min-width:360px){
+    .myUL{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (min-width:768px){
+    .myUL{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width:1024px){
+    .myUL{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 
 .carousel-inner{
     overflow: visible;
@@ -114,11 +140,16 @@ section .myUL .container-visible:hover {
     transform: rotate(5deg) scale(1.07);
 }
 
-/* section .myUL .container-visible {
-    display: block;
-    width: 100%;
-    margin: 0;
-    border: none;
-    text-decoration: none;
-    color: rgb(83, 148, 240);
-} */
+.busqueda form{
+    display: inline-block;
+    margin-right: 3rem;
+}
+
+.saludo span{
+    margin-left: 2rem
+}
+
+.row{
+    justify-content: center;
+}
+

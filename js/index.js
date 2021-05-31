@@ -1,13 +1,26 @@
 window.onload = app;
 
-var config = JSON.parse(JSON.stringify(config));
-var estudiantes = JSON.parse(JSON.stringify(listado));
+var estudiantes;
+var config;
 
+async function getInfo(url) {
+    try {
+        const resultado = await fetch(url);
+        const data = await resultado.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+        return;
+    }
+}
 
-function app(){
+async function app(){
+    estudiantes = await getInfo("/datos/index.json");
+    config = await getInfo(language);
     header();
     fillMain();
     footer();
+    seleccionarIdioma();
 }
 
 function header(){
@@ -15,8 +28,8 @@ function header(){
     document.title = config.sitio[0] + config.sitio[1] + ' ' + config.sitio[2];
     document.getElementsByClassName('logo')[0].innerHTML = config.sitio[0] + '<small>' + config.sitio[1] +
         '</small>' + config.sitio[2];
-    document.getElementsByClassName('saludo')[0].innerHTML = config.saludo + ', ' + estudiantes[0].nombre;
-
+    document.getElementsByClassName('saludo')[0].innerHTML = config.saludo + ', ' + username + '<span>' + `(visita : ${visita})` + '</span>';
+    console.log(visita);
 }
 
 function fillMain(){
@@ -27,29 +40,23 @@ function fillMain(){
     var input, filter, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    const lista_estudiantes = document.createElement('DIV')
+    const lista_estudiantes = document.createElement('DIV');
     lista_estudiantes.classList.add('myUL');
-    // lista_estudiantes.classList.add('carousel-inner');
-    let cont = 0
+    let cont = 0;
 
     for(x of estudiantes){
         txtValue = x.nombre;
         if (txtValue.toUpperCase().indexOf(filter) > -1 || input == '') {
             const container_image = document.createElement('DIV');
-            // container_image.classList.add('carousel-item');
-            // if (cont++ == 0){container_image.classList.add('active');}
-    
+
             const image = document.createElement('IMG');
-            image.src = x.imagen;
+            image.src = `/${x.imagen}`;
             image.alt = `foto de ${x.nombre}`;
     
             const parrafo = document.createElement('P');
             const anchor= document.createElement('A');
             parrafo.textContent = x.nombre;
-            if (x.ci == '26956071') {
-                anchor.href = `${x.ci}/perfil.php`;
-            } 
-            else {anchor.href = '#';}
+            anchor.href = `/perfil.php/?ci=${x.ci}`;
             const container2 = document.createElement('DIV')
             anchor.appendChild(image);
             anchor.appendChild(parrafo);
@@ -60,7 +67,6 @@ function fillMain(){
         }
     }
     main.appendChild(lista_estudiantes);
-    console.log(main);
 }
 
 function footer(){
@@ -77,5 +83,20 @@ function group(){
             next = next.next();
             next.children(':first-child').clone().appendTo($(this));
         }
+    });
+}
+
+function seleccionarIdioma(){
+    const select = document.querySelector('#select');
+    select.addEventListener('change', (e) => {
+        str = window.location.toString();
+        if(str.includes('len')){
+            str = str.replace('/?len=es', e.target.value);
+            str = str.replace('/?len=en', e.target.value);
+            str = str.replace('/?len=pt', e.target.value);
+        }else{
+            str = window.location + e.target.value;
+        }
+        window.location = str;
     });
 }
