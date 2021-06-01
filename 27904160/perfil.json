@@ -1,4 +1,4 @@
-let perfil = {	
+{
 	"nombre":"Jose Gregorio Hernandez",
 	"descripcion":"Soy estudiante de computacion del 6to semestre de la UCV, bachiller desde el 2015 y actualmente me desempeño como desarrollador frontend con react para una empresa llamada JaliSoft.",
 	"color":"verde",
