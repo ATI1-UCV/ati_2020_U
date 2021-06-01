@@ -1,5 +1,29 @@
 
+$( document ).ready(function() {
+	console.log("DONE LOADING");
 
+	$("#profile_photo").attr("alt"   ,"Cesar Salazar Foto")
+	$("#profile_photo").attr("sizes"   , "(max-width: 320px) 280px, (max-width: 480px) 440px, 800px")
+});
+
+
+/*
+console.log("JAVA FIRST");
+$.ajax({
+  async: false,
+  type: 'POST', //http method
+  url: 'perfil.php', //url to php file
+  data: {'config': 'test1'}, //array or json object
+  success: function(response) {
+  	console.log("success");
+    console.log("Ajax response",response);
+
+    }
+});
+
+*/
+
+/*
 $( document ).ready(function() {
     $("#profile_photo").attr("src"   ,perfil.imagen)
 	$("#profile_photo").attr("alt"   ,"Cesar Salazar Foto")
@@ -26,7 +50,7 @@ $( document ).ready(function() {
 	$("footer").hmtl(config.copyRight)
 
 });
-
+*/
 
 
 

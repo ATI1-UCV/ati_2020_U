@@ -1,4 +1,4 @@
-config = {
+{
 	"sitio": ["ATI","[UCV]","2020-U"],
 	"home": "Início",
 	"login": "Sessão",
@@ -10,7 +10,7 @@ config = {
 	"musica":"Meu estilo de música favorita",
 	"video_juego":"Jogos de vídeo favoritos",
 	"lenguajes":"Linguagems aprendidas",
-	"email":"Se precisar me contatar pode me escrever em [email]",
+	"email":"Se precisar me contatar pode me escrever em [email] ",
 	"buscar": "Procurar",
 	"saludo": "Olá"
 }

@@ -1,4 +1,4 @@
-config = {
+{
 	"sitio": ["ITA","[UCV]","2020-U"],
 	"home": "Home",
 	"login": "Login",
@@ -10,7 +10,7 @@ config = {
 	"musica":"My favorite music style",
 	"video_juego":"Favorite video games",
 	"lenguajes":"Languages learned",
-	"email":"please send me a email to [email], if you need to contact me",
+	"email":"please send me a email to [email], if you need to contact me ",
 	"buscar": "Search",
 	"saludo": "Hi"
 }
