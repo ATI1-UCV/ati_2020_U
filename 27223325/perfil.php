@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 
-		<script src="configEN.json" type="text/javascript"></script>
+		<script src="config.json" type="text/javascript"></script>
 		<script src="perfil.json" type="text/javascript"></script>
 		<script src="perfil.js" type="text/javascript"></script>
 
