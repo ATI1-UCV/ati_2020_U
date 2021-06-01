@@ -1,4 +1,4 @@
-config = {
+{
 	"sitio": ["ITA","[UCV]","2020-U"],
 	"home": "Home",
 	"login": "Login",
@@ -12,5 +12,6 @@ config = {
 	"lenguajes":"Languages learned",
 	"email":"please send me a email to [email], if you need to contact me",
 	"buscar": "Search",
-	"saludo": "Hi"
+	"saludo": "Hi",
+	"no_hay": "There are no students who have in their name: [query]"
 }

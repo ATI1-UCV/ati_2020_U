@@ -1,54 +1,54 @@
-document.getElementById("saludo").innerHTML = config.saludo+ " " + perfil.nombre;
-document.getElementById("sitio").innerHTML = config.sitio[0] + "<small>" + config.sitio[1] + "</small>" + config.sitio[2]
-document.getElementById("name").setAttribute("value", config.nombre + "...");
-document.getElementById("buscar").setAttribute("value", config.buscar);
-document.getElementById("footer").innerHTML = config.copyRight;
-document.getElementById("sec").innerHTML = "<ul id=\"lista\"></ul>"
+$("#sec").append($("<div id=\"lista\"></div>"));
+$("#lista").addClass("row center");
 
-ul = document.getElementById("lista");
-l = listado.length;
-for(i = 0; i < l; i++) {
-    img = document.createElement("img");
-    img.setAttribute("src", listado[i].imagen);
-    img.setAttribute("width", 80);
-    img.setAttribute("height", 80);
-    img.setAttribute("class", "center");
-    li = document.createElement("li");
-    font = document.createElement("font");
-    font.setAttribute("size", 4);
-    a = document.createElement("a");
-    a.setAttribute("href", "#");
-    a.innerHTML = listado[i].nombre;
-    font.appendChild(img);
-    font.appendChild(a);
-    li.appendChild(font);
-    ul.appendChild(li);
+url = (event) => {
+    var ci = event.target.getAttribute("data-ci");
+    window.location.href = "perfil.php?ci=" + ci + "&len=" +len_js;
 }
-lis = document.createElement("li");
-lis.style.display = "none";
-lis.style.width = "100%";
-ul.appendChild(lis);
+
+
+var l = datos.length;
+for(i = 0; i < l; i++) {
+    var img = $("<img></img>")[0];
+    $(img).attr("src", datos[i].imagen);
+    $(img).addClass("w-100 d-block");
+    var li = $("<div></div>")[0];
+    $(li).addClass("col-md-3");
+    var a = $("<a></a>")[0];
+    $(a).attr("data-ci", datos[i].ci);
+    $(a).attr("href", "#");
+    $(a).html(datos[i].nombre);
+    a.addEventListener("click", url);
+    $(li).append(img);
+    $(li).append(a);
+    $("#lista").append(li);
+}
+var lis = $("<li></li>")[0];
+$(lis).addClass("d-none");
+$(lis).css("width", "100%");
+$(lis).attr("id", "no_hay");
+$("#lista").append(lis);
+var name = "";
+$(lis).html(config.no_hay.replace("[query]", name));
 
 
 function busqueda() {
-    name = document.getElementById("name").value;
-    childs = ul.children;
-    re = new RegExp(name, "i");
-    remove = 0;
-    for(i = 0; i < l; i++) {
-        b = re.test(listado[i].nombre);
-        if(!b) {
-            childs[i].style.display = "none";
-            remove++;
-        } else {
-            childs[i].style.display = "inline-block";
+    name = document.getElementById("name").value.toLowerCase();
+    var childs = $("#lista").children();
+    var remove = 0;
+    for (i = 0; i < l; i++) {
+        if (datos[i].nombre.toLowerCase().includes(name)) {
+            $(childs[i]).attr("class", "col-md-3 d-block");
             remove--;
-        }
-        if(remove == l) {
-            lis.innerHTML = config.no_hay.replace("[query]", name);
-            lis.style.display = "inline-block";
         } else {
-            lis.style.display = "none";
+            $(childs[i]).attr("class", "col-md-3 d-none");
+            remove++;
+        }
+        if (remove == l) {
+            $(lis).html(config.no_hay.replace("[query]", name));
+            $(lis).attr("class", "d-block");
+        } else {
+            $(lis).attr("class", "d-none");
         }
     }
 }

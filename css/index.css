@@ -1,41 +1,158 @@
-section li {
-    float: left;
-    display: inline-block;
-    padding-bottom: 10000px;
-    margin-bottom: -10000px;
-    text-align: center;
-    direction: rtl;
-    width: calc(25% - 12px);
-    box-shadow: 2px 2px 2px #86b1ef;
-    padding: 1px;
-    margin: 5px;
-    background-color: #f5f7f9;
-    min-height: calc(33vh - 82px);
+html {
+    font-size: 62.5%;
 }
 
-section li:hover {
+header {
+    height: 8%;
+    width: 100%;
+}
+
+footer {
+    height: 5%;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+section {
+    height: 82%;
+}
+
+li {
+    white-space: nowrap;
+    overflow: visible;
+    text-align: center;
+}
+
+p, a {
+    line-height: normal;
+    font-size: 1.6rem;
+}
+
+#busqueda {
+    margin-left: 2%;
+}
+
+#buscar {
+    width: 25%;
+}
+
+#name {
+    width: 70%;
+    height: 80%;
+}
+
+#drop-items {
+    overflow: visible;
+    height: auto;
+}
+
+#drop-items li a{
+    color: black;
+}
+
+#dropdown {
+    font-size: 1.6rem;
+}
+
+.col-md-3 {
+    width: 22%;
+}
+
+.dropdown-menu {
+    min-width: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+}
+
+.logo small {
+    font-size: 1.5rem;
+}
+
+header {
+    height: 8%;
+    width: 100%;
+}
+
+section {
+    height: 82%;
+}
+
+footer {
+    height: 5%;
+    width: 100%;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    overflow: visible;
+}
+
+nav ul li {
+    line-height: 100%;
+} 
+
+ul, li, #nav {
+    clear: left;
+    height: 100%; 
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#busqueda {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: center;
+}
+
+img {
+    height: 80%;
+    width: 100%;
+    object-fit: fill; 
+}
+
+button {
+    font-size: 1.6rem;
+}
+
+
+
+
+section div div {
+    text-align: center;
+    box-shadow: 2px 2px 2px #86b1ef;
+    margin: 1%;
+    background-color: #f5f7f9;
+    height: 20rem;
+    overflow: hidden;
+}
+
+section div div:hover {
     animation-name: my_animation;
     animation-duration: 2s;
     animation-fill-mode: forwards; 
 }
 
-li a {
-    display: block;
-    text-align: center;
-    font-size: 150%;
-}
-
-section ul {
-    overflow: hidden;
+#lista {
+    width: 99%;
+    overflow: auto;
     float: left;
     padding-bottom: 5%;
-}
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
 }
 
 @keyframes my_animation {

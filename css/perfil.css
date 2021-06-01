@@ -20,6 +20,25 @@
     color: red;
 }
 
+#drop-items {
+    overflow: visible;
+    height: auto;
+}
+
+#drop-items li a{
+    color: black;
+}
+
+#dropdown {
+    font-size: 1.6rem;
+}
+
+.dropdown-menu {
+    min-width: 0;
+    padding: 0;
+    text-align: center;
+}
+
 .fcenter {
     display: flex;
     align-items: center;
@@ -64,6 +83,10 @@ h1 {
     font-size: 2rem;
 }
 
+button {
+    font-size: 1.6rem;
+}
+
 img {
     border-radius: 60px 0px 0px 0px;
     height: 100%;
@@ -72,14 +95,16 @@ img {
 }
 
 header {
-    min-height: 5rem;
-    height: auto;
+    height: 8%;
     width: 100%;
 }
 
+section {
+    height: 82%;
+}
 
 footer {
-    height: auto;
+    height: 5%;
     width: 100%;
 }
 
@@ -87,9 +112,12 @@ nav ul li {
     line-height: 100%;
 } 
 
+nav ul {
+    overflow: visible;
+}
+
 ul, li, #nav {
     clear: left;
-    min-height: 5rem;
     height: 100%; 
     width: 100%;
 }
