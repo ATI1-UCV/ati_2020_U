@@ -1,7 +1,8 @@
 <?php
-    session_start();
+    
     if (!headers_sent()) {
-        // las cabeceras ya se han enviado, no intentar añadir una nueva
+        session_start();
+        
         if(isset($_COOKIE['contador'])){
             $_COOKIE['contador'] += 1;
         }else{
