@@ -21,23 +21,21 @@ td {
 }
 
 #foto {
-	border: 0px solid black;
+	border: 0em solid black;
 	width: 15%;
 }
 
 #foto img {
-	border-radius: 60px 0px 0px 0px;
+	border-radius: 3.75em 0em 0em 0em;
+	height: 25em;
+	width: 28.125em;
 }
 
 #contenido {
-	border: 1px solid black;
-	width: 80px;
-	box-shadow: 5px 5px gray;
-}
-
-#contenido  {
-	border: 1px solid black;
-	padding: 6px;
+	border: 0.0625em solid black;
+	width: 100%;
+	box-shadow: 0.3125em 0.3125em gray;
+	padding: 0.375em;
 }
 
 #nombre {
@@ -50,11 +48,11 @@ td {
 #descripcion {
 	font-family: arial;
 	font-style: italic;
-	margin-top: 3px;
+	margin-top: 0.1875em;
 }
 
 #agenda {
-	border: 0px solid black;
+	border: 0em solid black;
 	padding: 0;
 	width: 80%;
 }
