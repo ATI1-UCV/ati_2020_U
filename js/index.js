@@ -33,7 +33,6 @@ function busqueda(listado){
         }
     })  
 
-    console.log(listadoBusqueda)
 
     if(listadoBusqueda.some(estudiante => estudiante !== undefined) ){
         $('#listado').removeClass('not_found')
