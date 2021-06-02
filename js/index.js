@@ -1,65 +1,84 @@
 window.onload = function() {
-    //config
-    // variables
     const logo = document.querySelector('.logo')
-    const saludo = document.querySelector('.saludo')
+    const saludo = document.querySelector('#saludo')
     const busqueda = document.querySelector('.busqueda').firstChild
-    const footer = document.querySelector('footer')
+    const footer = document.querySelector('.footer')
     const sectionListado = document.querySelector('section')
     const input = document.querySelector('#nombreBusqueda');
     const form = document.querySelector('form')
     const titulo = document.querySelector('title')
-    
-   
-    //cambios ATI[UCV] 2020-U
-    titulo.innerText = `${config.sitio[0]}${config.sitio[1]} ${config.sitio[2]}`
-    //internacionalizacion
-    logo.innerHTML = `${config.sitio[0]}<small>${config.sitio[1]}</small> ${config.sitio[2]}`
-    saludo.innerText = `${config.saludo}, Katherin Mozo`
-    busqueda.nextElementSibling[0].setAttribute("placeholder", config.nombre)
-    busqueda.nextElementSibling[1].setAttribute("value", config.buscar)
-    footer.innerText = config.copyRight
+    const selectLenguaje = document.querySelector('.lenguaje')
 
-    //listado de estudiantes
-    for(let i=0; i < listado.length; i++){
-        const nuevoUL = document.createElement('ul')
-            nuevoUL.innerHTML = `
-                <li>
-                    <img src="${listado[i].imagen}" alt="${listado[i].nombre}">
-                    <a href="./${listado[i].ci}/perfil.html">${listado[i].nombre}</a>
-                </li>`
-            sectionListado.appendChild(nuevoUL)
-    }
-    
-    
-    
-    //busqueda 
-    form.addEventListener('submit',(e)=>{
-        e.preventDefault()
-    })
-
-    input.addEventListener('keyup', busquedaNombre)
-    function busquedaNombre(){
-        const entrada = this.value
-
-        sectionListado.innerHTML = '';
+    async function index(){
+        let response = await fetch('../datos/index.json')
+        let listado = await response.json()
+       
+        
         for(let i=0; i < listado.length; i++){
-            if(listado[i].nombre.toUpperCase().includes(entrada.toUpperCase())){
-                const nuevoUL = document.createElement('ul')
+            const nuevoUL = document.createElement('ul')
                 nuevoUL.innerHTML = `
                     <li>
                         <img src="${listado[i].imagen}" alt="${listado[i].nombre}">
-                        <a href="./${listado[i].ci}/perfil.html">${listado[i].nombre}</a>
+                        <a href="/perfil.php?ci=${listado[i].ci}">${listado[i].nombre}</a>
                     </li>`
                 sectionListado.appendChild(nuevoUL)
-            }
-        }
-        if(sectionListado.innerHTML === ''){
-            let textMensaje = `<p>${config.mensajeBusqueda}</p>`
-            sectionListado.innerHTML = textMensaje.replace('[query]', entrada)
         }
         
-    };
+        
+        
+        //busqueda 
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault()
+        })
     
+        input.addEventListener('keyup', busquedaNombre)
 
+        function busquedaNombre(){
+            const entrada = this.value
+    
+            sectionListado.innerHTML = '';
+            for(let i=0; i < listado.length; i++){
+                if(listado[i].nombre.toUpperCase().includes(entrada.toUpperCase())){
+                    const nuevoUL = document.createElement('ul')
+                    nuevoUL.innerHTML = `
+                        <li>
+                            <img src="${listado[i].imagen}" alt="${listado[i].nombre}">
+                            <a href="/perfil.php?ci=${listado[i].ci}">${listado[i].nombre}</a>
+                        </li>`
+                    sectionListado.appendChild(nuevoUL)
+                }
+            }
+            if(sectionListado.innerHTML === ''){
+                let textMensaje = `<p>No existen estudiantes con el nombre: ${entrada}</p>`
+                sectionListado.innerHTML = textMensaje
+            }
+            
+        };
+
+
+        //Cambio de lenguaje
+        selectLenguaje.addEventListener('change', cambiarLenguaje)
+        async function cambiarLenguaje(event){
+            const len = event.target.value
+
+            if(len === 'EN' || len === 'ES' || len === 'PT'){
+                //se busca el jso correspondiente
+                let res = await fetch(`../conf/config${len}.json`)
+                let configLen = await res.json()
+
+                //se llena la pag
+
+                saludo.innerText  = configLen['saludo']
+                busqueda.nextElementSibling[0].setAttribute("placeholder", configLen['nombre'])
+                busqueda.nextElementSibling[1].setAttribute("value",  configLen['buscar'])
+                footer.innerText = configLen['copyRight']
+            }
+            
+        }
+    }
+
+    index()
+
+    
 }
+    
