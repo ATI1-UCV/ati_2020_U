@@ -29,7 +29,6 @@ $("#lenguaje").change( function(){
     })
     .then(function(data) {
         console.log('data = ', data);
-        console.log(data.sitio);
         llenadoDatos(data);
 
     })

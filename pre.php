@@ -15,9 +15,8 @@
 
             
             <li class="col-lg-2">
-                    <select id="lenguaje" class="form-select" aria-label=".form-select-lg example">
-                        <option selected>Lenguage</option>
-                        <option value="es">ES</option>
+                    <select id="lenguaje" class="form-select" aria-label=".form-select-lg example">           
+                        <option selected value="es">ES</option>
                         <option value="en">EN</option>
                         <option value="pt">PT</option>
                     </select>

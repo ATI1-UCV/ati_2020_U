@@ -1,8 +1,8 @@
 <?php 
-	session_start();
+	
 
 	if(!headers_sent()){
-
+		session_start();
 		if(isset($_COOKIE['contador'])){
 			$_COOKIE['contador'] += 1;
 		}else{
