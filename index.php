@@ -1,16 +1,16 @@
 <?php 
 	
-	
-	if(!headers_sent()){
-		session_start();
-		if(isset($_COOKIE['contador'])){
-			$_COOKIE['contador'] += 1;
-		}else{
-			$value = 1; 
-			setcookie("contador", $value);
-		}
-		
-	}
+	if (!headers_sent()) {
+        session_start();
+
+        if(isset($_COOKIE['contador'])){
+            setcookie("contador", $_COOKIE['contador'] + 1);
+        }else{
+            $value = 1; 
+            setcookie("contador", $value);
+        }
+        
+    }
 
 	$profile = $_GET['ci'] ? $_GET['ci']."/perfil.json" : 'datos/perfil.json';
 	$profile_data = file_get_contents($profile);

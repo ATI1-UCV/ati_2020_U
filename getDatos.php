@@ -4,7 +4,7 @@
         session_start();
 
         if(isset($_COOKIE['contador'])){
-            $_COOKIE['contador'] += 1;
+            setcookie("contador", $_COOKIE['contador'] + 1);
         }else{
             $value = 1; 
             setcookie("contador", $value);
