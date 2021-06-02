@@ -5,13 +5,12 @@
 
             <li id="saludo" class="saludo col-lg-3"> <?php 
     
-            if($currentFile == '/index.php'){
-                $visitas = " Visitas: " . $_COOKIE['contador'];
+            if($currentFile == '/index.php'){              
+                echo '<span id="saludoSinNombre">' . $decoded_config_data['saludo'] . "</span>" . ', ' . $_SESSION['usuario'] . " Visitas: " . $_COOKIE['contador'];
             }else{
-                $visitas = "";
+                echo '<span id="saludoSinNombre">' . $decoded_config_data['saludo'] . "</span>" . ', ' . $_SESSION['usuario'];
             }
-
-            echo '<span id="saludoSinNombre">' . $decoded_config_data['saludo'] . "</span>" . ', ' . $_SESSION['usuario'] . $visitas; ?></li>
+             ?></li>
 
             
             <li class="col-lg-2">

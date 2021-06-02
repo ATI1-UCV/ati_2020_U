@@ -98,7 +98,7 @@ function busqueda(listado){
         listadoBusqueda.forEach(estudiante => {
             if(estudiante !== undefined){
                 
-                $('#listado').append('<li class="image splide__slide"><img src="'+ estudiante.imagen + '"> <p>'+ estudiante.nombre + '</p><p class="cedula" id="' + estudiante.ci + '">'+ estudiante.ci +'</p></li>');
+                $('#listado').append('<li class="image splide__slide"><img src="'+ estudiante.imagen + '"> <p id="'+ estudiante.ci+'">'+ estudiante.nombre + '</p></li>');
                 
                 $('#' + estudiante.ci).click(() =>{
                     busquedaPerfil(estudiante.ci);
