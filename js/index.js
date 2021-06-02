@@ -10,11 +10,9 @@ function busquedaFetch(){
         }
     })
     .then(function(response) {
-        console.log('response =', response);
         return response.json();
     })
     .then(function(data) {
-        console.log('data = ', data);
         busqueda(data);
     })
     .catch(function(err) {
@@ -22,20 +20,13 @@ function busquedaFetch(){
     });
 
 }
-//Busqueda
-
-$("#submitBusqueda").on("click",function(event){
-    event.preventDefault();
- });
-
-
 
 function busqueda(listado){
     var listadoEstudiantes =JSON.parse(JSON.stringify(listado));
-    console.log(listadoEstudiantes)
+
     $('#listado li, #listado h3').remove()
     var textoABuscar = $('#textoABuscar').val()
-    console.log(textoABuscar)
+
     var listadoBusqueda = listadoEstudiantes.map(estudiante => {
         if(estudiante.nombre.toLowerCase().includes(textoABuscar.toLowerCase()) && estudiante !== undefined){           
             return estudiante
@@ -80,6 +71,10 @@ busquedaFetch();
 $('#textoABuscar').keyup( busquedaFetch );
 
 $('#submitBusqueda').click(busquedaFetch);
+
+$("#submitBusqueda").on("click",function(event){
+    event.preventDefault();
+ });
 
 //Splide
 var splides = $(".splide");

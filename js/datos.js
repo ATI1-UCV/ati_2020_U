@@ -2,7 +2,6 @@ $("#lenguaje").change( function(){
     //obteniendo el url
     let url;
     let len = $("#lenguaje").val();
-    console.log(len);
 
     if(len == "es"){
         url = "http://"+ window.location.host + "/conf/configES.json";
@@ -24,12 +23,9 @@ $("#lenguaje").change( function(){
         }
     })
     .then(function(response) {
-        console.log('response =', response);
         return response.json();
     })
     .then(function(data) {
-        console.log('data = ', data);
-        console.log(data.sitio);
         llenadoDatos(data);
 
     })
