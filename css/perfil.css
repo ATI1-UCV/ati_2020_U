@@ -1,0 +1,44 @@
+body{
+	font-size: 11pt;
+}
+
+#img-perfil{
+	border-top-left-radius: 30px; 
+	margin: 5px;
+	/* max-height: 30em; */
+	max-width: 90%;
+}
+
+#nombre-perfil{
+	color: #EE9C3C;
+	font-size: 35px;
+	display: block;
+}
+
+#nombre-perfil, #desc-perfil{
+	font-family: verdana;
+}
+
+#perfilEstudiante a{
+	text-decoration: none;
+	color: #EE9C3C;
+}
+
+#perfilEstudiante a:visited{
+	color: #D92626;
+}
+
+.descripcion{
+	border: 1px solid #000;
+	box-shadow: 5px 5px #777;
+	padding: 5px;
+	margin: 5px;
+}
+
+#perfilEstudiante section{
+	margin-bottom: 5px;
+}
+
+.noMostrar{
+	display: none;
+}

@@ -1,4 +1,5 @@
-FROM ubuntu:16.04
-RUN apt-get update
-RUN apt-get install -y firefox
-RUN apt-get install -y vim
+#Partimos de una imagen con ubuntu y apache-php7
+FROM nimmis/apache-php7
+
+#copiamos el directorio actual en la sgt ruta
+COPY . /var/www/html

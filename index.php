@@ -1,3 +1,30 @@
+<?php
+	session_start(); 
+
+	if ( (isset($_GET["len"]) ) && ( $_GET["len"] === 'es' || $_GET["len"] === 'en' || $_GET["len"] === 'pt' ) ){
+		$len = $_GET["len"];
+		$_SESSION['len'] = $len;
+	} elseif(isset($_SESSION["len"])) {
+		$len = $_SESSION['len'];
+	}else{
+		$len = 'es';
+	}
+
+	if(isset($_COOKIE['contador'])){
+		// Caduca en un año
+		setcookie('contador', $_COOKIE['contador'] + 1, time() + 365 * 24 * 60 * 60);
+	} else {
+		setcookie('contador', 1, time() + 365 * 24 * 60 * 60);
+
+	}
+
+	$contador = $_COOKIE['contador'];
+
+	
+	setcookie('lenguaje', $len, time() + 365 * 24 * 60 * 60);
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -15,7 +42,8 @@
 	<!-- estilos -->
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
-		<script src="conf/configES.json"></script>
+		<link rel="stylesheet" href="css/perfil.css"  type="text/css">
+		<!-- <script src="conf/configES.json"></script> -->
 		<script src="datos/index.json"></script>
 		<script src="js/index.js"></script>
 		<title></title>
@@ -25,7 +53,11 @@
 			<nav class="container-fluid">
 				<ul class="row">
 					<li class="col-xs-12 col-sm-12 col-md-5 logo"></li>
-					<li class="col-xs-12 col-sm-5 col-md-3 saludo"></li>
+					<li class="col-xs-12 col-sm-5 col-md-3 saludo">
+						<span id='saludo'></span>
+						<span id='nombre'></span>
+						<span id='visitas'> (visitas <?php echo $contador ?>)</span>
+					</li>
 					<li class="col-xs-12 col-sm-6 col-md-3 busqueda">
 						<form>
 							<div class="form-group form-inline d-flex justify-content-end">
@@ -39,9 +71,13 @@
 			</nav> 
 	    </header>
 	    <section>
+	    	<span id='msj'></span>
 			<div class="swiper-container">
 				<div class="swiper-wrapper"></div>
 			</div>
+		</section>
+		<section id='perfilEstudiante'>
+
 		</section>
 		<footer></footer>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

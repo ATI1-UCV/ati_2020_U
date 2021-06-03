@@ -4,7 +4,7 @@
 	"color" :"Negro", 
 	"libro": "Steppenwolf de Hermann Hesse", 
 	"musica": "Rock y Electronica", 
-	"videojuego": "Dark Souls y The Legend of Zelda", 
+	"video_juego": "Dark Souls y The Legend of Zelda", 
 	"lenguaje": ["Python", "C++", "Ruby", "Javascript", "Java"], 
 	"email": "jose_enrique_29@gmail.com", 
 	"ci": "25235661", 
