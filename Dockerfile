@@ -1,2 +1,2 @@
 FROM reto19
-copy / /etc/www/html
+copy / /var/www/html
