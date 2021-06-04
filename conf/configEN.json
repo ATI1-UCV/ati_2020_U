@@ -1,4 +1,4 @@
-config = {
+{
 	"sitio": ["ITA","[UCV]","2020-U"],
 	"home": "Home",
 	"login": "Login",

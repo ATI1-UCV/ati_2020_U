@@ -27,7 +27,7 @@ body{
     font-size: 1.6rem;
 }
 
-img {
+.index img {
     width: 60%;
     height: 25rem;
     margin: 0 auto
@@ -44,7 +44,7 @@ header {
     }
 }
 
-.row{
+ul.row{
     margin: 0;
     align-items: center;
 }
@@ -55,15 +55,16 @@ nav ul li{
 }
 
 @media (min-width: 768px){
+    nav ul li{
+        border-bottom: none;
+    }
+}
+
+@media (min-width: 768px){
     .busqueda{
         text-align: right;
         padding-right: 3rem;
     }
-}
-
-section.main{
-    min-height: calc(100% - 13.4rem);
-    margin-bottom: 0;
 }
 
 footer{
@@ -76,6 +77,12 @@ footer{
 .myUL{
     padding-block-start: 5rem;
 }
+
+main.main{
+    min-height: calc(100% - 13.4rem);
+    margin-bottom: 0;
+}
+
 
 .carousel-inner{
     overflow: visible;
@@ -111,6 +118,18 @@ section .myUL .container-visible:hover {
     transform: rotate(5deg) scale(1.07);
 }
 
+.busqueda form{
+    display: inline-block;
+    margin-right: 3rem;
+}
+
+.saludo span{
+    margin-left: 2rem
+}
+
+.index .row{
+    justify-content: center;
+}
 /* section .myUL .container-visible {
     display: block;
     width: 100%;
@@ -137,7 +156,6 @@ section .myUL .container-visible:hover {
     grid-template-columns: repeat(4, 1fr);
     gap: 4rem;
 }
-
 .carousel-inner .carousel-item-right.active,
 .carousel-inner .carousel-item-next {
   transform: translateX(25%);
