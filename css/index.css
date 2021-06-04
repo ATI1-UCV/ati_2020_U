@@ -11,7 +11,7 @@ section ul li{
   text-align: center;
   background-color: rgb(245,247,249);
   width: 200px;
-  margin-left: auto;
+  margin-left: calc(50% - 100px);
   box-shadow: 1px 1px 1px 1px grey;
   transition: all ease .5s;
   height: 200px;
@@ -19,7 +19,8 @@ section ul li{
 }
 section ul li img{
 	margin-top: 10px;
-	height: 150px;
+	height: 140px;
+  max-width: 150px;
     transition: all ease .5s;
 }
 section ul li span{
@@ -37,11 +38,23 @@ section ul li:hover{
 }
 
 section ul li:hover img{
-	height: 170px !important;
+	height: 150px !important;
 	margin-top: 5px;
     transition: all ease .5s;
 }
 section ul li:hover span{
 	display:block;
-	margin-bottom: 12px;	
+	margin-bottom: 12px;
+  text-overflow: ellipsis;
+}
+#error-query{
+  text-align: center;
+  font-size: 30px;
+}
+#input_buscar{
+  height:30px;
+  width:50%;
+}
+#buscar{
+  line-height: normal !important
 }
