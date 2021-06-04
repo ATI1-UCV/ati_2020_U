@@ -42,6 +42,8 @@ ul li p{
 	color: rgb(102,165,215);
 }
 
+
+
 @keyframes rotacion{
 	0%	 {transform: rotate(); background-color: rgb(234,247,245);	width:200px; height:250px; }
 	100% {transform: rotate(88deg); background-color:#99c5dd; width:210px; height:260px; padding-left:60px; padding-top: 35px;}
