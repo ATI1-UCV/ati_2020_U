@@ -1,0 +1,52 @@
+#shadow {
+    max-height: 100%;
+    width: 100%;
+    padding-left: 5px;
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px blue;
+}
+
+#contacto a {
+    color: orange;
+}
+
+#contacto a:visited {
+    color: red;
+}
+
+.size {
+    min-height: 80%;
+    width: 100%;
+}
+
+.botspace {
+    margin-bottom: 6rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.cursiva {
+    font-family: Arial; 
+    font-style: italic;
+    word-break: break-word;
+}
+
+a {
+    line-height: normal;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+h1 {
+    color:#0000FF;
+    font-size: 2rem;
+}
+
+#imagen {
+    border-radius: 60px 0px 0px 0px;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
