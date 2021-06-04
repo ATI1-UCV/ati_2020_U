@@ -1,0 +1,58 @@
+p.email:first-letter {
+  text-transform: uppercase;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 90%;
+  display: grid;
+  place-items: center;
+  height: 80%;
+}
+
+.row {
+  margin: auto 0;
+}
+
+#myimage {
+  display: grid;
+  place-items: center;
+}
+
+img {
+  width: 100%;
+  border-top-left-radius: 20%;
+}
+
+#mycontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 80rm;
+  border: 0.4rem solid black;
+  box-shadow: 0.5rem 0.5rem gray;
+  padding: 2rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.name {
+  color: Gold;
+  font-size: 6rem;
+}
+
+.desc {
+  font-family: Montserrat;
+  font-style: italic;
+  text-align: justify;
+}
+
+a {
+  color: orange;
+}
+
+a:visited {
+  color: red;
+}

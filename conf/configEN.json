@@ -1,16 +1,17 @@
-config = {
-	"sitio": ["ITA","[UCV]","2020-U"],
-	"home": "Home",
-	"login": "Login",
-	"copyRight":"Copyright © 2020 Computer school - ITA. All rights reserved",
-	"nombre":"Name",
-	"descripcion":"",
-	"color":"My favorite color is",
-	"libro":"My favorite book is",
-	"musica":"My favorite music style",
-	"video_juego":"Favorite video games",
-	"lenguajes":"Languages learned",
-	"email":"please send me a email to [email], if you need to contact me",
-	"buscar": "Search",
-	"saludo": "Hi"
+{
+  "sitio": ["ITA", "[UCV]", "2021-1"],
+  "home": "Home",
+  "login": "Login",
+  "copyRight": "Copyright © 2021 Computer school - ITA. All rights reserved",
+  "nombre": "Name",
+  "descripcion": "",
+  "color": "My favorite color is",
+  "libro": "My favorite book is",
+  "musica": "My favorite music style",
+  "video_juego": "Favorite video games",
+  "lenguajes": "Languages learned",
+  "email": "please send me a email to [email], if you need to contact me",
+  "buscar": "Search",
+  "saludo": "Hi"
 }
+
