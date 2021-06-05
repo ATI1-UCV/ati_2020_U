@@ -41,7 +41,6 @@ function carousel(){
 
 async function app(){
     estudiantes = await getInfo("/datos/index.json");
-    // console.log(estudiantes)
     config = await getInfo(language);
     header();
     fillMain();
@@ -92,7 +91,8 @@ function fillMain(){
             // } 
             // else {anchor.href = '#';}
             anchor.setAttribute('data-ci', `/${x.ci}/perfil.json`)
-            anchor.href = '#'
+            anchor.setAttribute('data-image', `/${x.imagen}`)
+            anchor.href = '#';
             const container2 = document.createElement('DIV')
             anchor.appendChild(image);
             anchor.appendChild(parrafo);
@@ -110,6 +110,8 @@ function fillMain(){
         document.querySelector('.carousel-control-next').style.display = 'none';
     }
 
+    carousel();
+    aparecerPerfil();
 }
 
 function footer(){
@@ -140,7 +142,7 @@ function aparecerPerfil(){
                 perfil.classList.add('hidden');
             }else{
                 perfil.classList.remove('hidden');
-                activate(e.currentTarget.dataset.ci);
+                activate(e.currentTarget.dataset.ci, e.currentTarget.dataset.image);
             }
             previus = e.currentTarget.dataset.ci
     }}
@@ -158,14 +160,10 @@ async function getInfo(url) {
     }
 }
 
-function fillMain2(){
+function fillMain2(imagen){
 
-    if(perfil.imagen){
-        $('.perfil img').attr("src", `/${perfil.ci}/${perfil.imagen}`);
-    }else{
-        $('.perfil img').attr("src", `/${perfil.ci}/${perfil.ci}.jpg`);
-    }
 
+    $('.perfil img').attr("src", imagen);
     $('.perfil h1').text(perfil.nombre);
     $('.perfil .description').text(perfil.descripcion);
     const preguntas = ["color", "libro", "musica", "video_juego", "lenguajes"];
@@ -192,7 +190,7 @@ function fillMain2(){
 
 }
 
-async function activate(url){
+async function activate(url, imagen){
     perfil = await getInfo(url);
-    fillMain2();
+    fillMain2(imagen);
 }
