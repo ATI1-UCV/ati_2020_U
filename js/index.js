@@ -90,7 +90,7 @@ function fillMain(){
             //     anchor.href = `$/{x.ci}/perfil.html`;
             // } 
             // else {anchor.href = '#';}
-            anchor.setAttribute('data-ci', `/${x.ci}/perfil.json`)
+            anchor.setAttribute('data-ci', `${x.ci}`)
             anchor.setAttribute('data-image', `/${x.imagen}`)
             anchor.href = '#';
             const container2 = document.createElement('DIV')
@@ -190,7 +190,14 @@ function fillMain2(imagen){
 
 }
 
-async function activate(url, imagen){
-    perfil = await getInfo(url);
-    fillMain2(imagen);
+async function activate(ci, imagen){
+    try {
+        const resultado = await fetch(`/getDatos.php?ci=${ci}`, {method: "GET"});
+        const data = await resultado.json();
+        perfil = data;
+        fillMain2(imagen);
+    } catch (error) {
+        console.log(error);
+        return;
+    }
 }
