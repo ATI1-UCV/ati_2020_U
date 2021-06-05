@@ -26,6 +26,9 @@
      float:right;
 }
 
+div.inline{
+    float: left;
+}
 img {
     max-width: 100%;
     height: auto;
