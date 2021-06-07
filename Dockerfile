@@ -1,4 +1,6 @@
-FROM php:7.4-apache
-COPY ./22021629/ /var/www/html/
+FROM php:apache
+
+WORKDIR /var/www/html
+COPY . .
 
 EXPOSE 80
